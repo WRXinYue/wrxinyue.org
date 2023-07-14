@@ -2,6 +2,8 @@
 
 ## Purpose
 
+username.github.io是一个特殊的仓库，GitHub Pages会自动把这个仓库作为个人网站，并且可以通过`https://username.github.io`访问。在这网站是我的和人页面，有喜欢的小伙伴可以来参考
+
 个人主页，调用了Github的API。
 
 ## Features
