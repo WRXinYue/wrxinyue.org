@@ -1,363 +1,238 @@
-<!DOCTYPE HTML>
-<html>
+﻿﻿<!DOCTYPE html>
+
+<html lang="zh">
+
 <head>
-<title>吾日心悦如石水主页</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta charset="UTF-8">
+    <title>吾日心悦如石水的主页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="00后学生，爱好影视后期，拍摄，编程等">
+    <meta name="keywords" content="Java,Spring,个人博客，微信小程序，博客">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript">
+        if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+            alert('朋友，上古浏览器不支持呢~');
+        }
+    </script>
 </head>
+
 <body class="is-preload">
 
-<!-- Wrapper -->
-<div id="wrapper">
+    <div id="body-wrap">
+        <nav class="not_index_bg" id="nav" style="background-image:url(https://tuapi.eees.cc/api.php?category=dongman&type=302&px=pc)"> <!-- api接口调用-->
+            <div id="page_site-info">
+                <div id="site-title">
+                    <span class="blogtitle"></span>
+                    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+                    <script>
+                        var typed = new Typed(".blogtitle", {
+                            strings: ['求知若饥，虚心若愚', '有远大抱负的人不可忽略眼前的工作!!!', '開玩笑前，請先考慮是否會傷害到別人', "雪花飘飘北风萧萧，天地一片苍茫，一剪寒梅傲立雪中，只为伊人飘香，爱我所爱无怨无悔，此情长留心间"],
+                            startDelay: 300,
+                            typeSpeed: 100,
+                            loop: true,
+                            backSpeed: 50,
+                            backDelay: 5000,
+                            showCursor: true
+                        });
+                    </script>
+                </div>
+            </div>
+        </nav>
+        <main id="content-outer">
+            <div class="layout_page" id="content-inner">
+                <div class="aside_content" id="aside_content">
+                    <div class="card-widget card-info">
+                        <div class="card-content">
+                            <div class="card-info-avatar is-center">
+                                <img class="avatar-img"
+                                    src="http://q1.qlogo.cn/g?b=qq&nk=3322543587&s=640"
+                                    alt="avatar">
+                                <div class="author-info__name">吾日心悦如石水</div>
+                                <div class="author-info__description">00后学生，会java，C语言，HTML5和CSS3等基础语言，主打学python，喜欢人工智能，爱好影视后期、拍摄、电子音乐编曲、编程等</div>
+                            </div>
+                            <div class="card-info-social-icons is-center">
+                                <a class="social-icon" href="https://github.com/WRXinYue" target="_blank">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-	<!-- Header -->
-		<header id="header">
-			<div class="logo">
-				<span class="icon fa-gem"></span>
-			</div>
-			<div class="content">
-				<div class="inner">
-					<h1>关于吾日心悦如石水（WRXinYue）</h1>
-					<p>00后学生，会java，C语言，HTML5和CSS3等基础语言，主打学python<br />
-						喜欢人工智能，爱好影视后期、拍摄、电子音乐编曲、编程等。</p>
-				</div>
-			</div>
-			<nav>
-				<ul>
-					<li><a href="#intro">介绍</a></li>
-					<li><a href="#work">关于</a></li>
-					<li><a href="#about">导航</a></li>
-					<li><a href="#contact">联系</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</ul>
-			</nav>
-		</header>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                                <span>一言</span>
+                            </div>
+                            <div id="hitokoto"></div>
+                        </div>
+                    </div>
+                    <div class="card-widget card-announcement">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span>今日诗词</span>
+                            </div>
+                            <div id="jinrishici-sentence"></div>
+                        </div>
+                    </div>
 
-	<!-- Main -->
-		<div id="main">
+                    <div class="card-widget card-webinfo">
+                        <div class="card-content">
+                            <div class="item-headline">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>站点信息</span>
+                            </div>
+                            <div class="webinfo">
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-uv-name">本站访客数 :</div>
+                                    <div class="webinfo-site-uv-count" id="busuanzi_value_site_uv"></div>
+                                </div>
+                                <div class="webinfo-item">
+                                    <div class="webinfo-site-name">本站总访问量 :</div>
+                                    <div class="webinfo-site-pv-count" id="busuanzi_value_site_pv"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article id="page">
+                    <div class="article-container">
+						<h2>介绍</h2>
+						<div id="introduce"></div>
+                        <hr>
 
-			<!-- Intro -->
-				<article id="intro">
-					<h2 class="major">介绍</h2>
-					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-					<p>00后学生一枚，在初中时为了自学计算机放弃读高中，而想去到无忧无虑的职高，继续深造我的技术，但是我这个职高并不比高中轻松，
-						甚至不许用电脑，即使这样我还是买了许多关于计算机的书籍，所经历的磨难只会让我成长，职高读完之后我还想继续往上考......</a>.</p>
-					<p>关于技能：熟练使用windows系列操作系统，会各种linux操作系统，会一些java、C语言基本语法，会熟练编写HTML5和CSS3等基础语言，了解汇编以及易语言等相关知识，喜欢python、人工智能一些知识，偶尔也搞搞关于渗透相关的东西，
-						熟练使用PR，会使用Adobe全家桶、会FL电子音乐编曲等</p>
-				</article>
+                        <h2>音乐</h2>
+                        <meting-js auto="https://y.qq.com/n/ryqq/playlist/4063308541.html"></meting-js>
+                        <hr>
 
-			<!-- Work -->
-				<article id="work">
-					<h2 class="major">关于</h2>
-					<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-					<p>本页面使用 <a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a> 修改制作</p>
-					<P>服务器提供商 <a target="_blank" href="https://console.cloud.tencent.com/">Tencent</a> </P>
-					<P>域名提供商 <a target="_blank" href="https://www.dnspod.cn/">DNSPod</a> </p>
-					<p>DNS提供商 <a target="_blank" href="https://www.dnspod.cn/">DNSPod</a> </p>
+                        <br>
+                        <h1>我的博客</h1>
+                        <div class="tool">
+                            <a href="https://wrxinyue.github.io/blog/" target="_blank">吾日心悦如石水的博客</a>
+                        </div>
 
-				</article>
+                        <hr>
+                        <h2>刷题</h2>
+                        <div class="tool">
+                            <a href="https://wrxinyue.github.io/study_notes/" target="_blank">吾日心悦如石水的笔记</a><br>
+                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
+                            <a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>
+                        </div>
 
-			<!-- About -->
-				<article id="about">
-					<h2 class="major">导航</h2>
-					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-					<p><a href="home/index.html">导航主页</a></p>
-				</article>
+                        <hr>
+                        <h2>收藏</h2>
+                        <div class="tool">
+                            <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
+                            <a href="https://adzhp.cn/" target="_blank" rel="noopener noreferrer">爱达杂货铺、</a>
+                            <a href="http://ifeve.com/" target="_blank" rel="noopener noreferrer">并发编程网</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </main>
+        <footer id="footer">
+            <div id="footer-wrap">
+                <div class="copyright">Copyright &copy; WRXinYue 2021-2023</div>
+            </div>
+        </footer>
+    </div>
 
-			<!-- Contact -->
-				<article id="contact">
-					<h2 class="major">联系</h2>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="4"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					</ul>
-				</article>
-
-			<!-- Elements -->
-				<article id="elements">
-					<h2 class="major">Elements</h2>
-
-					<section>
-						<h3 class="major">Text</h3>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h4>Blockquote</h4>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h4>Preformatted</h4>
-						<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
-
-					<section>
-						<h3 class="major">Lists</h3>
-
-						<h4>Unordered</h4>
-						<ul>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Sagittis adipiscing.</li>
-							<li>Felis enim feugiat.</li>
-						</ul>
-
-						<h4>Alternate</h4>
-						<ul class="alt">
-							<li>Dolor pulvinar etiam.</li>
-							<li>Sagittis adipiscing.</li>
-							<li>Felis enim feugiat.</li>
-						</ul>
-
-						<h4>Ordered</h4>
-						<ol>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis viverra.</li>
-							<li>Felis enim feugiat.</li>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis lorem.</li>
-							<li>Felis enim et feugiat.</li>
-						</ol>
-						<h4>Icons</h4>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						</ul>
-
-						<h4>Actions</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Default</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary">Default</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-					</section>
-
-					<section>
-						<h3 class="major">Table</h3>
-						<h4>Default</h4>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h4>Alternate</h4>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h3 class="major">Buttons</h3>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h3 class="major">Form</h3>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<label for="demo-name">Name</label>
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-								</div>
-								<div class="field half">
-									<label for="demo-email">Email</label>
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@abc.com" />
-								</div>
-								<div class="field">
-									<label for="demo-category">Category</label>
-									<select name="demo-category" id="demo-category">
-										<option value="">-</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="field half">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="field half">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="field half">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="field half">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="field">
-									<label for="demo-message">Message</label>
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li><input type="submit" value="Send Message" class="primary" /></li>
-								<li><input type="reset" value="Reset" /></li>
-							</ul>
-						</form>
-					</section>
-
-				</article>
-
-		</div>
-
-	<!-- Footer -->
-		<footer id="footer">
-			<p class="copyright">Copyright &copy; WRXinYue 2021-2022 </a></p>
-		</footer>
-
-</div>
-
-<!-- BG -->
-<div id="bg"></div>
+</body>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.fancybox@2.1.5/source/jquery.fancybox.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" async></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<!-- APlayer & MetingJS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<!-- nplayer -->
+<script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
 
-</body>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+<!--鼠标点击效果-->
+<script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+
+<script type="text/javascript">
+	console.clear();
+	console.log("%c 有朋自远方来, 不亦说乎.", "background:#24272A; color:#ffffff", "");
+	console.log("%c Github %c", "background:#24272A; color:#ffffff", "", "https://github.com/WRXinYue");
+	console.log("%c 版本号: %c", "background:#24272A; color:#ffffff", "", "1.0.0");
+
+
+	(function ($) {
+		$.fn.snow = function (options) {
+			var $flake = $('<div id="snowbox" />').css({ 'position': 'absolute', 'z-index': '9999', 'top': '-50px' }).html('&#10052;'),
+				documentHeight = $(document).height(),
+				documentWidth = $(document).width(),
+				defaults = {
+					minSize: 10,
+					maxSize: 20,
+					newOn: 1000,
+					flakeColor: "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
+				},
+				options = $.extend({}, defaults, options);
+			var interval = setInterval(function () {
+				var startPositionLeft = Math.random() * documentWidth - 100,
+					startOpacity = 0.5 + Math.random(),
+					sizeFlake = options.minSize + Math.random() * options.maxSize,
+					endPositionTop = documentHeight - 200,
+					endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
+					durationFall = documentHeight * 10 + Math.random() * 5000;
+				$flake.clone().appendTo('body').css({
+					left: startPositionLeft,
+					opacity: startOpacity,
+					'font-size': sizeFlake,
+					color: options.flakeColor
+				}).animate({
+					top: endPositionTop,
+					left: endPositionLeft,
+					opacity: 0.2
+				}, durationFall, 'linear', function () {
+					$(this).remove()
+				});
+			}, options.newOn);
+		};
+	})(jQuery);
+	$(function () {
+		$.fn.snow({
+			minSize: 5, /* 定义雪花最小尺寸 */
+			maxSize: 50,/* 定义雪花最大尺寸 */
+			newOn: 800  /* 定义密集程度，数字越小越密集 */
+		});
+	});
+	
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+	fetch('https://api.github.com/repos/WRXinYue/WRXinYue/readme', {
+		headers: { 'Accept': 'application/vnd.github.v3.raw' }
+	})
+	.then(response => {
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		return response.text()
+	})
+	.then(data => {
+		document.getElementById('introduce').innerHTML = marked.parse(data)
+	})
+	.catch(error => console.error(error))
+</script>
 </html>
