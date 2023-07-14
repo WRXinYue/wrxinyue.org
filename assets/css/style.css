@@ -5,13 +5,14 @@ html {
     height: 100%;
 }
 body {
-    position: relative;  /*相对位置*/
-    min-height: 100%;    /*设置段落的最小高度百分比*/
-    background: #eee;  /*规定要使用的背景颜色*/
-    color: #4c4948;    /*规定文本的颜色*/
-    font-size: 14px;     /*规定文本的字体大小*/
+    position: relative;
+    min-height: 100%;
+    color: #4c4948;
+    font-size: 14px;
     font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;  /*规定文本的字体族（字体系列）*/
-    line-height: 2;      /*设置行高*/
+    line-height: 2;
+    background: linear-gradient(to bottom, #f0f9ff 0%, #fff 100%);
+    background-attachment: fixed;
 }
 body {
     margin: 0;           /*在一条声明中设置所有外边距属性*/
@@ -60,7 +61,8 @@ strong{
     transition: all .5s;
 }
 #nav.not_index_bg {
-    height: 20rem;
+    height: 22rem;
+    background-position: top;
 }
 #nav {
     position: relative;
@@ -197,6 +199,19 @@ h1 {
 
 .tool a {
     color: #FF0066;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.tool a:hover {
+    color: #FF6699;
+}
+
+.tool a:active {
+    color: "#FF3399";
 }
 
 .is-center {

@@ -1,6 +1,6 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "./live2d/live2d_default/";
-const tips_path = "./live2d/live2d_default/";
+const live2d_path = "./models/live2d/live2d_default/";
+const tips_path = "./models/live2d/live2d_default/";
 //const live2d_path = "";
 //const live2d_path = "/live2d-widget/";
 

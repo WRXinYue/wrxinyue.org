@@ -109,26 +109,18 @@
                         <meting-js auto="https://y.qq.com/n/ryqq/playlist/4063308541.html"></meting-js>
                         <hr>
 
-                        <br>
-                        <h1>我的博客</h1>
+                        <br />
+                        <h2>我的</h2>
                         <div class="tool">
-                            <a href="https://blog.wrxinyue.org" target="_blank">吾日心悦如石水的博客</a>
+                            <a href="https://www.wrxinyue.org" target="_blank">技术栈</a><br />
+                            <a href="https://blog.wrxinyue.org" target="_blank">博客</a>
                         </div>
 
                         <hr>
                         <h2>刷题</h2>
                         <div class="tool">
-                            <a href="https://wrxinyue.github.io/study_notes/" target="_blank">吾日心悦如石水的笔记</a><br>
-                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br>
+                            <a href="https://leetcode-cn.com/problemset/all/" target="_blank">Leetcode</a><br />
                             <a href="https://www.nowcoder.com/ta/coding-interviews" target="_blank">剑指 Offer</a>
-                        </div>
-
-                        <hr>
-                        <h2>收藏</h2>
-                        <div class="tool">
-                            <a href="http://tooool.org/" target="_blank" rel="noopener noreferrer">程序员导航、</a>
-                            <a href="https://adzhp.cn/" target="_blank" rel="noopener noreferrer">爱达杂货铺、</a>
-                            <a href="http://ifeve.com/" target="_blank" rel="noopener noreferrer">并发编程网</a>
                         </div>
                     </div>
                 </article>
@@ -165,10 +157,13 @@
 
 <!-- Live2D https://github.com/Fog-Forest/live2d -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-<script src="/live2d/live2d_default/autoload.js"></script>
+<script src="models/live2d/live2d_default/autoload.js"></script>
 
 <!--鼠标点击效果-->
 <script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js"></script>
+
+<!-- Sakura -->
+<script src="/models/sakura_fall/sakura_fall2/js/sakura.js"></script>
 
 <script type="text/javascript">
 	console.clear();
@@ -223,18 +218,34 @@
 
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
-	fetch('https://api.github.com/repos/WRXinYue/WRXinYue/readme', {
+    let cacheLifetime = 60 * 60 * 1000 * 12 // 缓存寿命1天
+
+    // 尝试从localStorage中获取缓存的数据和过期时间
+    let cacheData = localStorage.getItem('readmeData');
+    let cacheTime = localStorage.getItem('readmeTime');
+
+    let currentTime = new Date().getTime();
+
+    if (cacheData && cacheTime && currentTime - cacheTime < cacheLifetime) {
+        document.getElementById('introduce').innerHTML = marked.parse(cacheData);
+    } else {
+        fetch('https://api.github.com/repos/WRXinYue/WRXinYue/readme', {
 		headers: { 'Accept': 'application/vnd.github.v3.raw' }
-	})
-	.then(response => {
-		if (!response.ok) {
-			throw new Error(`HTTP error! status: ${response.status}`);
-		}
-		return response.text()
-	})
-	.then(data => {
-		document.getElementById('introduce').innerHTML = marked.parse(data)
-	})
-	.catch(error => console.error(error))
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text()
+        })
+        .then(data => {
+            // 禁用mangle和headerIds参数，并将Markdown文本转换为HTML
+            document.getElementById('introduce').innerHTML = marked.parse(data, {mangle: false, headerIds: false})
+            // 更新缓存
+            localStorage.setItem('readmeData', data);
+            localStorage.setItem('readmeTime', data);
+        })
+        .catch(error => console.error(error))
+    }
 </script>
 </html>
