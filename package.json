@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.92.1",
     "@react-three/fiber": "^8.15.12",
     "aplayer": "^1.10.1",
+    "breakpoints-js": "^1.0.6",
     "framer-motion": "^10.16.12",
     "maath": "^0.10.4",
     "marked": "^11.1.0",
