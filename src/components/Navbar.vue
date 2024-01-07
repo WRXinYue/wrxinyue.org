@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full fixed z-20" :class="scrolled ? 'ground-glass' : 'bg-transparent'">
+  <div
+    class="w-full fixed z-20"
+    :class="scrolled ? 'ground-glass' : 'bg-transparent'"
+  >
     <nav class="gap-2em py-6 px-2.5em">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -7,56 +10,64 @@
       <router-link to="/music">Music</router-link>
       <div
         id="marker"
-        :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'"
+        :class="
+          scrolled
+            ? 'animate__animated animate__zoomIn'
+            : 'animate__animated animate__zoomOut'
+        "
       ></div>
     </nav>
     <div
       class="w-full h-1px bg-primary theme-border-b"
-      :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'"
+      :class="
+        scrolled
+          ? 'animate__animated animate__zoomIn'
+          : 'animate__animated animate__zoomOut'
+      "
     />
   </div>
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router/auto'
+import { useRoute } from "vue-router/auto";
 
-const route = useRoute()
+const route = useRoute();
 
-const scrolled = ref(false)
-const marker = ref()
+const scrolled = ref(false);
+const marker = ref();
 
 onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
+  // window.addEventListener('scroll', handleScroll)
 
   nextTick(() => {
-    marker.value = document.querySelector('#marker')
-    updateMarker()
-  })
-})
+    marker.value = document.querySelector("#marker");
+    updateMarker();
+  });
+});
 
 watch(
   () => route.path,
   () => {
-    nextTick(updateMarker)
+    nextTick(updateMarker);
   },
-)
+);
 
 const updateMarker = () => {
-  const routeActive = document.querySelector('.router-link-active')
+  const routeActive = document.querySelector(".router-link-active");
   if (routeActive) {
-    marker.value.style.left = routeActive.offsetLeft + 'px'
-    marker.value.style.width = routeActive.offsetWidth + 'px'
+    marker.value.style.left = routeActive.offsetLeft + "px";
+    marker.value.style.width = routeActive.offsetWidth + "px";
   }
-}
+};
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
+  window.removeEventListener("scroll", handleScroll);
+});
 
 const handleScroll = () => {
-  const scrollTop = window.scrollY
-  scrolled.value = scrollTop > 100
-}
+  const scrollTop = window.scrollY;
+  scrolled.value = scrollTop > 100;
+};
 </script>
 
 <style scoped>
