@@ -59,7 +59,7 @@ const checkMousePosition = (event) => {
 // }
 
 const preload = () => {
-  img = p.loadImage("wallhaven-jxl31y.png");
+  img = p.loadImage("bg.png");
 };
 
 const setup = () => {
