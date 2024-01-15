@@ -3,25 +3,17 @@
     <!-- <PlayButton @click="initAudio()" class="absolute" /> -->
     <div ref="canvasWrapper"></div>
 
-    <div
-      class="h-100vh w-60 md:w-100 lg:w-140 absolute left-0 bg-white flex"
-      :class="
-        active
-          ? 'animate__animated animate__slideInLeft'
-          : 'animate__animated animate__slideOutLeft'
-      "
-    >
-      <div
-        class="w-full"
-        id="aplayer"
-        @mouseenter="onMouseEnter"
-        @mouseleave="onMouseLeave"
-      ></div>
+    <div class="w-60 md:w-100 lg:w-140 absolute left-0 bg-white flex bottom-0"
+      :class="active ? 'animate__animated animate__slideInLeft' : 'animate__animated animate__slideOutLeft'"
+      :style="{ height: viewportHeight }">
+      <div class="w-full" id="aplayer" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave"></div>
     </div>
   </div>
 </template>
 
 <script setup>
+import styles from "~/style";
+
 const canvasWrapper = ref(null);
 const active = ref(true);
 
@@ -32,6 +24,16 @@ var img;
 var fft;
 var particles = [];
 var audioContextStarted = false;
+
+const viewportHeight = computed(() => {
+  // 将视口高度转换为像素
+  const vhInPx = window.innerHeight / 100;
+  // 计算剩余高度（以像素为单位）
+  const remainingHeightPx = 100 * vhInPx - styles.navHeader;
+  // 将结果转换回'vh'单位
+  return remainingHeightPx / vhInPx + 'vh';
+});
+
 
 const onMouseEnter = () => {
   active.value = true;
@@ -305,6 +307,7 @@ onUnmounted(() => {
 :deep(.aplayer-volume-wrap) {
   display: none !important;
 }
+
 :deep(.n-drawer-body-content-wrapper) {
   padding: 0 !important;
   display: flex;

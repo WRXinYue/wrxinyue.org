@@ -1,35 +1,22 @@
 <template>
-  <div
-    class="w-full fixed z-20"
-    :class="scrolled ? 'ground-glass' : 'bg-transparent'"
-  >
-    <nav class="gap-2em py-6 px-2.5em">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/contact">Contact</router-link>
-      <router-link to="/music">Music</router-link>
-      <div
-        id="marker"
-        :class="
-          scrolled
-            ? 'animate__animated animate__zoomIn'
-            : 'animate__animated animate__zoomOut'
-        "
-      ></div>
+  <div class="w-full fixed z-20" :class="scrolled ? 'ground-glass' : 'bg-transparent'">
+    <nav class="px-2.5em items-center" :style="{ height: styles.navHeader + 'px' }">
+      <div class="h-full flex items-center">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/contact">Contact</router-link>
+        <router-link to="/music">Music</router-link>
+      </div>
+      <div id="marker" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
     </nav>
-    <div
-      class="w-full h-1px bg-primary theme-border-b"
-      :class="
-        scrolled
-          ? 'animate__animated animate__zoomIn'
-          : 'animate__animated animate__zoomOut'
-      "
-    />
+    <div class="w-full h-1px bg-primary theme-border-b"
+      :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
   </div>
 </template>
 
 <script setup>
 import { useRoute } from "vue-router/auto";
+import styles from "~/style";
 
 const route = useRoute();
 
@@ -37,7 +24,7 @@ const scrolled = ref(false);
 const marker = ref();
 
 onMounted(() => {
-  // window.addEventListener('scroll', handleScroll)
+  window.addEventListener("scroll", handleScroll);
 
   nextTick(() => {
     marker.value = document.querySelector("#marker");
@@ -96,6 +83,7 @@ a.router-link-active {
 
 #marker {
   position: absolute;
+  transform: translateY(-2px);
   border-bottom: 2px solid #08f9ff;
   transition: 0.5s;
   pointer-events: none;
