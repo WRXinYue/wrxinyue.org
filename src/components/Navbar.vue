@@ -9,52 +9,51 @@
       </div>
       <div id="marker" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
     </nav>
-    <div class="w-full h-1px bg-primary theme-border-b"
-      :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
+    <div class="w-full h-1px bg-primary theme-border-b" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
   </div>
 </template>
 
 <script setup>
-import { useRoute } from "vue-router/auto";
-import styles from "~/style";
+import { useRoute } from 'vue-router/auto'
+import styles from '~/style'
 
-const route = useRoute();
+const route = useRoute()
 
-const scrolled = ref(false);
-const marker = ref();
+const scrolled = ref(false)
+const marker = ref()
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener('scroll', handleScroll)
 
   nextTick(() => {
-    marker.value = document.querySelector("#marker");
-    updateMarker();
-  });
-});
+    marker.value = document.querySelector('#marker')
+    updateMarker()
+  })
+})
 
 watch(
   () => route.path,
   () => {
-    nextTick(updateMarker);
+    nextTick(updateMarker)
   },
-);
+)
 
 const updateMarker = () => {
-  const routeActive = document.querySelector(".router-link-active");
+  const routeActive = document.querySelector('.router-link-active')
   if (routeActive) {
-    marker.value.style.left = routeActive.offsetLeft + "px";
-    marker.value.style.width = routeActive.offsetWidth + "px";
+    marker.value.style.left = routeActive.offsetLeft + 'px'
+    marker.value.style.width = routeActive.offsetWidth + 'px'
   }
-};
+}
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 
 const handleScroll = () => {
-  const scrollTop = window.scrollY;
-  scrolled.value = scrollTop > 100;
-};
+  const scrollTop = window.scrollY
+  scrolled.value = scrollTop > 100
+}
 </script>
 
 <style scoped>

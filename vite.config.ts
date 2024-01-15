@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
+import eslintPlugin from 'vite-plugin-eslint'
 import Vue from '@vitejs/plugin-vue'
 
 import Layouts from 'vite-plugin-vue-layouts'
@@ -40,6 +41,9 @@ export default defineConfig({
         },
         VueRouterAutoImports,
       ],
+      eslintrc: {
+        enabled: true,
+      },
     }),
 
     // https://github.com/antfu/unplugin-vue-components
@@ -57,5 +61,7 @@ export default defineConfig({
     }),
 
     UnoCSS(),
+
+    eslintPlugin(),
   ],
 })

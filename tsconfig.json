@@ -31,10 +31,7 @@
     }
   },
   "vueCompilerOptions": {
-    "plugins": [
-      "@vue-macros/volar/define-models",
-      "@vue-macros/volar/define-slots"
-    ]
+    "plugins": ["@vue-macros/volar/define-models", "@vue-macros/volar/define-slots"]
   },
   "exclude": ["dist", "node_modules", "cypress"]
 }

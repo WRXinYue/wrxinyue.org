@@ -15,7 +15,7 @@ onMounted(async () => {
   const request = await axios.get('https://v1.hitokoto.cn/?c=h')
   hitokoto.value = request.data.hitokoto
 
-  const typed = new Typed('#nav-typed', {
+  new Typed('#nav-typed', {
     strings: [hitokoto.value],
     typeSpeed: 50,
   })

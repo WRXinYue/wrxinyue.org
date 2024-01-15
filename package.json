@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite-ssg build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.29",
@@ -24,6 +26,10 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-vue": "^9.20.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "unocss": "^0.58.0",
@@ -32,6 +38,7 @@
     "unplugin-vue-macros": "^2.7.6",
     "unplugin-vue-router": "^0.7.0",
     "vite": "^5.0.8",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-vue-layouts": "^0.10.0",
     "vite-ssg": "^0.23.5"
   }
