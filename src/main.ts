@@ -1,6 +1,7 @@
-import { ViteSSG } from 'vite-ssg'
+import { createApp } from 'vue'
 import App from './App.vue'
 import { setupLayouts } from 'virtual:generated-layouts'
+import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from 'vue-router/auto/routes'
 
 import 'uno.css'
@@ -9,13 +10,12 @@ import './style.css'
 import 'splitting/dist/splitting.css'
 import 'splitting/dist/splitting-cells.css'
 
-// https://github.com/antfu/vite-ssg
-export const createApp = ViteSSG(
-  App,
-  {
-    routes: setupLayouts(routes),
-    base: import.meta.env.BASE_URL,
-  },
-  // eslint-disable-next-line no-unused-vars
-  async ({ app, router, routes, isClient, initialState }) => {},
-)
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: setupLayouts(routes),
+})
+
+const app = createApp(App)
+app.use(router)
+
+app.mount('#app')

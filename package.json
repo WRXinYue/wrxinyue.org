@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite-ssg build",
+    "dev": "vite --host",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
-    "format": "prettier .  --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.29",
@@ -39,7 +39,6 @@
     "unplugin-vue-router": "^0.7.0",
     "vite": "^5.0.8",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-vue-layouts": "^0.10.0",
-    "vite-ssg": "^0.23.5"
+    "vite-plugin-vue-layouts": "^0.10.0"
   }
 }
