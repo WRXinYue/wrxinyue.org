@@ -3,7 +3,11 @@
     <header class="gsap_header relative flex px-70px justify-center flex-items-center w-full h-100vh">
       <h1 class="gasp_title my-element"> <span class="title_paralax">WRXinYue's</span><span class="theme-stroke">Home</span> </h1>
       <div class="gsap_header__img absolute h-full w-full top-0 overflow-hidden">
-        <img class="object-cover block bg-cover" src="https://w.wallhaven.cc/full/3l/wallhaven-3lgk6y.png" alt="1" />
+        <img v-if="home.type === 'pcImage'" class="object-cover block bg-cover" src="https://w.wallhaven.cc/full/3l/wallhaven-3lgk6y.png" alt="1" />
+        <video v-if="home.type === 'pcVideo'" class="object-cover block bg-cover" preload="auto" autoplay loop muted>
+          <source :src="randomVideo" type="video/mp4" />
+          您的浏览器不支持视频标签。
+        </video>
       </div>
       <div class="header__marq absolute bottom-0 left-0">
         <div class="header__marq-wrapp">
@@ -108,11 +112,41 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 import { ideas, projects, services, skills } from '~/constants/index'
+import { home } from '~/constants/index'
+
+const randomVideo = ref('')
+
+const chooseRandomVideo = () => {
+  const shouldChooseNewVideo = () => {
+    const lastUpdateTime = localStorage.getItem('lastUpdateTime')
+    const currentTime = Date.now()
+
+    // 12-hour cache
+    return !lastUpdateTime || currentTime - lastUpdateTime >= 12 * 60 * 60 * 1000
+  }
+
+  if (shouldChooseNewVideo()) {
+    if (home.pcVideo && home.pcVideo.length > 0) {
+      const randomIndex = Math.floor(Math.random() * home.pcVideo.length)
+      randomVideo.value = home.pcVideo[randomIndex]
+      localStorage.setItem('lastUpdateTime', Date.now())
+      localStorage.setItem('currentVideo', randomVideo.value)
+    } else {
+      randomVideo.value = ''
+    }
+  } else {
+    const cachedVideo = localStorage.getItem('currentVideo')
+    if (cachedVideo) {
+      randomVideo.value = cachedVideo
+    }
+  }
+}
 
 onMounted(async () => {
+  chooseRandomVideo()
+
   const splittingModule = await import('splitting')
   const Splitting = splittingModule.default
 

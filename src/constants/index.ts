@@ -1,3 +1,17 @@
+export const home = {
+  type: 'pcVideo',
+  pcImage: ['https://w.wallhaven.cc/full/3l/wallhaven-3lgk6y.png'],
+  pcVideo: [
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/AION 5.0 Login Screen (clean) (1080p_60fps_H264-128kbit_AAC).mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/Genshin Impact - Yae Miko (4) Cybust PC.mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/Industrial space station.mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/Miko fox (Ver.1.2).mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/red_ahq12.mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/壁纸.mp4',
+    'https://wrxinyue-images.s3.bitiful.net/wallpaper/蝴蝶忍.mp4',
+  ],
+}
+
 export const ideas = [
   {
     text: 'Explore New Technologies',
