@@ -1,4 +1,4 @@
-export const home = {
+export const homeConfig = {
   type: 'pcVideo',
   pcImage: ['https://w.wallhaven.cc/full/3l/wallhaven-3lgk6y.png'],
   pcVideo: [
@@ -6,9 +6,18 @@ export const home = {
     'https://wrxinyue-images.s3.bitiful.net/wallpaper/Genshin Impact - Yae Miko (4) Cybust PC.mp4',
     'https://wrxinyue-images.s3.bitiful.net/wallpaper/Industrial space station.mp4',
     'https://wrxinyue-images.s3.bitiful.net/wallpaper/Miko fox (Ver.1.2).mp4',
-    'https://wrxinyue-images.s3.bitiful.net/wallpaper/red_ahq12.mp4',
     'https://wrxinyue-images.s3.bitiful.net/wallpaper/壁纸.mp4',
     'https://wrxinyue-images.s3.bitiful.net/wallpaper/蝴蝶忍.mp4',
+  ],
+  mobileImages: [
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (1).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (2).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (3).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (4).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (5).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (6).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640 (7).jpeg',
+    'https://wrxinyue-images.s3.bitiful.net/mobile-wallpaper/babata/640.jpeg',
   ],
 }
 

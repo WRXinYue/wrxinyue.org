@@ -190,8 +190,7 @@ class Particle {
 import axios from 'axios'
 
 const audioList = ref([])
-// eslint-disable-next-line no-unused-vars
-const currentTrack = ref()
+// const currentTrack = ref()
 
 const fetchAudioList = async (url) => {
   const cacheKey = 'audioListCache'
@@ -272,8 +271,9 @@ onMounted(async () => {
 
   ap.on('play', function () {
     if (song && song.isLoaded()) {
-      const currentTrack = ap.list.audios[ap.list.index]
-      console.log('当前播放的音乐 URL:', currentTrack.url)
+      // const currentTrack = ap.list.audios[ap.list.index]
+      // console.log('当前播放的音乐 URL:', currentTrack.url)
+      ap.list.audios[ap.list.index]
       syncPlay() // 同步播放
     }
   })
