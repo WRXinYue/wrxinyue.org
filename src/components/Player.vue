@@ -3,20 +3,18 @@
     <!-- <PlayButton @click="initAudio()" class="absolute" /> -->
     <div ref="canvasWrapper"></div>
 
-    <div
-      class="w-60 md:w-100 lg:w-140 absolute left-0 bg-white flex bottom-0 animate__animated"
-      :class="active ? 'animate__slideInLeft' : 'animate__slideOutLeft'"
-      :style="{ height: viewportHeight }"
-    >
+    <div ref="animatedDiv" class="w-60 md:w-100 lg:w-140 absolute left-0 bg-white text-black flex bottom-0" :style="{ height: viewportHeight }">
       <div id="aplayer" class="w-full" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave"></div>
     </div>
   </div>
 </template>
 
 <script setup>
+import { gsap } from 'gsap'
 import styles from '~/style'
 
 const canvasWrapper = ref(null)
+const animatedDiv = ref(null)
 const active = ref(false)
 
 let allowMouseLeave = true
@@ -28,6 +26,10 @@ var img
 var fft
 var particles = []
 // var audioContextStarted = false
+
+watch(active, (newVal) => {
+  newVal ? gsap.to(animatedDiv.value, { x: 0, duration: 0.5 }) : gsap.to(animatedDiv.value, { x: '-110%', duration: 0.5 })
+})
 
 const viewportHeight = computed(() => {
   // 将视口高度转换为像素
@@ -242,6 +244,8 @@ const syncPause = () => {
 }
 
 onMounted(async () => {
+  gsap.set(animatedDiv.value, { x: '-110%', duration: 0.5 })
+
   const p5Module = await import('p5')
   const p5 = p5Module.default
   window.p5 = p5

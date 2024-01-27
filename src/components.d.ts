@@ -7,12 +7,19 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    BaseMeterGroup: typeof import('./components/BaseMeterGroup.vue')['default']
+    BaseSidebar: typeof import('./components/BaseSidebar.vue')['default']
+    DevTools: typeof import('./components/DevTools.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    MeterGroup: typeof import('./components/MeterGroup.vue')['default']
+    MeterGroupLabel: typeof import('./components/MeterGroupLabel.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     PlayButton: typeof import('./components/PlayButton.vue')['default']
     Player: typeof import('./components/Player.vue')['default']
+    Portal: typeof import('./components/Portal.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./components/Sidebar.vue')['default']
     WebVitals: typeof import('./components/WebVitals.vue')['default']
   }
 }
