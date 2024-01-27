@@ -11,16 +11,20 @@
 </template>
 
 <script setup>
-import Lenis from '@studio-freight/lenis'
-const lenis = new Lenis({ lerp: 0.04 })
+const lenis = ref(null)
 
-onMounted(() => {
-  requestAnimationFrame(raf)
+onMounted(async () => {
+  if (window.innerWidth >= 768) {
+    const LenisModule = await import('@studio-freight/lenis')
+    const Lenis = LenisModule.default
+    lenis.value = new Lenis({ lerp: 0.04 })
+
+    requestAnimationFrame(raf)
+  }
 })
 
 const raf = (time) => {
-  lenis && lenis.raf(time)
+  lenis.value && lenis.value.raf(time)
   requestAnimationFrame(raf)
 }
-// min-width: 768px
 </script>
