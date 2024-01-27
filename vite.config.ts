@@ -75,6 +75,27 @@ export default defineConfig({
         short_name: 'home',
         description: 'My personal page',
         theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'favicon.ico',
+            sizes: '48x48 32x32 24x24 16x16',
+            type: 'image/x-icon',
+          },
+        ],
+        screenshots: [
+          {
+            src: 'unknown.png',
+            type: 'image/png',
+            sizes: '1024x768',
+            form_factor: 'wide',
+          },
+          {
+            src: 'unknown.png',
+            type: 'image/png',
+            sizes: '640x1136',
+            // 'form_factor' 未设置或设置为非 'wide'
+          },
+        ],
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
