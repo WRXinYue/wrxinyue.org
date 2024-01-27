@@ -79,7 +79,7 @@ export default defineConfig({
           {
             src: 'vite.svg',
             type: 'image/svg+xml',
-            sizes: '32x32',
+            sizes: '512x512',
             purpose: 'any',
           },
         ],
