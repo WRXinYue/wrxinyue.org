@@ -78,7 +78,7 @@ export default defineConfig({
         icons: [
           {
             src: 'favicon.ico',
-            sizes: '48x48 32x32 24x24 16x16',
+            sizes: '64x64',
             type: 'image/x-icon',
           },
         ],
@@ -86,13 +86,13 @@ export default defineConfig({
           {
             src: 'unknown.png',
             type: 'image/png',
-            sizes: '1024x768',
+            sizes: '3840x2160',
             form_factor: 'wide',
           },
           {
             src: 'unknown.png',
             type: 'image/png',
-            sizes: '640x1136',
+            sizes: '3840x2160',
             // 'form_factor' 未设置或设置为非 'wide'
           },
         ],
