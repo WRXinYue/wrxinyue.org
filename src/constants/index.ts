@@ -2,7 +2,7 @@ export const homeConfig = {
   type: 'pcVideo',
   pcImage: ['https://w.wallhaven.cc/full/3l/wallhaven-3lgk6y.png'],
   pcVideo: [
-    'https://wrxinyue.s3.bitiful.net/pc-wallpaper/AION 5.0 Login Screen (clean) (1080p_60fps_H264-128kbit_AAC).mp4',
+    'https://wrxinyue.s3.bitiful.net/pc-wallpaper/wallpaper_Industrial space station.mp4',
     'https://wrxinyue.s3.bitiful.net/pc-wallpaper/wallpaper_Miko fox (Ver.1.2).mp4',
     'https://wrxinyue.s3.bitiful.net/pc-wallpaper/蝴蝶忍.mp4',
   ],
