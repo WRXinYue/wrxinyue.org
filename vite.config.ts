@@ -77,9 +77,10 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'favicon.ico',
-            sizes: '64x64',
-            type: 'image/x-icon',
+            src: 'vite.svg',
+            type: 'image/svg+xml',
+            sizes: '32x32',
+            purpose: 'any',
           },
         ],
         screenshots: [
@@ -110,7 +111,7 @@ export default defineConfig({
                 maxAgeSeconds: 60 * 60 * 24 * 30, // 缓存 30 天
               },
               cacheableResponse: {
-                statuses: [0, 200],
+                statuses: [0, 200, 206],
               },
             },
           },
