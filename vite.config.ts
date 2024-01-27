@@ -69,20 +69,51 @@ export default defineConfig({
     visualizer({ open: true }) as PluginOption,
 
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'robots.txt'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
+      manifest: {
+        name: 'WRXinYue Home',
+        short_name: 'home',
+        description: 'My personal page',
+        theme_color: '#ffffff',
+        icons: [
+          {
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
+      },
       workbox: {
-        clientsClaim: true,
-        skipWaiting: true,
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
         runtimeCaching: [
           {
-            urlPattern: /.*\.mp4$/,
+            urlPattern: new RegExp('https://wrxinyue.s3.bitiful.net/.*.mp4'),
             handler: 'CacheFirst',
             options: {
-              cacheName: 'video-cache',
+              cacheName: 'external-mp4-files',
               expiration: {
                 maxEntries: 10,
-                maxAgeSeconds: 24 * 60 * 60,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 缓存 30 天
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
               },
             },
           },
