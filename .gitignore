@@ -34,3 +34,4 @@ yarn-error.log*
 
 #temp
 /.vite-ssg-temp
+stats.html

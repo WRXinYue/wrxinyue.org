@@ -1,11 +1,13 @@
 import path from 'node:path'
-import { defineConfig } from 'vite'
+import { defineConfig, type PluginOption } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import Vue from '@vitejs/plugin-vue'
 
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import { visualizer } from 'rollup-plugin-visualizer'
+import { VitePWA } from 'vite-plugin-pwa'
 import UnoCSS from 'unocss/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
 
@@ -63,5 +65,37 @@ export default defineConfig({
     UnoCSS(),
 
     eslintPlugin(),
+
+    visualizer({ open: true }) as PluginOption,
+
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.ico', 'robots.txt'],
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true,
+        runtimeCaching: [
+          {
+            urlPattern: /.*\.mp4$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'video-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 24 * 60 * 60,
+              },
+            },
+          },
+        ],
+      },
+    }),
   ],
+
+  build: {
+    chunkSizeWarningLimit: 2000,
+    cssCodeSplit: true,
+    sourcemap: false,
+    minify: 'esbuild',
+    assetsInlineLimit: 5000,
+  },
 })

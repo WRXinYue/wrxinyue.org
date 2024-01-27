@@ -13,5 +13,6 @@ declare module 'vue' {
     Player: typeof import('./components/Player.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    WebVitals: typeof import('./components/WebVitals.vue')['default']
   }
 }

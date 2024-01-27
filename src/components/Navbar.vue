@@ -6,16 +6,23 @@
         <router-link to="/about">About</router-link>
         <router-link to="/contact">Contact</router-link>
         <router-link to="/music">Music</router-link>
+        <div class="flex gap-2 justify-content-center">
+          <Button icon="pi pi-arrow-left" @click="visibleRight = !visibleRight" />
+        </div>
       </div>
       <div id="marker" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
     </nav>
     <div class="w-full h-1px bg-primary theme-border-b" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
   </div>
+  <WebVitals :visible-right="visibleRight" @close="visibleRight = false" />
 </template>
 
 <script setup>
 import { useRoute } from 'vue-router/auto'
 import styles from '~/style'
+import Button from 'primevue/button'
+
+const visibleRight = ref(false)
 
 const route = useRoute()
 
