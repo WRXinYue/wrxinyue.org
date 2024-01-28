@@ -77,7 +77,17 @@ export default defineConfig({
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'vite.svg',
+            src: 'pwa-32x32.svg',
+            type: 'image/svg+xml',
+            sizes: '32x32',
+          },
+          {
+            src: 'pwa-192x192.svg',
+            type: 'image/svg+xml',
+            sizes: '192x192',
+          },
+          {
+            src: 'pwa-512x512.svg',
             type: 'image/svg+xml',
             sizes: '512x512',
             purpose: 'any',
