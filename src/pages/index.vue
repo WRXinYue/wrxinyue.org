@@ -28,18 +28,11 @@
 
     <main class="container">
       <section class="about">
-        <div class="about__wrapp flex justify-between">
-          <div class="about__img h-auto theme-about">
-            <img src="https://w.wallhaven.cc/full/q2/wallhaven-q21ezq.jpg" alt="2" />
-          </div>
-          <div class="about__txt pr-70px h-auto theme-about">
-            <h2 class="theme-section-title">
-              abo<span class="theme-stroke">ut</span>
-              <span class="section-title__square"></span>
-            </h2>
-            <p class="text-xl theme-text"> Software Engineer, be good at Java and C#, also love developing games and visual computing </p>
-          </div>
-        </div>
+        <h2 class="theme-section-title">
+          abo<span class="theme-stroke">ut</span>
+          <span class="section-title__square"></span>
+        </h2>
+        <p class="text-xl theme-text flex justify-center"> Software Engineer, be good at Java and C#, also love developing games and visual computing </p>
       </section>
 
       <section class="skills">

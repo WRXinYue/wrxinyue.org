@@ -1,12 +1,11 @@
 import path from 'node:path'
-import { defineConfig, type PluginOption } from 'vite'
+import { defineConfig } from 'vite'
 import eslintPlugin from 'vite-plugin-eslint'
 import Vue from '@vitejs/plugin-vue'
 
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-import { visualizer } from 'rollup-plugin-visualizer'
 import { VitePWA } from 'vite-plugin-pwa'
 import UnoCSS from 'unocss/vite'
 import VueMacros from 'unplugin-vue-macros/vite'
@@ -65,8 +64,6 @@ export default defineConfig({
     UnoCSS(),
 
     eslintPlugin(),
-
-    visualizer({ open: true }) as PluginOption,
 
     VitePWA({
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],

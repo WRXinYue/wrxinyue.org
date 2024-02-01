@@ -1,10 +1,9 @@
 {
-  "name": "wrxinyue.org",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.13.1",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3333 --open",
     "build": "vite build",
     "preview": "vite preview",
     "host": "vite --host 0.0.0.0",
@@ -25,19 +24,17 @@
     "primeicons": "^6.0.1",
     "primevue": "^3.47.2",
     "splitting": "^1.0.6",
+    "three": "^0.161.0",
     "typed.js": "^2.1.0",
     "vue": "^3.4.15",
     "vue-router": "4",
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@antfu/eslint-config": "^2.6.1",
     "@vitejs/plugin-vue": "^5.0.3",
     "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-vue": "^9.20.1",
-    "rollup-plugin-visualizer": "^5.12.0",
+    "eslint-plugin-format": "^0.1.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "unocss": "^0.58.4",
@@ -48,7 +45,6 @@
     "vite": "^5.0.12",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-pwa": "^0.17.5",
-    "vite-plugin-vue-layouts": "^0.11.0",
-    "vue-eslint-parser": "^9.4.2"
+    "vite-plugin-vue-layouts": "^0.11.0"
   }
 }
