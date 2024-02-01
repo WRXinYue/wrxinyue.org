@@ -1,49 +1,3 @@
-<template>
-  <Portal>
-    <div v-if="containerVisible" :ref="maskRef" @mousedown="onMaskClick" :class="cx('mask')" :style="sx('mask', true, { position })" v-bind="ptm('mask')">
-      <transition
-        name="p-sidebar"
-        @enter="onEnter"
-        @after-enter="onAfterEnter"
-        @before-leave="onBeforeLeave"
-        @leave="onLeave"
-        @after-leave="onAfterLeave"
-        appear
-        v-bind="ptm('transition')"
-      >
-        <div v-if="visible" :ref="containerRef" v-focustrap :class="cx('root')" role="complementary" :aria-modal="modal" v-bind="{ ...$attrs, ...ptm('root') }">
-          <slot v-if="$slots.container" name="container" :onClose="hide" :closeCallback="hide"></slot>
-          <template v-else>
-            <div :ref="headerContainerRef" :class="cx('header')" v-bind="ptm('header')">
-              <slot name="header" :class="cx('title')">
-                <div v-if="header" :class="cx('title')" v-bind="ptm('title')">{{ header }}</div>
-              </slot>
-              <button
-                v-if="showCloseIcon"
-                :ref="closeButtonRef"
-                v-ripple
-                type="button"
-                :class="cx('closeButton')"
-                :aria-label="closeAriaLabel"
-                @click="hide"
-                v-bind="ptm('closeButton')"
-                data-pc-group-section="iconcontainer"
-              >
-                <slot name="closeicon" :class="cx('closeIcon')">
-                  <component :is="closeIcon ? 'span' : 'TimesIcon'" :class="[cx('closeIcon'), closeIcon]" v-bind="ptm('closeIcon')"></component>
-                </slot>
-              </button>
-            </div>
-            <div :ref="contentRef" :class="cx('content')" v-bind="ptm('content')">
-              <slot></slot>
-            </div>
-          </template>
-        </div>
-      </transition>
-    </div>
-  </Portal>
-</template>
-
 <script>
 import FocusTrap from 'primevue/focustrap'
 import TimesIcon from 'primevue/icons/times'
@@ -54,6 +8,14 @@ import BaseSidebar from './BaseSidebar.vue'
 
 export default {
   name: 'Sidebar',
+  directives: {
+    focustrap: FocusTrap,
+    ripple: Ripple,
+  },
+  components: {
+    Portal,
+    TimesIcon,
+  },
   extends: BaseSidebar,
   inheritAttrs: false,
   emits: ['update:visible', 'show', 'hide', 'after-hide'],
@@ -69,17 +31,23 @@ export default {
   closeButton: null,
   outsideClickListener: null,
   documentKeydownListener: null,
+  computed: {
+    fullScreen() {
+      return this.position === 'full'
+    },
+    closeAriaLabel() {
+      return this.$primevue.config.locale.aria ? this.$primevue.config.locale.aria.close : undefined
+    },
+  },
   updated() {
-    if (this.visible) {
+    if (this.visible)
       this.containerVisible = this.visible
-    }
   },
   beforeUnmount() {
     this.disableDocumentSettings()
 
-    if (this.mask && this.autoZIndex) {
+    if (this.mask && this.autoZIndex)
       ZIndexUtils.clear(this.mask)
-    }
 
     this.container = null
     this.mask = null
@@ -93,35 +61,32 @@ export default {
       this.focus()
       this.bindDocumentKeyDownListener()
 
-      if (this.autoZIndex) {
+      if (this.autoZIndex)
         ZIndexUtils.set('modal', this.mask, this.baseZIndex || this.$primevue.config.zIndex.modal)
-      }
     },
     onAfterEnter() {
       this.enableDocumentSettings()
     },
     onBeforeLeave() {
-      if (this.modal) {
+      if (this.modal)
         !this.isUnstyled && DomHandler.addClass(this.mask, 'p-component-overlay-leave')
-      }
     },
     onLeave() {
       this.$emit('hide')
     },
     onAfterLeave() {
-      if (this.autoZIndex) {
+      if (this.autoZIndex)
         ZIndexUtils.clear(this.mask)
-      }
 
       this.unbindDocumentKeyDownListener()
       this.containerVisible = false
       this.disableDocumentSettings()
+      // eslint-disable-next-line vue/custom-event-name-casing
       this.$emit('after-hide')
     },
     onMaskClick(event) {
-      if (this.dismissable && this.modal && this.mask === event.target) {
+      if (this.dismissable && this.modal && this.mask === event.target)
         this.hide()
-      }
     },
     focus() {
       const findFocusableElement = (container) => {
@@ -133,33 +98,28 @@ export default {
       if (!focusTarget) {
         focusTarget = this.$slots.default && findFocusableElement(this.container)
 
-        if (!focusTarget) {
+        if (!focusTarget)
           focusTarget = this.closeButton
-        }
       }
 
       focusTarget && DomHandler.focus(focusTarget)
     },
     enableDocumentSettings() {
-      if (this.dismissable && !this.modal) {
+      if (this.dismissable && !this.modal)
         this.bindOutsideClickListener()
-      }
 
-      if (this.blockScroll) {
+      if (this.blockScroll)
         DomHandler.blockBodyScroll()
-      }
     },
     disableDocumentSettings() {
       this.unbindOutsideClickListener()
 
-      if (this.blockScroll) {
+      if (this.blockScroll)
         DomHandler.unblockBodyScroll()
-      }
     },
     onKeydown(event) {
-      if (event.code === 'Escape') {
+      if (event.code === 'Escape')
         this.hide()
-      }
     },
     containerRef(el) {
       this.container = el
@@ -191,9 +151,8 @@ export default {
     bindOutsideClickListener() {
       if (!this.outsideClickListener) {
         this.outsideClickListener = (event) => {
-          if (this.isOutsideClicked(event)) {
+          if (this.isOutsideClicked(event))
             this.hide()
-          }
         }
 
         document.addEventListener('click', this.outsideClickListener)
@@ -209,21 +168,53 @@ export default {
       return this.container && !this.container.contains(event.target)
     },
   },
-  computed: {
-    fullScreen() {
-      return this.position === 'full'
-    },
-    closeAriaLabel() {
-      return this.$primevue.config.locale.aria ? this.$primevue.config.locale.aria.close : undefined
-    },
-  },
-  directives: {
-    focustrap: FocusTrap,
-    ripple: Ripple,
-  },
-  components: {
-    Portal: Portal,
-    TimesIcon,
-  },
 }
 </script>
+
+<template>
+  <Portal>
+    <div v-if="containerVisible" :ref="maskRef" :class="cx('mask')" :style="sx('mask', true, { position })" v-bind="ptm('mask')" @mousedown="onMaskClick">
+      <transition
+        name="p-sidebar"
+        appear
+        v-bind="ptm('transition')"
+        @enter="onEnter"
+        @after-enter="onAfterEnter"
+        @before-leave="onBeforeLeave"
+        @leave="onLeave"
+        @after-leave="onAfterLeave"
+      >
+        <div v-if="visible" :ref="containerRef" v-focustrap :class="cx('root')" role="complementary" :aria-modal="modal" v-bind="{ ...$attrs, ...ptm('root') }">
+          <slot v-if="$slots.container" name="container" :on-close="hide" :close-callback="hide" />
+          <template v-else>
+            <div :ref="headerContainerRef" :class="cx('header')" v-bind="ptm('header')">
+              <slot name="header" :class="cx('title')">
+                <div v-if="header" :class="cx('title')" v-bind="ptm('title')">
+                  {{ header }}
+                </div>
+              </slot>
+              <button
+                v-if="showCloseIcon"
+                :ref="closeButtonRef"
+                v-ripple
+                type="button"
+                :class="cx('closeButton')"
+                :aria-label="closeAriaLabel"
+                v-bind="ptm('closeButton')"
+                data-pc-group-section="iconcontainer"
+                @click="hide"
+              >
+                <slot name="closeicon" :class="cx('closeIcon')">
+                  <component :is="closeIcon ? 'span' : 'TimesIcon'" :class="[cx('closeIcon'), closeIcon]" v-bind="ptm('closeIcon')" />
+                </slot>
+              </button>
+            </div>
+            <div :ref="contentRef" :class="cx('content')" v-bind="ptm('content')">
+              <slot />
+            </div>
+          </template>
+        </div>
+      </transition>
+    </div>
+  </Portal>
+</template>

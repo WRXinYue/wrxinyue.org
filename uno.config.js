@@ -10,9 +10,9 @@ export default defineConfig({
     [
       'theme-section-title',
       {
-        position: 'relative',
-        margin: '0',
-        color: 'var(--pr-color)',
+        'position': 'relative',
+        'margin': '0',
+        'color': 'var(--pr-color)',
         'margin-bottom': '60px',
         'line-height': '0.8',
         'font-size': '70px',
@@ -20,6 +20,6 @@ export default defineConfig({
         'text-transform': 'uppercase',
       },
     ],
-    ['theme-stroke', { color: 'transparent', '-webkit-text-stroke': '1px var(--pr-color)' }],
+    ['theme-stroke', { 'color': 'transparent', '-webkit-text-stroke': '1px var(--pr-color)' }],
   ],
 })

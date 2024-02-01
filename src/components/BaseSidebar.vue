@@ -5,6 +5,11 @@ import SidebarStyle from 'primevue/sidebar/style'
 export default {
   name: 'BaseSidebar',
   extends: BaseComponent,
+  provide() {
+    return {
+      $parentInstance: this,
+    }
+  },
   props: {
     visible: {
       type: Boolean,
@@ -48,10 +53,5 @@ export default {
     },
   },
   style: SidebarStyle,
-  provide() {
-    return {
-      $parentInstance: this,
-    }
-  },
 }
 </script>

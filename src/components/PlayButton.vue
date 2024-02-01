@@ -1,23 +1,3 @@
-<template>
-  <div class="mt-30">
-    <div class="play-backdrop"></div>
-    <div class="play-button">
-      <svg class="play-circles" viewBox="0 0 152 152">
-        <circle class="play-circle-01" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="343 343" cx="76" cy="76" r="72.7" />
-        <circle class="play-circle-02" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="309 309" cx="76" cy="76" r="65.5" />
-      </svg>
-      <div class="play-perspective">
-        <button class="play-close"></button>
-        <div class="play-triangle">
-          <div class="play-video">
-            <div class="w-600px h-400px"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import gsap from 'gsap'
 
@@ -149,6 +129,26 @@ onMounted(async () => {
   })
 })
 </script>
+
+<template>
+  <div class="mt-30">
+    <div class="play-backdrop" />
+    <div class="play-button">
+      <svg class="play-circles" viewBox="0 0 152 152">
+        <circle class="play-circle-01" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="343 343" cx="76" cy="76" r="72.7" />
+        <circle class="play-circle-02" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="309 309" cx="76" cy="76" r="65.5" />
+      </svg>
+      <div class="play-perspective">
+        <button class="play-close" />
+        <div class="play-triangle">
+          <div class="play-video">
+            <div class="w-600px h-400px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .play-button {

@@ -1,8 +1,8 @@
-import path from 'node:path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import eslintPlugin from 'vite-plugin-eslint'
 import Vue from '@vitejs/plugin-vue'
 
+import IconsResolver from 'unplugin-icons/resolver'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -17,9 +17,9 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
-    alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
-    },
+    alias: [
+      { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
+    ],
   },
 
   plugins: [
@@ -37,23 +37,21 @@ export default defineConfig({
       imports: [
         'vue',
         {
-          // add any other imports you were relying on
           'vue-router/auto': ['useLink'],
         },
         VueRouterAutoImports,
       ],
-      eslintrc: {
-        enabled: true,
-      },
     }),
 
-    // https://github.com/antfu/unplugin-vue-components
     Components({
-      // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
-      // allow auto import and register components used in markdown
+      dts: true,
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/components.d.ts',
+      resolvers: [
+        IconsResolver({
+          componentPrefix: '',
+        }),
+      ],
     }),
 
     VueRouter({
@@ -62,8 +60,6 @@ export default defineConfig({
     }),
 
     UnoCSS(),
-
-    eslintPlugin(),
 
     VitePWA({
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'mask-icon.svg'],
@@ -109,7 +105,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
         runtimeCaching: [
           {
-            urlPattern: new RegExp('https://wrxinyue.s3.bitiful.net/.*.mp4'),
+            urlPattern: /https:\/\/wrxinyue.s3.bitiful.net\/.*.mp4/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'external-mp4-files',

@@ -1,11 +1,11 @@
 import { createApp } from 'vue'
-import App from './App.vue'
 import { createPinia } from 'pinia'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { createRouter, createWebHistory } from 'vue-router'
 import { routes } from 'vue-router/auto/routes'
 import PrimeVue from 'primevue/config'
-import { onLCP, onFID, onCLS } from 'web-vitals'
+import { onCLS, onFID, onLCP } from 'web-vitals'
+import App from './App.vue'
 import { usePerformanceStore } from '~/stores/performance'
 
 import 'uno.css'
@@ -30,8 +30,8 @@ app.use(PrimeVue)
 
 const performanceStore = usePerformanceStore()
 
-onLCP((lcp) => performanceStore.setLCP(lcp))
-onFID((fid) => performanceStore.setFID(fid))
-onCLS((cls) => performanceStore.setCLS(cls))
+onLCP(lcp => performanceStore.setLCP(lcp))
+onFID(fid => performanceStore.setFID(fid))
+onCLS(cls => performanceStore.setCLS(cls))
 
 app.mount('#app')

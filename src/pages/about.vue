@@ -15,13 +15,14 @@ onMounted(async () => {
   const request = await axios.get('https://v1.hitokoto.cn/?c=h')
   hitokoto.value = request.data.hitokoto
 
+  // eslint-disable-next-line no-new
   new Typed('#nav-typed', {
     strings: [hitokoto.value],
     typeSpeed: 50,
   })
 })
 
-const useGithubMarkdown = async (url) => {
+async function useGithubMarkdown(url) {
   let html = ''
   const cacheLifetime = 60 * 60 * 1000 * 12
 
@@ -31,7 +32,8 @@ const useGithubMarkdown = async (url) => {
 
   if (cacheData && cacheTime && currentTime - cacheTime < cacheLifetime) {
     html = marked.parse(cacheData)
-  } else {
+  }
+  else {
     const request = await axios.get(url)
     const markdownRequest = await axios.get(request.data.download_url)
     html = marked.parse(markdownRequest.data, { mangle: false, headerIds: false })
@@ -49,12 +51,12 @@ const useGithubMarkdown = async (url) => {
       class="h-22rem bg-top bg-cover flex items-center justify-center bg-local"
       style="background-image: url(https://tuapi.eees.cc/api.php?category=dongman&type=302&px=pc)"
     >
-      <span id="nav-typed" class="top-30 text-4xl text-light-50 font-bold leading-normal"></span>
+      <span id="nav-typed" class="top-30 text-4xl text-light-50 font-bold leading-normal" />
     </div>
 
     <div class="flex justify-center">
       <div class="article-container">
-        <article class="markdown-body rounded-2" v-html="githubMarkdown"></article>
+        <article class="markdown-body rounded-2" v-html="githubMarkdown" />
       </div>
     </div>
   </div>

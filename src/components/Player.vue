@@ -1,16 +1,6 @@
-<template>
-  <div class="flex w-full h-100vh justify-center items-center overflow-hidden">
-    <!-- <PlayButton @click="initAudio()" class="absolute" /> -->
-    <div ref="canvasWrapper"></div>
-
-    <div ref="animatedDiv" class="w-60 md:w-100 lg:w-140 absolute left-0 bg-white text-black flex bottom-0" :style="{ height: viewportHeight }">
-      <div id="aplayer" class="w-full" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave"></div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { gsap } from 'gsap'
+import axios from 'axios'
 import styles from '~/style'
 
 const canvasWrapper = ref(null)
@@ -22,9 +12,9 @@ let allowMouseLeave = true
 let ap
 let p
 let song
-var img
-var fft
-var particles = []
+let img
+let fft
+const particles = []
 // var audioContextStarted = false
 
 watch(active, (newVal) => {
@@ -37,33 +27,28 @@ const viewportHeight = computed(() => {
   // 计算剩余高度（以像素为单位）
   const remainingHeightPx = 100 * vhInPx - styles.navHeader
   // 将结果转换回'vh'单位
-  return remainingHeightPx / vhInPx + 'vh'
+  return `${remainingHeightPx / vhInPx}vh`
 })
 
-const onMouseEnter = () => {
+function onMouseEnter() {
   allowMouseLeave = false
 
   setTimeout(() => {
     allowMouseLeave = true
   }, 400)
-  if (!allowMouseLeave) {
+  if (!allowMouseLeave)
     active.value = true
-  }
 }
 
-const onMouseLeave = () => {
-  console.log(allowMouseLeave)
-
-  if (allowMouseLeave) {
+function onMouseLeave() {
+  if (allowMouseLeave)
     active.value = false
-  }
 }
 
-const checkMousePosition = (event) => {
+function checkMousePosition(event) {
   // console.log(event.clientX);
-  if (event.clientX <= 60) {
+  if (event.clientX <= 60)
     active.value = true
-  }
 }
 
 // const initAudio = () => {
@@ -76,22 +61,22 @@ const checkMousePosition = (event) => {
 //   }
 // }
 
-const preload = () => {
+function preload() {
   img = p.loadImage('bg.png')
 }
 
-const setup = () => {
+function setup() {
   p.createCanvas(p.windowWidth, p.windowHeight)
   p.angleMode(p.DEGREES)
   p.imageMode(p.CENTER)
   p.rectMode(p.CENTER)
-  // eslint-disable-next-line no-undef
+
   fft = new p5.FFT(0.3)
 
   img.filter(p.BLUR, 12)
 }
 
-const draw = () => {
+function draw() {
   p.background(0)
 
   p.translate(p.width / 2, p.height / 2)
@@ -100,14 +85,13 @@ const draw = () => {
   p.amp = fft.getEnergy(20, 200)
 
   p.push()
-  if (p.amp > 230) {
+  if (p.amp > 230)
     p.rotate(p.random(-0.5, 0.5))
-  }
 
   p.image(img, 0, 0, p.width + 100, p.height + 100)
   p.pop()
 
-  var alpha = p.map(p.amp, 0, 255, 180, 150)
+  const alpha = p.map(p.amp, 0, 255, 180, 150)
   p.fill(0, alpha)
   p.noStroke()
   p.rect(0, 0, p.width, p.height)
@@ -116,17 +100,17 @@ const draw = () => {
   p.strokeWeight(3)
   p.noFill()
 
-  var wave = fft.waveform()
+  const wave = fft.waveform()
 
-  for (var t = -1; t <= 1; t += 2) {
+  for (let t = -1; t <= 1; t += 2) {
     p.beginShape()
-    for (var i = 0; i <= 180; i += 0.5) {
-      var index = p.floor(p.map(i, 0, 180, 0, wave.length - 1))
+    for (let i = 0; i <= 180; i += 0.5) {
+      const index = p.floor(p.map(i, 0, 180, 0, wave.length - 1))
 
-      var r = p.map(wave[index], -1, 1, 150, 350)
+      const r = p.map(wave[index], -1, 1, 150, 350)
 
-      var x = r * p.sin(i) * t
-      var y = r * p.cos(i)
+      const x = r * p.sin(i) * t
+      const y = r * p.cos(i)
       p.vertex(x, y)
     }
     p.endShape()
@@ -139,7 +123,8 @@ const draw = () => {
     if (!particles[i].edges()) {
       particles[i].update(p.amp > 230)
       particles[i].show()
-    } else {
+    }
+    else {
       particles.splice(i, 1)
     }
   }
@@ -157,7 +142,6 @@ const draw = () => {
 
 class Particle {
   constructor() {
-    // eslint-disable-next-line no-undef
     this.pos = p5.Vector.random2D().mult(250)
     this.vel = p.createVector(0, 0)
     this.acc = this.pos.copy().mult(p.random(0.0001, 0.00001))
@@ -166,6 +150,7 @@ class Particle {
 
     this.color = [p.random(200, 255), p.random(200, 255), p.random(200, 255)]
   }
+
   update(cond) {
     this.vel.add(this.acc)
     this.pos.add(this.vel)
@@ -175,13 +160,14 @@ class Particle {
       this.pos.add(this.vel)
     }
   }
+
   edges() {
-    if (this.pos.x < -p.width / 2 || this.pos.x > p.width / 2 || this.pos.y < -p.height / 2 || this.pos.y > p.height / 2) {
+    if (this.pos.x < -p.width / 2 || this.pos.x > p.width / 2 || this.pos.y < -p.height / 2 || this.pos.y > p.height / 2)
       return true
-    } else {
+    else
       return false
-    }
   }
+
   show() {
     p.noStroke()
     p.fill(this.color)
@@ -189,12 +175,10 @@ class Particle {
   }
 }
 
-import axios from 'axios'
-
 const audioList = ref([])
 // const currentTrack = ref()
 
-const fetchAudioList = async (url) => {
+async function fetchAudioList(url) {
   const cacheKey = 'audioListCache'
   const cacheTimeKey = 'audioListCacheTime'
   const cacheDuration = 86400000 // 24 hours in milliseconds
@@ -208,10 +192,11 @@ const fetchAudioList = async (url) => {
     if (cachedData && cachedTime && now - cachedTime < cacheDuration) {
       // Use cached data
       audioList.value = JSON.parse(cachedData)
-    } else {
+    }
+    else {
       // Fetch new data and update cache
       const response = await axios.get(url)
-      const formattedData = response.data.map((song) => ({
+      const formattedData = response.data.map(song => ({
         name: song.name,
         artist: song.artist,
         url: song.url,
@@ -224,19 +209,20 @@ const fetchAudioList = async (url) => {
       localStorage.setItem(cacheKey, JSON.stringify(formattedData))
       localStorage.setItem(cacheTimeKey, now.toString())
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Error fetching audio list:', error)
   }
 }
 
-const syncPlay = () => {
+function syncPlay() {
   if (song.isLoaded()) {
     song.play()
     ap.play()
   }
 }
 
-const syncPause = () => {
+function syncPause() {
   if (ap.paused) {
     song.pause()
     ap.pause()
@@ -273,33 +259,34 @@ onMounted(async () => {
   })
   ap.volume(0) // Prevent users from manually adjusting parameters
 
-  ap.on('play', function () {
+  ap.on('play', () => {
     if (song && song.isLoaded()) {
       // const currentTrack = ap.list.audios[ap.list.index]
       // console.log('当前播放的音乐 URL:', currentTrack.url)
+      // eslint-disable-next-line no-unused-expressions
       ap.list.audios[ap.list.index]
       syncPlay() // 同步播放
     }
   })
 
-  ap.on('pause', function () {
+  ap.on('pause', () => {
     syncPause() // 同步暂停
   })
 
   // 当APlayer切换曲目时
-  ap.on('listswitch', function (e) {
-    if (song) {
+  ap.on('listswitch', (e) => {
+    if (song)
       song.pause()
-    }
+
     const track = ap.list.audios[e.index]
-    song = p.loadSound(track.url, function () {
+    song = p.loadSound(track.url, () => {
       // 如果APlayer正在播放，同步播放新曲目
-      if (!ap.paused) {
+      if (!ap.paused)
         syncPlay()
-      }
     })
   })
 
+  // eslint-disable-next-line no-new, new-cap
   new p5((_p) => {
     p = _p
     p.preload = () => preload()
@@ -315,6 +302,17 @@ onUnmounted(() => {
   window.removeEventListener('mousemove', checkMousePosition)
 })
 </script>
+
+<template>
+  <div class="flex w-full h-100vh justify-center items-center overflow-hidden">
+    <!-- <PlayButton @click="initAudio()" class="absolute" /> -->
+    <div ref="canvasWrapper" />
+
+    <div ref="animatedDiv" class="w-60 md:w-100 lg:w-140 absolute left-0 bg-white text-black flex bottom-0" :style="{ height: viewportHeight }">
+      <div id="aplayer" class="w-full" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave" />
+    </div>
+  </div>
+</template>
 
 <style scoped>
 /* 隐藏aplayer默认音量调节 */

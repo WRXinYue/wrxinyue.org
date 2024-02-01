@@ -32,7 +32,7 @@ export const ideas = [
     url: 'star.svg',
   },
   {
-    text: "Let's Build Something Amazing",
+    text: 'Let\'s Build Something Amazing',
     url: 'star.svg',
   },
 ]

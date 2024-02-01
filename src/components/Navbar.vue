@@ -1,22 +1,3 @@
-<template>
-  <div class="w-full fixed z-20" :class="scrolled ? 'ground-glass' : 'bg-transparent'">
-    <nav class="px-2.5em items-center" :style="{ height: styles.navHeader + 'px' }">
-      <div class="h-full flex items-center">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/contact">Contact</router-link>
-        <router-link to="/music">Music</router-link>
-        <router-link class="<md:hidden" to="#" @click="visibleLeft = true">Dev Tools</router-link>
-      </div>
-      <div id="marker" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
-    </nav>
-    <div class="w-full h-1px bg-primary theme-border-b" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
-  </div>
-  <Sidebar v-model:visible="visibleLeft" header="Dev Tools">
-    <DevTools />
-  </Sidebar>
-</template>
-
 <script setup>
 import { useRoute } from 'vue-router/auto'
 import styles from '~/style'
@@ -43,11 +24,11 @@ watch(
   },
 )
 
-const updateMarker = () => {
+function updateMarker() {
   const routeActive = document.querySelector('.router-link-active')
   if (routeActive) {
-    marker.value.style.left = routeActive.offsetLeft + 'px'
-    marker.value.style.width = routeActive.offsetWidth + 'px'
+    marker.value.style.left = `${routeActive.offsetLeft}px`
+    marker.value.style.width = `${routeActive.offsetWidth}px`
   }
 }
 
@@ -55,11 +36,40 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const handleScroll = () => {
+function handleScroll() {
   const scrollTop = window.scrollY
   scrolled.value = scrollTop > 100
 }
 </script>
+
+<template>
+  <div class="w-full fixed z-20" :class="scrolled ? 'ground-glass' : 'bg-transparent'">
+    <nav class="px-2.5em items-center" :style="{ height: `${styles.navHeader}px` }">
+      <div class="h-full flex items-center">
+        <router-link to="/">
+          Home
+        </router-link>
+        <router-link to="/about">
+          About
+        </router-link>
+        <router-link to="/contact">
+          Contact
+        </router-link>
+        <router-link to="/music">
+          Music
+        </router-link>
+        <router-link class="<md:hidden" to="#" @click="visibleLeft = true">
+          Dev Tools
+        </router-link>
+      </div>
+      <div id="marker" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
+    </nav>
+    <div class="w-full h-1px bg-primary theme-border-b" :class="scrolled ? 'animate__animated animate__zoomIn' : 'animate__animated animate__zoomOut'" />
+  </div>
+  <Sidebar v-model:visible="visibleLeft" header="Dev Tools">
+    <DevTools />
+  </Sidebar>
+</template>
 
 <style scoped>
 a {

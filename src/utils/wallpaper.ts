@@ -1,7 +1,7 @@
 /**
  * Randomly switch wallpaper
  */
-const chooseRandomWallpaper = (wallpaperList: string[], wallpaperType: string) => {
+function chooseRandomWallpaper(wallpaperList: string[], wallpaperType: string) {
   let randomWallpaper = ''
   const shouldChooseNewWallpaper = () => {
     const lastUpdateTime = localStorage.getItem(`${wallpaperType}lastUpdateTime`)
@@ -18,14 +18,15 @@ const chooseRandomWallpaper = (wallpaperList: string[], wallpaperType: string) =
       randomWallpaper = wallpaperList[randomIndex]
       localStorage.setItem(`${wallpaperType}lastUpdateTime`, String(Date.now()))
       localStorage.setItem(`current${wallpaperType}`, randomWallpaper)
-    } else {
+    }
+    else {
       randomWallpaper = ''
     }
-  } else {
+  }
+  else {
     const cachedWallpaper = localStorage.getItem(`current${wallpaperType}`)
-    if (cachedWallpaper) {
+    if (cachedWallpaper)
       randomWallpaper = cachedWallpaper
-    }
   }
 
   return randomWallpaper
