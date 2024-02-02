@@ -19,19 +19,17 @@ const { frontmatter, video, date } = defineProps({
 <template>
   <div>
     <a
-      border="~ base rounded-lg"
-      block
-      of-hidden
+      border="~ base rounded-lg" block of-hidden
       class="group"
-      hover="scale-101 shadow-xl z-10"
-      transition-all
-      duration-500
-      bg-base
-      relative
+      hover="scale-101 shadow-xl z-10" transition-all duration-500 bg-base relative
       :href="frontmatter.link"
       target="_blank"
     >
-      <video v-if="video" :src="video" w-full autoplay loop muted playsinline border="b base" />
+      <video
+        v-if="video"
+        :src="video"
+        w-full autoplay loop muted playsinline border="b base"
+      />
 
       <div class="prose prose-sm p4 m0 pb3">
         <slot />

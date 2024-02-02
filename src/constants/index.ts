@@ -43,7 +43,7 @@ export const projects = [
     name: '',
     workItemSpeed: '-300',
     workItemNumSpeed: '-1000',
-    url: 'unknown.png',
+    url: 'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/unknown.png',
     alt: '3',
   },
   {
@@ -51,7 +51,7 @@ export const projects = [
     name: '',
     workItemSpeed: '-600',
     workItemNumSpeed: '-500',
-    url: 'unknown.png',
+    url: 'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/unknown.png',
     alt: '4',
   },
   {
@@ -59,7 +59,7 @@ export const projects = [
     name: '',
     workItemSpeed: '-700',
     workItemNumSpeed: '-700',
-    url: 'unknown.png',
+    url: 'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/unknown.png',
     alt: '5',
   },
   {
@@ -67,7 +67,7 @@ export const projects = [
     name: '',
     workItemSpeed: '-400',
     workItemNumSpeed: '-200',
-    url: 'unknown.png',
+    url: 'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/unknown.png',
     alt: '6',
   },
 ]

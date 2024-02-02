@@ -18,10 +18,6 @@
     'lnum' on;
 }
 
-body {
-  background: var(--second-color);
-}
-
 /******************************************/
 section {
   padding-top: 150px;

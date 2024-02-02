@@ -62,7 +62,7 @@ function checkMousePosition(event) {
 // }
 
 function preload() {
-  img = p.loadImage('bg.png')
+  img = p.loadImage('https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/wallhaven-o5wlp9.png')
 }
 
 function setup() {
