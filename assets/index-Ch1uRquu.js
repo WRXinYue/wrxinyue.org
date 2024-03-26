@@ -1,0 +1,1 @@
+import{K as e,L as n,M as r}from"./app-BLeb-hNP.js";const f=e(),i=n("antfu-english-only",!1);function u(s,t=!0){const a=r(s);return t||a.year()===r().year()?a.format("MMM D"):a.format("MMM D, YYYY")}export{i as e,u as f,f as i};

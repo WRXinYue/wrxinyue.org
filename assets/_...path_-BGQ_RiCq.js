@@ -1,0 +1,1 @@
+import{d as s,u as a,a as n,o as c,b as r,c as p}from"./app-BLeb-hNP.js";const u=s({__name:"[...path]",setup(f){const t=a(),e=n();return c(()=>{t.push("/"),e.path!=="/"&&e.path.endsWith("/")&&t.replace(e.path.slice(0,-1))}),(i,_)=>(r(),p("div"))}}),o={};typeof o=="function"&&o(u);export{u as default};

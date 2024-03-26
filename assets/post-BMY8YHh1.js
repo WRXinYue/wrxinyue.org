@@ -1,0 +1,1 @@
+import{_ as s,x as e,b as a,c,i as t,w as r,F as _,g as l}from"./app-BLeb-hNP.js";const u={},i=l("div",{class:"mt-100px"},null,-1);function m(p,d){const o=e("RouterView"),n=e("Layout");return a(),c(_,null,[i,t(n,null,{default:r(()=>[t(o)]),_:1})],64)}const x=s(u,[["render",m]]);export{x as default};

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://valaxy.site/</id>
+    <title>Valaxy Theme Yun</title>
+    <updated>2024-03-26T16:11:40.969Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>WRXinYue</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://valaxy.site/"/>
+    <link rel="self" href="https://valaxy.site/atom.xml"/>
+    <subtitle>Valaxy Theme Yun Preview.</subtitle>
+    <logo>https://valaxy.site/valaxy-logo.png</logo>
+    <icon>https://valaxy.site/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2024 © WRXinYue</rights>
+    <entry>
+        <title type="html"><![CDATA[博客迁移日志]]></title>
+        <id>https://valaxy.site/posts/journey-with-icons</id>
+        <link href="https://valaxy.site/posts/journey-with-icons"/>
+        <updated>2022-07-12T18:44:36.000Z</updated>
+        <summary type="html"><![CDATA[To solve the pain I faced in using icons for the web, I built several tools to make the DX better.]]></summary>
+        <content type="html"><![CDATA[<p>注在此之前的文章都是当初从github的hexo博客搬过来的，当时在学校也就写了那么几个= =</p>
+<p>来自QQ空间：<br>
+Ok,我的博客又活了。首先感谢各位前辈们，新网址已加入二级域名，原网址计划建成主页导</p>
+]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-03-26T16:10:38.215Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[黑魂复刻第一季（傅老师）]]></title>
+        <id>https://valaxy.site/posts/黑魂复刻第一季-傅老师</id>
+        <link href="https://valaxy.site/posts/黑魂复刻第一季-傅老师"/>
+        <updated>2022-07-21T01:37:43.000Z</updated>
+        <summary type="html"><![CDATA[黑魂复刻第一季（傅老师）]]></summary>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h1>1.玩家输入模块 Player Input Module</h1>
+<h2>按键输入原理</h2>
+<p>灵魂画师博老师：</p>
+<p>![image-20220720143557788](<a href="https://wr">https://wr</a></p>
+]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-03-26T16:10:38.215Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hexo + OBSIDIAN 插件配置]]></title>
+        <id>https://valaxy.site/posts/Hexo and OBSIDIAN 插件配置</id>
+        <link href="https://valaxy.site/posts/Hexo and OBSIDIAN 插件配置"/>
+        <updated>2023-04-17T18:03:23.000Z</updated>
+        <content type="html"><![CDATA[<h3>前言</h3>
+<p>写了很久博客了，原来halo搭建的博客又转移到hexo了，转移原因如下：</p>
+<ol>
+<li>写文章不方便。每次在本地Typora写完一次笔记，都要登录网站粘贴进去， 很麻烦。</li>
+<li>需要定期维护</li>
+</ol>
+]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2023-04-19T11:03:38.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日语]]></title>
+        <id>https://valaxy.site/posts/日语</id>
+        <link href="https://valaxy.site/posts/日语"/>
+        <updated>2022-08-30T11:44:51.000Z</updated>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h2>IT日语</h2>
+<p>|      | 日本語             | 英語              | 中国語           |          |<br>
+| ---- |</p>
+]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2023-04-18T15:07:23.000Z</published>
+    </entry>
+</feed>
