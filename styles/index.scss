@@ -1,0 +1,214 @@
+@use './main.css' as *;
+@use './markdown.css' as *;
+@use './prose.css' as *;
+
+/* 1.1.general-setting-pages *************************/
+/****************************************************/
+:root {
+  --pr-color: #fff;
+  --second-color: #050505;
+  --cubicbz: cubic-bezier(0.9 0 0.1 1);
+  --fz-big: 60px;
+  --st-c-footer-height: 90px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Syne sans-serif;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  font-feature-settings: pnum on lnum on;
+  border-style: none;
+}
+
+/******************************************/
+section {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.content {
+  width: 100%;
+  padding: 0 70px;
+}
+
+.char {
+  display: inline-block;
+}
+
+/* Paralax Effect On GSAP **********************************/
+/* header ********/
+
+.header__marq {
+  width: 100%;
+  height: auto;
+  background: #171717;
+  overflow: hidden;
+}
+
+.header__marq-wrapp {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.header__marq-txt {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-block;
+  padding-right: 55px;
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: var(--pr-color);
+  color: #9e9e9e;
+  font-size: 30px;
+}
+
+.header__marq-star {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+}
+
+.header__marq-star img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gasp_title {
+  position: relative;
+  margin: 0;
+  font-size: 85px;
+  text-align: center;
+  color: var(--pr-color);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  z-index: 2;
+}
+
+.title_parallax {
+  display: inline-block;
+  will-change: transform;
+}
+
+.title .stroke {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.gsap_header__img {
+  clip-path: polygon(0% 0% 0% 0% 0% 100% 0% 100%);
+}
+
+.theme-section-title .stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.section-title__square {
+  position: absolute;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #4b4b4b;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  z-index: -1;
+}
+
+/* about ********/
+.about .section-title {
+  text-align: left;
+}
+
+.about__img {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* skills ********/
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+}
+
+.skills__item {
+  list-style: none;
+  width: calc(33.33% - 27px);
+}
+
+.skills__num {
+  display: inline-block;
+  font-size: 60px;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+
+/* footer ********/
+
+.footer__div {
+  font-size: 70px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+.footer__div span {
+  display: inline-block;
+}
+
+.theme-section-title {
+  position: relative;
+  margin: 0;
+  color: var(--pr-color);
+  margin-bottom: 60px;
+  line-height: 0.8;
+  font-size: 70px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.theme-about {
+  width: 'calc(50% - 35px)';
+}
+
+.theme-border-b {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-text {
+  color: #4b4b4b;
+}
+
+.theme-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.sakura-navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+.active-header {
+  /* box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2); */
+  backdrop-filter: blur(10px);
+  transition: 0.85s;
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+

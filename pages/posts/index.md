@@ -2,6 +2,8 @@
 title: Blog
 display: ''
 plum: true
+layout: post
+hide: true
 ---
 
 <SubNav />

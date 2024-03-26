@@ -4,6 +4,7 @@ description: To solve the pain I faced in using icons for the web, I built sever
 date: 2022-07-12 18:44:36.0
 lang: zh
 duration: 2min
+type: blog
 ---
 
 注在此之前的文章都是当初从github的hexo博客搬过来的，当时在学校也就写了那么几个= =

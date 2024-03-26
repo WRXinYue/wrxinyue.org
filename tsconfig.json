@@ -7,11 +7,13 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["./*"]
     },
     "resolveJsonModule": true,
-    "types": ["vite/client", "vite-plugin-pages/client"],
+    "types": ["vite/client"],
     "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true

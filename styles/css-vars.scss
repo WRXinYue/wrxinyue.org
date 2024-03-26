@@ -1,0 +1,14 @@
+:root {
+  --st-c-secondary: #08f9ff;
+  --st-c-sidebar-marker-h: 2px;
+  --st-c-brand: #fff;
+  --st-c-bg: var(--c-bg);
+  --st-c-link: var(--va-c-text-light);
+  --un-prose-body: var(--va-c-text-light);
+}
+
+html.dark {
+  --st-c-secondary: #08f9ff;
+  --st-c-brand: #fff;
+  --st-c-bg: var(--c-bg);
+}
