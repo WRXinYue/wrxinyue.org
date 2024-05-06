@@ -1,5 +1,10 @@
 <script setup lang="ts">
-import { projects, services, skills } from '../constants/index'
+import { useI18n } from 'vue-i18n'
+import { useFrontmatter } from 'valaxy'
+
+const fm = useFrontmatter()
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -7,33 +12,27 @@ import { projects, services, skills } from '../constants/index'
     <main class="container">
       <section class="about">
         <ThemeSectionTitle text="abo" hl-text="ut" />
-        <p class="text-xl theme-text flex justify-center">
-          Software Engineer, be good at Java and C#, also love developing games and visual computing
+        <p class="text-xl text-center theme-text about-me">
+          {{ t('home.about') }}
         </p>
       </section>
 
       <section class="skills">
-        <div class="content">
-          <ThemeSectionTitle text="Tech" hl-text="Stack" />
+        <ThemeSectionTitle text="Tech" hl-text="Stack" />
 
-          <SkillsList :skills="skills" />
-        </div>
+        <SkillsList :skills="fm.skills" />
       </section>
 
-      <section class="work mt-150px">
-        <div class="content">
-          <ThemeSectionTitle text="portfo" hl-text="lio" />
-        </div>
+      <section class="work">
+        <ThemeSectionTitle text="portfo" hl-text="lio" />
 
-        <WorkGallery :projects="projects" />
+        <WorkGallery :projects="fm.projects" />
       </section>
 
       <section class="service">
-        <div class="content">
-          <ThemeSectionTitle text="servic" hl-text="es" />
+        <ThemeSectionTitle text="servic" hl-text="es" />
 
-          <ServicesOverview :services="services" />
-        </div>
+        <ServicesOverview :services="fm.services" />
       </section>
     </main>
 

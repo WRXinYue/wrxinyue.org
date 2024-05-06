@@ -2,7 +2,6 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { gsap } from 'gsap'
 import axios from 'axios'
-import styles from '../style'
 
 const canvasWrapper = ref(null)
 const animatedDiv = ref(null)

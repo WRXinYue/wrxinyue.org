@@ -1,6 +1,5 @@
 import dayjs from 'dayjs'
-import { useDark } from '@vueuse/core'
-import { useStorage } from '@vueuse/core'
+import { useDark, useStorage } from '@vueuse/core'
 import { nextTick } from 'vue'
 
 export const isDark = useDark()

@@ -25,14 +25,22 @@ export default defineValaxyConfig<ThemeUserConfig>({
       title: '',
       motto: '',
       urls: [
-        'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/wallhaven-jxlwpm.jpg',
+        'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/wallhaven-3lgk6y.png',
         'https://wrxinyue.s3.bitiful.net/pc-wallpaper/wallpaper_Industrial space station.mp4',
         'https://wrxinyue.s3.bitiful.net/pc-wallpaper/wallpaper_Miko fox (Ver.1.2).mp4',
         'https://wrxinyue.s3.bitiful.net/pc-wallpaper/蝴蝶忍.mp4',
+        // mobileImages
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (1).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (2).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (3).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (4).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (5).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (6).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640 (7).jpeg',
+        // 'https://wrxinyue.s3.bitiful.net/mobile-wallpaper/babata/640.jpeg',
       ],
     },
 
-    // 导航栏
     navbar: [
       {
         text: 'Home',
@@ -59,10 +67,6 @@ export default defineValaxyConfig<ThemeUserConfig>({
         link: '/demos',
       },
       {
-        text: 'Music',
-        link: '/music',
-      },
-      {
         text: 'About',
         link: '/about',
       },
@@ -70,7 +74,6 @@ export default defineValaxyConfig<ThemeUserConfig>({
 
     scrollDamping: true,
 
-    // 页脚配置
     footer: {
       since: 2024,
 

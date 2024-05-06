@@ -12,13 +12,12 @@ const posts = computed(() => pageList.value.filter(i =>
   && (!i.hide || i.hide === 'index'),
 ))
 
-export const demoItems = posts.value.map((post) => ({
+export const demoItems = posts.value.map(post => ({
+  title: post.title,
   link: post.link,
   date: post.path,
   excerpt: post.excerpt,
-  video: video[`.${post.path}.mp4`] as string,
+  src: video[`.${post.path}.mp4`] as string,
 }))
   .filter(item => item.date !== 'index')
   .sort((a, b) => b.date!.localeCompare(a.date!))
-
-console.log(demoItems);

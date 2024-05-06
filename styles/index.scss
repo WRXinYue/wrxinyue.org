@@ -1,6 +1,7 @@
+@use "valaxy/client/styles/mixins/index.scss" as *;
 @use './main.css' as *;
 @use './markdown.css' as *;
-@use './prose.css' as *;
+// @use './prose.css' as *;
 
 /* 1.1.general-setting-pages *************************/
 /****************************************************/
@@ -32,6 +33,24 @@ section {
   width: 100%;
   padding: 0 70px;
 }
+
+// Ensure that the home page style of the mobile terminal is displayed correctly
+.container {
+  @include tablet {
+    & {
+      max-width: 100% !important;
+      padding: 0 30px;
+    }
+  }
+  @include mobile {
+    & {
+      max-width: 100% !important;
+      padding: 0 10px;
+    }
+  }
+}
+
+
 
 .char {
   display: inline-block;
@@ -87,11 +106,21 @@ section {
   text-transform: uppercase;
   mix-blend-mode: difference;
   z-index: 2;
-}
 
-.title_parallax {
-  display: inline-block;
-  will-change: transform;
+  @include tablet {
+    & {
+      font-size: 70px
+    }
+  }
+  @include mobile {
+    & {
+      font-size: 50px
+    }
+  }
+  .title_parallax {
+    display: inline-block;
+    will-change: transform;
+  }
 }
 
 .title .stroke {
@@ -104,9 +133,31 @@ section {
   clip-path: polygon(0% 0% 0% 0% 0% 100% 0% 100%);
 }
 
-.theme-section-title .stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--pr-color);
+.theme-section-title {
+  position: relative;
+  margin: 0;
+  color: var(--pr-color);
+  line-height: 0.8 !important;
+  font-size: 4.2em !important;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    & {
+      font-size: 3.75em !important;
+    }
+  }
+
+  @include mobile {
+    & {
+      font-size: 2.5em !important;
+    }
+  }
+
+  & .stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+  }
 }
 
 .section-title__square {
@@ -114,11 +165,23 @@ section {
   display: inline-block;
   width: 130px;
   height: 130px;
-  border: 1px solid #4b4b4b;
+  border: 1px solid var(--border);
   top: 50%;
   left: 50%;
-  transform: translate(-50% -50%);
-  z-index: -1;
+  transform: translate(100%, -50%);
+  animation: pulse 5s infinite alternate;
+
+  @include tablet {
+    & {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    & {
+      display: none;
+    }
+  }
 }
 
 /* about ********/
@@ -138,49 +201,212 @@ section {
   object-fit: cover;
 }
 
-/* skills ********/
-.skills__list {
+.skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   width: 100%;
   height: auto;
+  min-height: 30vh;
+  margin-bottom: 0.5em;
+
+  .card {
+    width: calc(33.33% - 27px);
+    border-color: var(--border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    padding: 20px;
+    transition: border-color 0.3s ease;
+    position: relative;
+
+    @include mobile {
+      &.card {
+        width: 100%;
+      }
+    }
+
+    @include tablet {
+      &.card {
+        width: calc(50% - 27px);;
+      }
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin: 0;
+      position: absolute;
+      left: 1em;
+      top: 1em;
+      opacity: 0.5;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  .num {
+    display: inline-block;
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+  }
 }
 
-.skills__item {
-  list-style: none;
-  width: calc(33.33% - 27px);
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 120px;
+  justify-content: space-between;
+  padding: 0 120px;
+
+  @include tablet {
+    & {
+      padding: 0 80px;
+    }
+  }
+
+  @include mobile {
+    & {
+      padding: 0;
+    }
+  }
+
+  .card {
+    width: calc(50% - 60px);
+    height: 350px;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+      &.card {
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      &.card {
+        width: 100%;
+      }
+    }
+  }
+
+  .title {
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--pr-color);
+    mix-blend-mode: difference;
+    z-index: 2;
+  }
+
+  .media {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img, video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
-.skills__num {
-  display: inline-block;
-  font-size: 60px;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--pr-color);
+.service-container {
+  .service__item {
+    position: relative;
+    padding: 40px 0;
+    border-bottom: 1px solid #2f2e2e;
+
+    .text {
+      font-size: 50px;
+      color: #4b4b4b;
+      text-transform: uppercase;
+
+      @include tablet {
+        & {
+          font-size: 40px;
+        }
+      }
+
+      @include mobile {
+        & {
+          font-size: 30px;
+        }
+      }
+
+      &:hover {
+        color: #ffffff;
+        transition: color ease 0.3s;
+      }
+    }
+  }
+
+  .service-item-arrow {
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: rotate(180deg);
+    }
+
+    @include tablet {
+      & {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: none;
+      }
+    }
+  }
 }
 
 /* footer ********/
 
-.footer__div {
-  font-size: 70px;
-  letter-spacing: 15px;
-  text-transform: uppercase;
-}
+.footer {
+  display: flex;
 
-.footer__div span {
-  display: inline-block;
-}
+  @include tablet {
+    & {
+      display: none;
+    }
+  }
 
-.theme-section-title {
-  position: relative;
-  margin: 0;
-  color: var(--pr-color);
-  margin-bottom: 60px;
-  line-height: 0.8;
-  font-size: 70px;
-  text-align: center;
-  text-transform: uppercase;
+  @include mobile {
+    & {
+      display: none;
+    }
+  }
+
+  .footer__div {
+    font-size: 70px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+
+    & span {
+      display: inline-block;
+    }
+  }
 }
 
 .theme-about {

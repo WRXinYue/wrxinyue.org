@@ -19,7 +19,7 @@ function getSpeed(index: number): string {
 </script>
 
 <template>
-  <footer class="footer flex justify-center items-center h-100vh">
+  <footer class="footer justify-center items-center h-100vh">
     <div class="footer__div theme-pr-color">
       <span
         v-for="(char, index) in textArray"

@@ -18,8 +18,8 @@ dependencies:
     specifier: 0.18.5
     version: 0.18.5(@types/markdown-it@13.0.7)(@unhead/shared@1.8.10)(postcss@8.4.38)(typescript@5.3.3)(unhead@1.8.10)
   valaxy-theme-sakura:
-    specifier: 0.4.8-alpha.3
-    version: 0.4.8-alpha.3
+    specifier: 0.5.5
+    version: 0.5.5
 
 devDependencies:
   '@antfu/eslint-config':
@@ -3120,11 +3120,6 @@ packages:
     dependencies:
       browserslist: 4.23.0
     dev: true
-
-  /core-js@3.36.1:
-    resolution: {integrity: sha512-BTvUrwxVBezj5SZ3f10ImnX2oRByMxql3EimVqMysepbC9EeMUOpLwdy6Eoili2x6E4kf+ZUB5k/+Jv55alPfA==}
-    requiresBuild: true
-    dev: false
 
   /cose-base@1.0.3:
     resolution: {integrity: sha512-s9whTXInMSgAp/NVXVNuVxVKzGH2qck3aQlVHxDCdAEPgtMKwc4Wq6/QKhgdEdgbLSi9rBTAcPoRa6JpiG4ksg==}
@@ -6441,13 +6436,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /smooth-scrollbar@8.8.4:
-    resolution: {integrity: sha512-Wn2Q/iE+PE1ef4EfhFMhgaIMfSrjJl2LalRu0hBWSrw5nZKGsUIjWFWHnLB/Lpx7N+a1pJH6+wkQzBr+5nWPUg==}
-    dependencies:
-      core-js: 3.36.1
-      tslib: 1.14.1
-    dev: false
-
   /smoothscroll@0.4.0:
     resolution: {integrity: sha512-sggQ3U2Un38b3+q/j1P4Y4fCboCtoUIaBYoge+Lb6Xg1H8RTIif/hugVr+ErMtIDpvBbhQfTjtiTeYAfbw1ZGQ==}
     dev: false
@@ -6672,6 +6660,7 @@ packages:
 
   /tslib@1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
+    dev: true
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
@@ -7006,13 +6995,12 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /valaxy-theme-sakura@0.4.8-alpha.3:
-    resolution: {integrity: sha512-/jbTZvF9CSiiUQwebvMGY8lURpZarr8kkvP1dGMGKsmQSupnlS5CCDVpkpxt7BYnNYdmacw1+uyrmTNlg36I3w==}
+  /valaxy-theme-sakura@0.5.5:
+    resolution: {integrity: sha512-MkazvjKCas/++mP4es8IMNWYyqC23Lrl7kYuPTPeaq3cLCah28XKNGQBLUV6DC2Ie0JEpAhYS03gPh9JEq0ZKA==}
     dependencies:
       '@iconify-json/fa6-solid': 1.1.20
       '@iconify-json/mdi': 1.1.64
       '@studio-freight/lenis': 1.0.42
-      smooth-scrollbar: 8.8.4
       typed.js: 2.1.0
     dev: false
 

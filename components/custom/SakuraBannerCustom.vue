@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
-import { ideas } from '../constants/index'
+import { useFrontmatter } from 'valaxy'
+
+const fm = useFrontmatter()
 
 onMounted(async () => {
   const ScrollTriggerModule = await import('gsap/ScrollTrigger')
@@ -11,24 +13,36 @@ onMounted(async () => {
 
   const gTl = gsap.timeline()
 
+  gTl.to(
+    '.gsap_header__img',
+    {
+      duration: 0.75,
+      clipPath: 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)',
+      opacity: 0.03,
+      scale: 1.2,
+      ease: 'expo.out',
+      onUpdate() {
+        const progress = this.progress() * 100
+        this.targets()[0].style.clipPath = `polygon(0% 0%, ${progress}% 0%, ${progress}% 100%, 0% 100%)`
+      },
+    },
+  ).to(
+    '.gsap_header__img',
+    {
+      duration: 1.25,
+      opacity: 1,
+      scale: 1,
+      ease: 'expo.out',
+    },
+  )
+
   gTl.from('.gasp_title .char', {
-    duration: 1,
+    duration: 0.75,
     opacity: 0,
     yPercent: 130,
     stagger: 0.06,
     ease: 'back.out',
-  })
-
-  gTl.to(
-    '.gsap_header__img',
-    {
-      duration: 2,
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
-      scale: 1,
-      ease: 'expo.out',
-    },
-    '-=1',
-  )
+  }, '-=2')
 
   gTl.from(
     '.header__marq',
@@ -38,7 +52,7 @@ onMounted(async () => {
 
   const gsapSq = gsap.utils.toArray('.section-title__square') as Element[]
   gsapSq.forEach((gSq) => {
-    const rotationAnim = gsap.from(gSq, 3, { rotation: 720 })
+    const rotationAnim = gsap.from(gSq, { duration: 3, rotation: 720 })
     ScrollTrigger.create({
       trigger: gSq,
       animation: rotationAnim,
@@ -48,8 +62,6 @@ onMounted(async () => {
   })
 
   gsap_header()
-  gsap_about()
-  gsap_skills()
   gsap_portfolio()
   gsap_service()
   gsap_footer()
@@ -58,15 +70,13 @@ onMounted(async () => {
 function gsap_header() {
   gsap.to('.title_parallax', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
     yPercent: -150,
   })
-  gsap.to('.gsap_header .theme-stroke', {
+  gsap.to('.theme-stroke', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
@@ -74,7 +84,6 @@ function gsap_header() {
   })
   gsap.to('.gsap_header__img', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
@@ -82,7 +91,6 @@ function gsap_header() {
   })
   gsap.to('.gsap_header__img img', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
@@ -90,7 +98,6 @@ function gsap_header() {
   })
   gsap.to('.header__marq-wrapp', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
@@ -98,7 +105,6 @@ function gsap_header() {
   })
   gsap.to('.header__marq-star img', {
     scrollTrigger: {
-      trigger: '.gsap_header',
       start: 'top top',
       scrub: 1.9,
     },
@@ -106,46 +112,8 @@ function gsap_header() {
   })
 }
 
-function gsap_about() {
-  gsap.from('.about__img', {
-    scrollTrigger: {
-      trigger: '.about',
-      start: 'top bottom',
-      scrub: 1.9,
-    },
-    yPercent: 80,
-  })
-  gsap.from('.about__img img', {
-    scrollTrigger: {
-      trigger: '.about',
-      start: 'top bottom',
-      scrub: 1.9,
-    },
-    scale: 1.6,
-  })
-  gsap.to('.about__txt', {
-    scrollTrigger: {
-      trigger: '.about__wrapp',
-      start: 'top bottom',
-      scrub: 1.9,
-    },
-    yPercent: 50,
-  })
-}
-
-function gsap_skills() {
-  gsap.from('.skills__num', {
-    x: (i, el) => 1 - Number.parseFloat(el.getAttribute('data-speed')),
-    scrollTrigger: {
-      trigger: '.skills__list',
-      start: 'top bottom',
-      scrub: 1.9,
-    },
-  })
-}
-
 function gsap_portfolio() {
-  gsap.from('.work__item, .work__item-num', {
+  gsap.from('.work-container .card, .work-container .title', {
     y: (i, el) => 1 - Number.parseFloat(el.getAttribute('data-speed')),
     scrollTrigger: {
       trigger: '.work',
@@ -153,21 +121,23 @@ function gsap_portfolio() {
       scrub: 1.9,
     },
   })
-  gsap.from('.work__item-img img', {
-    scale: 1.6,
+  gsap.fromTo('.work-container .media', {
+    scale: 1.8,
+  }, {
     scrollTrigger: {
-      trigger: '.work__container',
+      trigger: '.work',
       start: 'top bottom',
-      scrub: 1.9,
+      scrub: 1.2,
     },
+    scale: 1.2,
   })
 }
 
 function gsap_service() {
-  gsap.from('.service__item-arrow', {
+  gsap.from('.service-item-arrow', {
     x: (i, el) => 1 - Number.parseFloat(el.getAttribute('data-speed')),
     scrollTrigger: {
-      trigger: '.service__list',
+      trigger: '.service',
       start: 'top bottom',
       scrub: 1.9,
     },
@@ -192,8 +162,24 @@ function gsap_footer() {
   <SakuraBanner>
     <template #info-overlay>
       <h1 class="gasp_title my-element">
-        <span class="title_parallax">WRXinYue's</span>
-        <span class="theme-stroke">Home</span>
+        <span class="title_parallax">
+          <span class="char">W</span>
+          <span class="char">R</span>
+          <span class="char">X</span>
+          <span class="char">i</span>
+          <span class="char">n</span>
+          <span class="char">Y</span>
+          <span class="char">u</span>
+          <span class="char">e</span>
+          <span class="char">'</span>
+          <span class="char">s</span>
+        </span>
+        <span class="theme-stroke char">
+          <span class="char">H</span>
+          <span class="char">o</span>
+          <span class="char">m</span>
+          <span class="char">e</span>
+        </span>
       </h1>
     </template>
     <template #background-display>
@@ -204,7 +190,7 @@ function gsap_footer() {
     <template #banner-overlay-bar>
       <div class="header__marq absolute bottom-0 left-0">
         <div class="header__marq-wrapp">
-          <span v-for="idea in ideas" :key="idea.text" class="header__marq-txt flex items-center">
+          <span v-for="idea in fm.ideas" :key="idea.text" class="header__marq-txt flex items-center">
             <span>{{ idea.text }}</span>
             <span class="header__marq-star">
               <img :src="idea.url" alt="">

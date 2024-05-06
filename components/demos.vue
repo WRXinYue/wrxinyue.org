@@ -4,6 +4,7 @@ import { projects } from '~/constants/index'
 
 <template>
   <section class="work">
+    <!-- TODO: -->
     <div class="content">
       <h2 class="theme-section-title">
         portfo<span class="theme-stroke">lio</span>
