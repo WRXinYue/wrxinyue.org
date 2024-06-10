@@ -12,11 +12,10 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "aplayer": "^1.10.1",
     "gsap": "^3.12.5",
     "p5": "^1.9.2",
     "valaxy": "0.18.5",
-    "valaxy-theme-sakura": "0.5.5"
+    "valaxy-theme-sakura": "0.6.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",
