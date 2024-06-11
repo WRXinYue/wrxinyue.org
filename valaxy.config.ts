@@ -5,9 +5,9 @@ import { defineValaxyConfig } from 'valaxy'
 import type { ThemeUserConfig } from 'valaxy-theme-sakura'
 import anchor from 'markdown-it-anchor'
 import LinkAttributes from 'markdown-it-link-attributes'
-import GitHubAlerts from 'markdown-it-github-alerts'
-import MarkdownItShikiji from 'markdown-it-shikiji'
-import { rendererRich, transformerTwoslash } from 'shikiji-twoslash'
+import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
+import Shiki from '@shikijs/markdown-it'
+import { rendererRich, transformerTwoslash } from '@shikijs/twoslash'
 import sharp from 'sharp'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
@@ -86,6 +86,17 @@ export default defineValaxyConfig<ThemeUserConfig>({
     },
   },
   markdown: {
+    // Waiting for Valaxy support
+    // theme: {
+    //   light: 'vitesse-light',
+    //   dark: 'vitesse-dark',
+    // },
+    // codeTransformers: [
+    //   transformerTwoslash({
+    //     explicitTrigger: true,
+    //     renderer: rendererRich(),
+    //   }),
+    // ],
     wrapperClasses: (id, code) => code.includes('@layout-full-width')
       ? ''
       : 'prose m-auto slide-enter-content',
@@ -97,7 +108,7 @@ export default defineValaxyConfig<ThemeUserConfig>({
       quotes: '""\'\'',
     },
     async markdownItSetup(md) {
-      md.use(await MarkdownItShikiji({
+      md.use(await Shiki({
         themes: {
           dark: 'vitesse-dark',
           light: 'vitesse-light',
@@ -134,7 +145,7 @@ export default defineValaxyConfig<ThemeUserConfig>({
         containerHeaderHtml: '<div class="table-of-contents-anchor"><div class="i-ri-menu-2-fill" /></div>',
       })
 
-      md.use(GitHubAlerts)
+      md.use(MarkdownItGitHubAlerts)
     },
     frontmatterPreprocess(frontmatter, options, id, defaults) {
       (() => {

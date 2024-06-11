@@ -17,8 +17,6 @@ sakura主题使用感受:
 该主题不兼容PHP7.4以上版本，以后可能需要考虑手动改框架。对sakura主题进行美化，修复了hermit x播放器的问题，更新了图片API，添加了live2d并进行适配。再次感谢这些前辈们的无私奉献的开源精神
 ![passr1](https://wrxinyue.oss-cn-hongkong.aliyuncs.com/img/passr1.png)
 
-![image-20220808080125468](https://cdn.jsdelivr.net/gh/WRXinYue/PictureCDN/img/image-20220808080125468.png)
-
 **原HEXO博客样式：**
 ![image-20221027004152466](https://wrxinyue.oss-cn-hongkong.aliyuncs.com/img/image-20221027004152466.png)
-地址：https://wrxinyue.github.io/blog/
+地址：<https://wrxinyue.github.io/blog/>

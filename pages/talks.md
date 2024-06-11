@@ -15,7 +15,7 @@ plum: true
 
 | Title                                                                  | Date | Deadline                      | MoSCoW |
 | ---------------------------------------------------------------------- | ---- | ----------------------------- | ------ |
-| wifi-pineapple-web                                                     | -    | <TalkDate date="2024-02-08"/> | M      |
+<!-- | wifi-pineapple-web                                                     | -    | <TalkDate date="2024-02-08"/> | M      | -->
 | [valaxy-theme-sakura](https://github.com/WRXinYue/valaxy-theme-sakura) | -    | -                             | M      |
 
 <h2 important="mb--4 mt-15">Previous Talk Recordings & Slides</h2>
