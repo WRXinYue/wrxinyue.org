@@ -4,6 +4,7 @@ import fs from 'fs-extra'
 import { defineValaxyConfig } from 'valaxy'
 import type { ThemeUserConfig } from 'valaxy-theme-sakura'
 import anchor from 'markdown-it-anchor'
+// @ts-expect-error missing types
 import LinkAttributes from 'markdown-it-link-attributes'
 import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import Shiki from '@shikijs/markdown-it'
@@ -239,7 +240,7 @@ async function generateOg(title: string, output: string) {
     line2: lines[1],
     line3: lines[2],
   }
-  const svg = ogSVg.replace(/\{\{([^}]+)}}/g, (_: any, name: string | number) => data[name] || '')
+  const svg = ogSVg.replace(/\{\{([^}]+)\}\}/g, (_: any, name: string | number) => data[name] || '')
 
   // eslint-disable-next-line no-console
   console.log(`Generating ${output}`)
