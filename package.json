@@ -15,7 +15,7 @@
     "gsap": "^3.12.5",
     "p5": "^1.9.2",
     "valaxy": "0.18.5",
-    "valaxy-theme-sakura": "0.6.0"
+    "valaxy-theme-sakura": "0.6.1-alpha.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",

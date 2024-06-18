@@ -1,0 +1,354 @@
+@use "valaxy/client/styles/mixins/index.scss" as *;
+
+/* Paralax Effect On GSAP **********************************/
+/* header ********/
+
+.header__marq {
+  width: 100%;
+  height: auto;
+  background: #171717;
+  overflow: hidden;
+}
+
+.header__marq-wrapp {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.header__marq-txt {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-block;
+  padding-right: 55px;
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: var(--pr-color);
+  color: #9e9e9e;
+  font-size: 30px;
+}
+
+.header__marq-star {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+}
+
+.header__marq-star img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gasp_title {
+  position: relative;
+  margin: 0;
+  font-size: 85px;
+  text-align: center;
+  color: var(--pr-color);
+  text-transform: uppercase;
+  mix-blend-mode: difference;
+  z-index: 2;
+
+  @include tablet {
+    & {
+      font-size: 70px
+    }
+  }
+  @include mobile {
+    & {
+      font-size: 50px
+    }
+  }
+  .title_parallax {
+    display: inline-block;
+    will-change: transform;
+  }
+}
+
+.title .stroke {
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pr-color);
+}
+
+.gsap_header__img {
+  clip-path: polygon(0% 0% 0% 0% 0% 100% 0% 100%);
+}
+
+.theme-section-title {
+  position: relative;
+  margin: 0;
+  color: var(--pr-color);
+  line-height: 0.8 !important;
+  font-size: 4.2em !important;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include tablet {
+    & {
+      font-size: 3.75em !important;
+    }
+  }
+
+  @include mobile {
+    & {
+      font-size: 2.5em !important;
+    }
+  }
+
+  & .stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+  }
+}
+
+.section-title__square {
+  position: absolute;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  border: 1px solid var(--border);
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -50%);
+  animation: pulse 5s infinite alternate;
+
+  @include tablet {
+    & {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    & {
+      display: none;
+    }
+  }
+}
+
+/* about ********/
+.about .section-title {
+  text-align: left;
+}
+
+.about__img {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: auto;
+  min-height: 30vh;
+  margin-bottom: 0.5em;
+
+  .card {
+    width: calc(33.33% - 27px);
+    border-color: var(--border);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    padding: 20px;
+    transition: border-color 0.3s ease;
+    position: relative;
+
+    @include mobile {
+      &.card {
+        width: 100%;
+      }
+    }
+
+    @include tablet {
+      &.card {
+        width: calc(50% - 27px);;
+      }
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin: 0;
+      position: absolute;
+      left: 1em;
+      top: 1em;
+      opacity: 0.5;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  .num {
+    display: inline-block;
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--pr-color);
+  }
+}
+
+.work-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 120px;
+  justify-content: space-between;
+  padding: 0 120px;
+
+  @include tablet {
+    & {
+      padding: 0 80px;
+    }
+  }
+
+  @include mobile {
+    & {
+      padding: 0;
+    }
+  }
+
+  .card {
+    width: calc(50% - 60px);
+    height: 350px;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    @include tablet {
+      &.card {
+        width: 100%;
+      }
+    }
+
+    @include mobile {
+      &.card {
+        width: 100%;
+      }
+    }
+  }
+
+  .title {
+    position: absolute;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--pr-color);
+    mix-blend-mode: difference;
+    z-index: 2;
+  }
+
+  .media {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img, video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.service-container {
+  .service__item {
+    position: relative;
+    padding: 40px 0;
+    border-bottom: 1px solid #2f2e2e;
+
+    .text {
+      font-size: 50px;
+      color: #4b4b4b;
+      text-transform: uppercase;
+
+      @include tablet {
+        & {
+          font-size: 40px;
+        }
+      }
+
+      @include mobile {
+        & {
+          font-size: 30px;
+        }
+      }
+
+      &:hover {
+        color: #ffffff;
+        transition: color ease 0.3s;
+      }
+    }
+  }
+
+  .service-item-arrow {
+    position: absolute;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transform: rotate(180deg);
+    }
+
+    @include tablet {
+      & {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      & {
+        display: none;
+      }
+    }
+  }
+}
+
+/* footer ********/
+
+.footer {
+  display: flex;
+
+  @include tablet {
+    & {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    & {
+      display: none;
+    }
+  }
+
+  .footer__div {
+    font-size: 70px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+
+    & span {
+      display: inline-block;
+    }
+  }
+}

@@ -32,7 +32,6 @@ declare module 'vue-router/auto-routes' {
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
-    '/posts/Hexo and OBSIDIAN 插件配置': RouteRecordInfo<'/posts/Hexo and OBSIDIAN 插件配置', '/posts/Hexo and OBSIDIAN 插件配置', Record<never, never>, Record<never, never>>,
     '/posts/journey-with-icons': RouteRecordInfo<'/posts/journey-with-icons', '/posts/journey-with-icons', Record<never, never>, Record<never, never>>,
     '/posts/日语': RouteRecordInfo<'/posts/日语', '/posts/日语', Record<never, never>, Record<never, never>>,
     '/posts/黑魂复刻第一季-傅老师': RouteRecordInfo<'/posts/黑魂复刻第一季-傅老师', '/posts/黑魂复刻第一季-傅老师', Record<never, never>, Record<never, never>>,
