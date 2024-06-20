@@ -1,0 +1,1 @@
+import{d as s,q as a,k as n,s as c,o as r,a as p}from"./app-CbDSiZiN.js";const u=s({__name:"[...path]",setup(f){const t=a(),e=n();return c(()=>{t.push("/"),e.path!=="/"&&e.path.endsWith("/")&&t.replace(e.path.slice(0,-1))}),(i,_)=>(r(),p("div"))}}),o={};typeof o=="function"&&o(u);export{u as default};

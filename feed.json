@@ -1,0 +1,52 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Valaxy Theme Yun",
+    "home_page_url": "https://valaxy.site/",
+    "feed_url": "https://valaxy.site/feed.json",
+    "description": "Valaxy Theme Yun Preview.",
+    "icon": "https://valaxy.site/valaxy-logo.png",
+    "author": {
+        "name": "WRXinYue",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<p>注在此之前的文章都是当初从github的hexo博客搬过来的，当时在学校也就写了那么几个= =</p>\n<p>来自QQ空间：<br>\nOk,我的博客又活了。首先感谢各位前辈们，新网址已加入二级域名，原网址计划建成主页导</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://valaxy.site/posts/journey-with-icons",
+            "title": "博客迁移日志",
+            "summary": "To solve the pain I faced in using icons for the web, I built several tools to make the DX better.",
+            "date_modified": "2022-07-12T18:44:36.000Z",
+            "date_published": "2024-06-20T03:50:51.601Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h1>1.玩家输入模块 Player Input Module</h1>\n<h2>按键输入原理</h2>\n<p>灵魂画师博老师：</p>\n<p>![image-20220720143557788](<a href=\"https://wr\">https://wr</a></p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://valaxy.site/posts/黑魂复刻第一季-傅老师",
+            "title": "黑魂复刻第一季（傅老师）",
+            "summary": "黑魂复刻第一季（傅老师）",
+            "date_modified": "2022-07-21T01:37:43.000Z",
+            "date_published": "2024-06-20T03:50:51.601Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h2>IT日语</h2>\n<p>|      | 日本語             | 英語              | 中国語           |          |<br>\n| ---- |</p>\n<br/><p>访问 <a href=\"\" target=\"_blank\"></a> 阅读全文。</p>",
+            "url": "https://valaxy.site/posts/日语",
+            "title": "日语",
+            "date_modified": "2022-08-30T11:44:51.000Z",
+            "date_published": "2023-04-18T15:07:23.000Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}

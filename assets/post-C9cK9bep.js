@@ -1,0 +1,1 @@
+import{_ as s,e,o as a,a as c,h as t,w as r,F as _,b as l}from"./app-CbDSiZiN.js";const u={},m=l("div",{class:"mt-100px"},null,-1);function p(d,i){const o=e("RouterView"),n=e("Layout");return a(),c(_,null,[m,t(n,null,{default:r(()=>[t(o)]),_:1})],64)}const x=s(u,[["render",p]]);export{x as default};
