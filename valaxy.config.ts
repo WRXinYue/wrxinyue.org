@@ -1,5 +1,5 @@
 import { basename, dirname } from 'node:path'
-import { presetAttributify, presetIcons, presetUno, presetWebFonts, transformerDirectives } from 'unocss'
+import { presetAttributify, presetIcons, presetWebFonts, transformerDirectives } from 'unocss'
 import fs from 'fs-extra'
 import { defineValaxyConfig } from 'valaxy'
 import type { ThemeUserConfig } from 'valaxy-theme-sakura'
@@ -208,7 +208,6 @@ export default defineValaxyConfig<ThemeUserConfig>({
         },
       }),
       presetAttributify(),
-      presetUno(),
       presetWebFonts({
         fonts: {
           sans: 'Inter:400,600,800',
