@@ -1,3 +1,7 @@
+@use "valaxy-theme-sakura/styles/widgets/navbar.scss" as *;
+@use "valaxy-theme-sakura/styles/themes/sakura/css-vars.scss" as *;
+@use 'valaxy-theme-sakura/styles/animation/fading/fading.scss' as *;
+@use 'valaxy-theme-sakura/styles/animation/slide/slide.scss' as *;
 @use "valaxy/client/styles/mixins/index.scss" as *;
 @use './markdown.css' as *;
 @use './gasp.scss' as *;
@@ -302,4 +306,16 @@ html:not(.dark) [img-dark] {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+
+#app main {
+  padding: 0 !important;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
 }

@@ -8,7 +8,6 @@
     "gsap",
     "instantsearch",
     "Sakura",
-    "Twoslash",
     "typecheck",
     "valaxy",
     "valaxyjs"
@@ -20,30 +19,20 @@
   "files.associations": {
     "*.css": "postcss"
   },
-  // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
+  "svg.preview.background": "editor",
+
+  "stylelint.validate": ["css", "scss", "vue"],
+
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
+
   // Auto fix
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+
   // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
@@ -55,6 +44,16 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
   ]
 }
