@@ -1,7 +1,7 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { CLSThresholds, FIDThresholds, LCPThresholds } from 'web-vitals'
-import { usePerformanceStore } from '~/stores/performance'
+import { usePerformanceStore } from '../helpers/performance'
 
 defineProps({
   visibleRight: Boolean,
