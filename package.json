@@ -1,8 +1,9 @@
 {
-  "name": "blog.wrxinyue.org",
+  "name": "wrxinyue.org",
   "type": "module",
-  "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@9.11.0",
+  "homepage": "https://wrxinyue.org",
   "scripts": {
     "build": "npm run build:ssg",
     "build:spa": "valaxy build",
