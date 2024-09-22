@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { demoItems } from '../pages/data'
+import { useDemoItems } from 'valaxy-theme-antfu/client'
 
 defineProps<{
   projects: any
 }>()
+
+const demoItems = useDemoItems()
 
 const defaultItems = [
   { title: 'Unknown', src: 'https://wrxinyue-images.s3.bitiful.net/pc-wallpaper/unknown.png', link: '', workItemSpeed: -700, workItemNumSpeed: -400 },

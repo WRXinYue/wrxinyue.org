@@ -15,9 +15,9 @@
     "@carbon/icons": "^11.45.0",
     "gsap": "^3.12.5",
     "p5": "^1.9.2",
-    "valaxy": "0.19.11",
+    "valaxy": "^0.19.12",
     "valaxy-addon-components": "^0.0.4",
-    "valaxy-theme-antfu": "^0.0.4",
+    "valaxy-theme-antfu": "^0.0.5",
     "valaxy-theme-sakura": "0.6.7-alpha.12"
   },
   "devDependencies": {

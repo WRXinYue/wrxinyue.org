@@ -6,6 +6,20 @@ import type { ThemeConfig } from './types'
 export default defineValaxyConfig<ThemeConfig>({
   theme: 'antfu',
 
+  siteConfig: {
+    url: 'https://wrxinyue.org/',
+    title: 'WRXinYue',
+    description: 'My personal website.',
+    favicon: '/favicon.ico',
+    author: {
+      name: 'WRXinYue',
+    },
+
+    search: {
+      enable: false,
+    },
+  },
+
   themeConfig: {
     banner: {
       title: '',
@@ -79,10 +93,6 @@ export default defineValaxyConfig<ThemeConfig>({
 
     scrollDamping: true,
 
-    // footer: {
-    //   since: 2024,
-    // },
-
     footer: {
       since: 2024,
 
@@ -94,9 +104,11 @@ export default defineValaxyConfig<ThemeConfig>({
       },
     },
   },
+
   addons: [
     addonHitokoto({}),
   ],
+
   components: {
     resolvers: [ValaxyThemesResolver({ themes: ['sakura'] })],
   },
