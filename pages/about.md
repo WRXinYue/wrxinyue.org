@@ -4,54 +4,82 @@ description: About me
 plum: true
 ---
 
-<div lang="en">
-Hey, I am WRXinYue, a open source enthusiast.
+<h2 align="center" lang="zh-CN">
+  关于我 ·
+  <a href="https://wrxinyue.org/about">WRXinYue</a>
+</h2>
 
-Working at Dalian.<br>
-Team： [Geekeyes](https://www.geekeyes.cn).
+<h2 align="center" lang="en">
+  About Me ·
+  <a href="https://wrxinyue.org/about">WRXinYue</a>
+</h2>
 
-I have a wide range of interests, including software development, data science, machine learning, and artificial intelligence. I am passionate about learning new technologies and applying them to practical projects. I enjoy sharing knowledge and experience with other developers and tech enthusiasts to foster mutual growth.
+::: en
+- Summary: A tech enthusiast who loves coding, enjoys listening to ambient & electronic music, and appreciates ACG culture.
+- Personality: Prefers quiet, enjoys solitude, and avoids interacting with too many acquaintances.
+- Philosophy: Secular humanism, geek spirit, and open-source values.
+- Team:
+[Ocean](https://oceandev.notion.site/8d46dfeeb5e242fbb8102270ca2f907e?v=836e5f4c8fc14880b0639549eb7e2ecc) |
+[Geekeyes](https://www.geekeyes.cn) |
+[Valaxy](https://github.com/valaxyjs)
+:::
+::: zh-CN
+- 概要: 一个热爱 Coding 的技术宅、听环境&电子音乐、享ACG文化
+- 人格: 喜欢安静、享受孤独、不与众多 acquaintances 交往
+- 思想: 世俗人文主义、极客精神、开源精神
+- 团队：
+[Ocean](https://oceandev.notion.site/8d46dfeeb5e242fbb8102270ca2f907e?v=836e5f4c8fc14880b0639549eb7e2ecc) |
+[极客之眼](https://www.geekeyes.cn) |
+[Valaxy](https://github.com/valaxyjs)
+- 项目: 我开源或参与了一些项目的开发，您可以在这里找到我的 <AppLink to="/projects"><span op75 i-simple-icons-github />完整项目列表</AppLink>
+:::
 
-In my spare time, I like to create games using Unity or UE, and I am currently learning about blockchain and LLMOps technologies. I hope to find time to refactor my projects.
+::: en
+> Technology is not just a tool; it is a joy and an art. Through continuous innovation and experimentation, one can enjoy the process of learning from the unknown.
+:::
+::: zh-CN
+> 技术不仅仅是工具，而是一种乐趣和艺术，通过不断创新和实验，享受从未知中学习的过程。
+:::
 
+::: en
 If you have any questions about my projects on GitHub or any other opportunities for collaboration, please feel free to contact me. I look forward to exploring innovative technologies and building meaningful projects with you.
+:::
+::: zh-CN
+如果你对我在GitHub上的项目或者其他方面有任何问题或者合作的机会，请随时联系我。我期待与你一起探索创新的技术和构建有意义的项目。
+:::
 
 ---
 
+::: en
 Find me on
+:::
+::: zh-CN
+关注我
+:::
 
+::: en
 <p flex="~ gap-3 wrap" class="mt--2!">
   <a href="https://github.com/WRXinYue" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
   <a href="https://space.bilibili.com/438788541" target="_blank"><span op75 i-simple-icons-bilibili /> BiliBili</a>
 </p>
-
-If you enjoy my works, consider sponsoring me on [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/wrxinyue) to keep them sustainable.
-
-<CalCom link="wrxinyue/quick-chat" title="Let's chat sometime" />
-</div>
-
-<div lang="zh-CN">
-hi，我是WRXinYue，一个开源爱好者
-
-在大连工作<br>
-团队： [极客之眼](https://www.geekeyes.cn)
-
-我的兴趣广泛，包括软件开发、数据科学、机器学习和人工智能。我热衷于学习新的技术，并将其应用于实际项目中。我喜欢与其他开发者和技术爱好者分享知识和经验，以促进共同成长。
-
-我在闲余时间会用Unity或者UE来制作一些游戏，目前正在学习区块链以及LLMOps领域技术，希望我能有时间去重构我那些项目。
-
-如果你对我在GitHub上的项目或者其他方面有任何问题或者合作的机会，都可以随时联系我。我期待与你一起探索创新的技术和构建有意义的项目。
-
----
-
-Find me on
-
+:::
+::: zh-CN
 <p flex="~ gap-3 wrap" class="mt--2!">
   <a href="https://github.com/WRXinYue" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
   <a href="https://space.bilibili.com/438788541" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
 </p>
+:::
 
-If you enjoy my works, consider sponsoring me on [<span i-carbon-favorite /> GitHub Sponsor](https://github.com/sponsors/WRXinYue) or [<span i-carbon-lightning /> 爱发电](https://afdian.net/a/wrxinyue) to keep them sustainable.
+::: en
+Or mail me at <wrxinyue@proton.me>
+:::
+::: zh-CN
+或者发邮件到 <wrxinyue@proton.me>
+:::
 
-<CalCom link="wrxinyue/quick-chat" title="约个时间聊聊天" />
-</div>
+::: en
+If you enjoy my works, consider sponsoring me on <a href="https://afdian.com/a/wrxinyue" target="_blank"><span i-carbon-lightning class="color-amber" /> 爱发电</a> to keep them sustainable.
+:::
+::: zh-CN
+如果你喜欢我的作品，可以在 <a href="https://afdian.com/a/wrxinyue" target="_blank"><span i-carbon-lightning class="color-amber" /> 爱发电</a> 上赞助我，非常感谢。
+:::

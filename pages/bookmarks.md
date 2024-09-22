@@ -59,3 +59,7 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 ### Diagram
 
 - [Isoflow](https://isoflow.io/)
+
+### Not classified
+
+- [人类理智研究](https://virmach.boomtlk.com/btsync/%E5%93%B2%E5%AD%A6%28%E7%94%B5%E5%AD%90%E4%B9%A6%29/%E5%93%B2%E5%AD%A6/%E7%9F%A5%E8%AF%86%E8%AE%BA%E4%B8%8E%E8%AE%A4%E8%AF%86%E8%AE%BA/%E5%A4%A7%E5%8D%AB%C2%B7%E4%BC%91%E8%B0%9F%EF%BC%9A%E4%BA%BA%E7%B1%BB%E7%90%86%E8%A7%A3%E7%A0%94%E7%A9%B6%20%28%E6%89%AB%E6%8F%8F%E7%89%88%29.pdf)
