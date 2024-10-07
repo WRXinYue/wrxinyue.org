@@ -1,0 +1,1 @@
+import{z as t,C as o,o as c,a as s,e as n}from"./app-D8cnwbVq.js";const r={},a={class:"mt-100px",style:{"min-height":"calc(100vh - 100px - var(--st-c-footer-height))"}};function _(i,p){const e=o("RouterView");return c(),s("div",a,[n(e)])}const m=t(r,[["render",_]]);export{m as default};
