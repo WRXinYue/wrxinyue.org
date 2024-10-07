@@ -107,7 +107,7 @@ type: blog
   <strong class="flex-shrink-0">2023.7</strong>
 </h3>
 
-增强了个人主页的功能，通过 GitHub API 实时获取 README.md 用作介绍，并添加了 Live2D 看板娘，进一步丰富了网站的互动性
+增强了个人主页的功能，通过 [GitHub REST API](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api#getting-started-with-the-rest-api) 实时获取 README.md 用作介绍，并添加了 Live2D 看板娘，进一步丰富了网站的互动性
 
 ![home-page-2023](https://wrxinyue.s3.bitiful.net/blog/home-page-2023.png)
 

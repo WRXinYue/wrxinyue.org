@@ -83,3 +83,11 @@ If you enjoy my works, consider sponsoring me on <a href="https://afdian.com/a/w
 ::: zh-CN
 如果你喜欢我的作品，可以在 <a href="https://afdian.com/a/wrxinyue" target="_blank"><span i-carbon-lightning class="color-amber" /> 爱发电</a> 上赞助我，非常感谢。
 :::
+
+<h3 align="center" lang="zh-CN">
+  <AppLink to="/posts/blog_evolution_journey">关于站点</AppLink>
+</h3>
+
+<h3 align="center" lang="en">
+  <AppLink to="/posts/blog_evolution_journey">About the Site</AppLink>
+</h3>

@@ -6,20 +6,6 @@ import type { ThemeConfig } from './types'
 export default defineValaxyConfig<ThemeConfig>({
   theme: 'antfu',
 
-  siteConfig: {
-    url: 'https://wrxinyue.org/',
-    title: 'WRXinYue',
-    description: 'My personal website.',
-    favicon: '/favicon.ico',
-    author: {
-      name: 'WRXinYue',
-    },
-
-    search: {
-      enable: false,
-    },
-  },
-
   themeConfig: {
     banner: {
       title: '',
