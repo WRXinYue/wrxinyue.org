@@ -33,6 +33,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/atan2': RouteRecordInfo<'/posts/atan2', '/posts/atan2', Record<never, never>, Record<never, never>>,
     '/posts/blog_evolution_journey': RouteRecordInfo<'/posts/blog_evolution_journey', '/posts/blog_evolution_journey', Record<never, never>, Record<never, never>>,
+    '/posts/note/wsl': RouteRecordInfo<'/posts/note/wsl', '/posts/note/wsl', Record<never, never>, Record<never, never>>,
     '/posts/摩擦和重力的物体运动与角度计算': RouteRecordInfo<'/posts/摩擦和重力的物体运动与角度计算', '/posts/摩擦和重力的物体运动与角度计算', Record<never, never>, Record<never, never>>,
     '/posts/日语': RouteRecordInfo<'/posts/日语', '/posts/日语', Record<never, never>, Record<never, never>>,
     '/posts/黑魂复刻第一季-傅老师': RouteRecordInfo<'/posts/黑魂复刻第一季-傅老师', '/posts/黑魂复刻第一季-傅老师', Record<never, never>, Record<never, never>>,
