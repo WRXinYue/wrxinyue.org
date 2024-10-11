@@ -6,6 +6,11 @@
 @use './markdown.css' as *;
 @use './gasp.scss' as *;
 
+// markdown-it-github-alerts
+@use 'markdown-it-github-alerts/styles/github-colors-light.css' as *;
+@use 'markdown-it-github-alerts/styles/github-colors-dark-class.css' as *;
+@use 'markdown-it-github-alerts/styles/github-base.css' as *;
+
 /* 1.1.general-setting-pages *************************/
 /****************************************************/
 :root {

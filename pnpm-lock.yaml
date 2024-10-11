@@ -11,9 +11,15 @@ importers:
       '@carbon/icons':
         specifier: ^11.45.0
         version: 11.49.0
+      '@ctrl/tinycolor':
+        specifier: ^4.1.0
+        version: 4.1.0
       gsap:
         specifier: ^3.12.5
         version: 3.12.5
+      markdown-it-github-alerts:
+        specifier: ^0.3.0
+        version: 0.3.0(markdown-it@14.1.0)
       p5:
         specifier: ^1.9.2
         version: 1.10.0
@@ -282,6 +288,10 @@ packages:
     resolution: {integrity: sha512-0MhX9/B4iL6Re04jPrttDm+BsP8y6mS7byuv0BvXgdXhbV5PdlsHt55dvNsuBCPZ7xq1oTAOOuotR9NFbQyMSA==}
     bundledDependencies:
       - is-unicode-supported
+
+  '@ctrl/tinycolor@4.1.0':
+    resolution: {integrity: sha512-WyOx8cJQ+FQus4Mm4uPIZA64gbk3Wxh0so5Lcii0aJifqwoVOlfFtorjLE0Hen4OYyHZMXDWqMmaQemBhgxFRQ==}
+    engines: {node: '>=14'}
 
   '@emnapi/runtime@1.2.0':
     resolution: {integrity: sha512-bV21/9LQmcQeCPEg3BDFtvwL6cwiTMksYNWQQ4KOxCZikEGalWtenoZ0wCiukJINlGCIi2KXx01g4FoH/LxpzQ==}
@@ -4657,6 +4667,8 @@ snapshots:
       '@clack/core': 0.3.4
       picocolors: 1.1.0
       sisteransi: 1.0.5
+
+  '@ctrl/tinycolor@4.1.0': {}
 
   '@emnapi/runtime@1.2.0':
     dependencies:
