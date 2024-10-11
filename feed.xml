@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>WRXinYue</title>
+        <link>https://wrxinyue.org/</link>
+        <description>My personal website.</description>
+        <lastBuildDate>Fri, 11 Oct 2024 03:37:57 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <image>
+            <title>WRXinYue</title>
+            <url>https://valaxy.site/valaxy-logo.png</url>
+            <link>https://wrxinyue.org/</link>
+        </image>
+        <copyright>CC BY-NC-SA 4.0 2024 © WRXinYue</copyright>
+        <atom:link href="https://wrxinyue.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[黑魂复刻第一季（傅老师）]]></title>
+            <link>https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</link>
+            <guid>https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</guid>
+            <pubDate>Fri, 11 Oct 2024 03:37:27 GMT</pubDate>
+            <description><![CDATA[黑魂复刻第一季（傅老师）]]></description>
+            <content:encoded><![CDATA[<p>[[toc]]</p>
+<h1>1.玩家输入模块 Player Input Module</h1>
+<h2>按键输入原理</h2>
+<p>灵魂画师博老师：</p>
+<p>![image-20220720143557788](<a href="https://wr">https://wr</a></p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/黑魂复刻第一季-傅老师" target="_blank">https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</a> to read more.</p>]]></content:encoded>
+            <author>i@valaxy.site (WRXinYue)</author>
+        </item>
+        <item>
+            <title><![CDATA[Atan2]]></title>
+            <link>https://wrxinyue.org/posts/atan2</link>
+            <guid>https://wrxinyue.org/posts/atan2</guid>
+            <pubDate>Fri, 11 Oct 2024 03:37:27 GMT</pubDate>
+            <content:encoded><![CDATA[<p>[[toc]]</p>
+<h1>Atan2</h1>
+<p>According to Kiwi on [Wikipedia](<a href="https://wikipedia.org/wiki/Atan2#East-counterclo">https://wikipedia.org/wiki/Atan2#East-counterclo</a></p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/atan2" target="_blank">https://wrxinyue.org/posts/atan2</a> to read more.</p>]]></content:encoded>
+            <author>i@valaxy.site (WRXinYue)</author>
+        </item>
+        <item>
+            <title><![CDATA[我的博客演进之路]]></title>
+            <link>https://wrxinyue.org/posts/blog_evolution_journey</link>
+            <guid>https://wrxinyue.org/posts/blog_evolution_journey</guid>
+            <pubDate>Fri, 11 Oct 2024 03:37:27 GMT</pubDate>
+            <content:encoded><![CDATA[<h2>我的博客演进之路</h2>
+<p>个人博客的变更与成长，持续记录中...</p>
+<hr>
+<h3 class="flex justify-between items-center">
+  <em class="<br/><p>Visit <a href="https://wrxinyue.org/posts/blog_evolution_journey" target="_blank">https://wrxinyue.org/posts/blog_evolution_journey</a> to read more.</p>]]></content:encoded>
+            <author>i@valaxy.site (WRXinYue)</author>
+        </item>
+        <item>
+            <title><![CDATA[摩擦和重力的物体运动与角度计算"]]></title>
+            <link>https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</link>
+            <guid>https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</guid>
+            <pubDate>Fri, 11 Oct 2024 03:37:27 GMT</pubDate>
+            <content:encoded><![CDATA[<h3>1. 计算两点之间的直线距离</h3>
+<p>首先，我们可以使用<strong>欧几里得距离</strong>公式计算两个坐标点 (x₁, y₁) 和 (x₂, y₂) 之间的直线距离。欧几里得距离是从一个点到另一个点的最短路径，</p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算" target="_blank">https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</a> to read more.</p>]]></content:encoded>
+            <author>i@valaxy.site (WRXinYue)</author>
+        </item>
+        <item>
+            <title><![CDATA[日语]]></title>
+            <link>https://wrxinyue.org/posts/日语</link>
+            <guid>https://wrxinyue.org/posts/日语</guid>
+            <pubDate>Tue, 18 Apr 2023 15:07:23 GMT</pubDate>
+            <content:encoded><![CDATA[<p>[[toc]]</p>
+<h2>IT日语</h2>
+<p>|      | 日本語             | 英語              | 中国語           |          |<br>
+| ---- |</p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/日语" target="_blank">https://wrxinyue.org/posts/日语</a> to read more.</p>]]></content:encoded>
+            <author>i@valaxy.site (WRXinYue)</author>
+        </item>
+    </channel>
+</rss>

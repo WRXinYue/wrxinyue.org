@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wrxinyue.org/</id>
+    <title>WRXinYue</title>
+    <updated>2024-10-11T03:37:57.907Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>WRXinYue</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://wrxinyue.org/"/>
+    <link rel="self" href="https://wrxinyue.org/atom.xml"/>
+    <subtitle>My personal website.</subtitle>
+    <logo>https://valaxy.site/valaxy-logo.png</logo>
+    <icon>https://wrxinyue.org/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2024 © WRXinYue</rights>
+    <entry>
+        <title type="html"><![CDATA[黑魂复刻第一季（傅老师）]]></title>
+        <id>https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</id>
+        <link href="https://wrxinyue.org/posts/黑魂复刻第一季-傅老师"/>
+        <updated>2022-07-21T01:37:43.000Z</updated>
+        <summary type="html"><![CDATA[黑魂复刻第一季（傅老师）]]></summary>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h1>1.玩家输入模块 Player Input Module</h1>
+<h2>按键输入原理</h2>
+<p>灵魂画师博老师：</p>
+<p>![image-20220720143557788](<a href="https://wr">https://wr</a></p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/黑魂复刻第一季-傅老师" target="_blank">https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</a> to read more.</p>]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-10-11T03:37:27.253Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Atan2]]></title>
+        <id>https://wrxinyue.org/posts/atan2</id>
+        <link href="https://wrxinyue.org/posts/atan2"/>
+        <updated>2024-10-11T03:37:27.252Z</updated>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h1>Atan2</h1>
+<p>According to Kiwi on [Wikipedia](<a href="https://wikipedia.org/wiki/Atan2#East-counterclo">https://wikipedia.org/wiki/Atan2#East-counterclo</a></p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/atan2" target="_blank">https://wrxinyue.org/posts/atan2</a> to read more.</p>]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-10-11T03:37:27.252Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我的博客演进之路]]></title>
+        <id>https://wrxinyue.org/posts/blog_evolution_journey</id>
+        <link href="https://wrxinyue.org/posts/blog_evolution_journey"/>
+        <updated>2022-07-12T18:44:36.000Z</updated>
+        <content type="html"><![CDATA[<h2>我的博客演进之路</h2>
+<p>个人博客的变更与成长，持续记录中...</p>
+<hr>
+<h3 class="flex justify-between items-center">
+  <em class="<br/><p>Visit <a href="https://wrxinyue.org/posts/blog_evolution_journey" target="_blank">https://wrxinyue.org/posts/blog_evolution_journey</a> to read more.</p>]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-10-11T03:37:27.252Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[摩擦和重力的物体运动与角度计算"]]></title>
+        <id>https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</id>
+        <link href="https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算"/>
+        <updated>2024-10-11T03:37:27.252Z</updated>
+        <content type="html"><![CDATA[<h3>1. 计算两点之间的直线距离</h3>
+<p>首先，我们可以使用<strong>欧几里得距离</strong>公式计算两个坐标点 (x₁, y₁) 和 (x₂, y₂) 之间的直线距离。欧几里得距离是从一个点到另一个点的最短路径，</p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算" target="_blank">https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</a> to read more.</p>]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-10-11T03:37:27.252Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[日语]]></title>
+        <id>https://wrxinyue.org/posts/日语</id>
+        <link href="https://wrxinyue.org/posts/日语"/>
+        <updated>2022-08-30T11:44:51.000Z</updated>
+        <content type="html"><![CDATA[<p>[[toc]]</p>
+<h2>IT日语</h2>
+<p>|      | 日本語             | 英語              | 中国語           |          |<br>
+| ---- |</p>
+<br/><p>Visit <a href="https://wrxinyue.org/posts/日语" target="_blank">https://wrxinyue.org/posts/日语</a> to read more.</p>]]></content>
+        <author>
+            <name>WRXinYue</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2023-04-18T15:07:23.000Z</published>
+    </entry>
+</feed>

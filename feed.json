@@ -1,0 +1,75 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "WRXinYue",
+    "home_page_url": "https://wrxinyue.org/",
+    "feed_url": "https://wrxinyue.org/feed.json",
+    "description": "My personal website.",
+    "icon": "https://valaxy.site/valaxy-logo.png",
+    "author": {
+        "name": "WRXinYue",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h1>1.玩家输入模块 Player Input Module</h1>\n<h2>按键输入原理</h2>\n<p>灵魂画师博老师：</p>\n<p>![image-20220720143557788](<a href=\"https://wr\">https://wr</a></p>\n<br/><p>Visit <a href=\"https://wrxinyue.org/posts/黑魂复刻第一季-傅老师\" target=\"_blank\">https://wrxinyue.org/posts/黑魂复刻第一季-傅老师</a> to read more.</p>",
+            "url": "https://wrxinyue.org/posts/黑魂复刻第一季-傅老师",
+            "title": "黑魂复刻第一季（傅老师）",
+            "summary": "黑魂复刻第一季（傅老师）",
+            "date_modified": "2022-07-21T01:37:43.000Z",
+            "date_published": "2024-10-11T03:37:27.253Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h1>Atan2</h1>\n<p>According to Kiwi on [Wikipedia](<a href=\"https://wikipedia.org/wiki/Atan2#East-counterclo\">https://wikipedia.org/wiki/Atan2#East-counterclo</a></p>\n<br/><p>Visit <a href=\"https://wrxinyue.org/posts/atan2\" target=\"_blank\">https://wrxinyue.org/posts/atan2</a> to read more.</p>",
+            "url": "https://wrxinyue.org/posts/atan2",
+            "title": "Atan2",
+            "date_modified": "2024-10-11T03:37:27.252Z",
+            "date_published": "2024-10-11T03:37:27.252Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h2>我的博客演进之路</h2>\n<p>个人博客的变更与成长，持续记录中...</p>\n<hr>\n<h3 class=\"flex justify-between items-center\">\n  <em class=\"<br/><p>Visit <a href=\"https://wrxinyue.org/posts/blog_evolution_journey\" target=\"_blank\">https://wrxinyue.org/posts/blog_evolution_journey</a> to read more.</p>",
+            "url": "https://wrxinyue.org/posts/blog_evolution_journey",
+            "title": "我的博客演进之路",
+            "date_modified": "2022-07-12T18:44:36.000Z",
+            "date_published": "2024-10-11T03:37:27.252Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<h3>1. 计算两点之间的直线距离</h3>\n<p>首先，我们可以使用<strong>欧几里得距离</strong>公式计算两个坐标点 (x₁, y₁) 和 (x₂, y₂) 之间的直线距离。欧几里得距离是从一个点到另一个点的最短路径，</p>\n<br/><p>Visit <a href=\"https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算\" target=\"_blank\">https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算</a> to read more.</p>",
+            "url": "https://wrxinyue.org/posts/摩擦和重力的物体运动与角度计算",
+            "title": "摩擦和重力的物体运动与角度计算\"",
+            "date_modified": "2024-10-11T03:37:27.252Z",
+            "date_published": "2024-10-11T03:37:27.252Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        },
+        {
+            "id": "",
+            "content_html": "<p>[[toc]]</p>\n<h2>IT日语</h2>\n<p>|      | 日本語             | 英語              | 中国語           |          |<br>\n| ---- |</p>\n<br/><p>Visit <a href=\"https://wrxinyue.org/posts/日语\" target=\"_blank\">https://wrxinyue.org/posts/日语</a> to read more.</p>",
+            "url": "https://wrxinyue.org/posts/日语",
+            "title": "日语",
+            "date_modified": "2022-08-30T11:44:51.000Z",
+            "date_published": "2023-04-18T15:07:23.000Z",
+            "author": {
+                "name": "WRXinYue",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}
