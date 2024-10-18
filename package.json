@@ -15,6 +15,7 @@
   "dependencies": {
     "@carbon/icons": "^11.45.0",
     "@ctrl/tinycolor": "^4.1.0",
+    "@wdns/vue-code-block": "^2.3.3",
     "gsap": "^3.12.5",
     "markdown-it-github-alerts": "^0.3.0",
     "p5": "^1.9.2",
