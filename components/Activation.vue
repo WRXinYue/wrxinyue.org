@@ -31,10 +31,12 @@ activateService().catch(console.error)
 </script>
 
 <template>
-  <VCodeBlock
-    :code="activation"
-    prismjs
-    lang="text"
-    theme="neon-bunny"
-  />
+  <ClientOnly>
+    <VCodeBlock
+      :code="activation"
+      prismjs
+      lang="text"
+      theme="neon-bunny"
+    />
+  </ClientOnly>
 </template>
