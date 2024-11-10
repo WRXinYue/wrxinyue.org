@@ -19,7 +19,7 @@
     "gsap": "^3.12.5",
     "markdown-it-github-alerts": "^0.3.0",
     "p5": "^1.9.2",
-    "valaxy": "^0.20.3",
+    "valaxy": "^0.20.4",
     "valaxy-addon-components": "^0.0.4",
     "valaxy-theme-antfu": "^0.0.5",
     "valaxy-theme-sakura": "0.6.8"
