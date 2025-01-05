@@ -36,8 +36,8 @@ importers:
         specifier: ^0.0.5
         version: 0.0.5(@vue/compiler-sfc@3.5.13)(markdown-it@14.1.0)(typescript@5.6.2)(vite@6.0.6(@types/node@22.5.5)(jiti@2.4.2)(sass@1.83.0)(terser@5.33.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.6.2))
       valaxy-theme-sakura:
-        specifier: 0.6.8
-        version: 0.6.8(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(valaxy-addon-waline@0.1.5(typescript@5.6.2)(valaxy@0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1)))
+        specifier: 0.8.0
+        version: 0.8.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.9.0
@@ -815,11 +815,11 @@ packages:
   '@iconify-json/carbon@1.2.1':
     resolution: {integrity: sha512-dIMY6OOY9LnwR3kOqAtfz4phGFG+KNfESEwSL6muCprBelSlSPpRXtdqvEEO/qWhkf5AJ9hWrOV3Egi5Z2IuKA==}
 
-  '@iconify-json/fa6-solid@1.2.0':
-    resolution: {integrity: sha512-hywmSkhPqay1lBtEltuGhawtUpq18Yyko8H2e3/artvTv5Eey1hz7OdBA2cXRwiES17KrkmXGoLDwNtkcpN4cw==}
+  '@iconify-json/fa6-solid@1.2.3':
+    resolution: {integrity: sha512-C5o8YJF+ekrS4wRb/6/0SE2KjRyJlCg++IOVC/fineiRinITivsmzFRNW1MQX2xfDZ1T7bxeKxLN6lcaTG3jGA==}
 
-  '@iconify-json/mdi@1.2.0':
-    resolution: {integrity: sha512-E9/3l5Syg3wfuarorFodhn4s8YorxhH3U3U20LaNBNiqw1kFNIDWhF6HymuzAD35k7RH0OBasJ+ZUyFtVVV6eg==}
+  '@iconify-json/mdi@1.2.2':
+    resolution: {integrity: sha512-84aznJXzfGdbOXGe8xB7E5uNAb7Yo5IABwTgq2X3kczb819qZeS9eL31bTVn7wJdCLK5ieaoUc2GTS3QYIkJ6g==}
 
   '@iconify-json/ph@1.2.0':
     resolution: {integrity: sha512-013eLpgTmX1lACOuDnkuhC7gRHyYj9w/j8SyDmlyUYvsKQrwdRsv1otcXtwH3DevuDAzSkreeeRsCeez+gTyVA==}
@@ -1282,10 +1282,6 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
-
-  '@studio-freight/lenis@1.0.42':
-    resolution: {integrity: sha512-HJAGf2DeM+BTvKzHv752z6Z7zy6bA643nZM7W88Ft9tnw2GsJSp6iJ+3cekjyMIWH+cloL2U9X82dKXgdU8kPg==}
-    deprecated: '''@studio-freight/lenis'' has been renamed to just ''lenis'', run ''npx @darkroom.engineering/codemods'' to update your dependecies accordingly.'
 
   '@stylistic/eslint-plugin@2.8.0':
     resolution: {integrity: sha512-Ufvk7hP+bf+pD35R/QfunF793XlSRIC7USr3/EdgduK9j13i2JjmsM0LUz3/foS+jDYp2fzyWZA9N44CPur0Ow==}
@@ -1799,9 +1795,6 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@vueuse/core@11.2.0':
-    resolution: {integrity: sha512-JIUwRcOqOWzcdu1dGlfW04kaJhW3EXnnjJJfLTtddJanymTL7lF1C0+dVVZ/siLfc73mWn+cGP1PE1PKPruRSA==}
-
   '@vueuse/core@12.0.0-beta.1':
     resolution: {integrity: sha512-+Z+qGQ0yi1ZA1xQvNQx2FUZiwonTluoK7PLucG+fUpyvclEWCuBn6VWbOvsYZq0HkXjFr/SJZ236/ksoXbc+kg==}
 
@@ -1846,25 +1839,11 @@ packages:
       universal-cookie:
         optional: true
 
-  '@vueuse/metadata@11.2.0':
-    resolution: {integrity: sha512-L0ZmtRmNx+ZW95DmrgD6vn484gSpVeRbgpWevFKXwqqQxW9hnSi2Ppuh2BzMjnbv4aJRiIw8tQatXT9uOB23dQ==}
-
   '@vueuse/metadata@12.0.0-beta.1':
     resolution: {integrity: sha512-TL2nBO72j5U6U9ohIVoaf3DHaYtnCCOxEgweu8rLIbdRMcY69qTwZI+6XFSCWLLwW0anzuoj5OZns9KZIqvMEA==}
 
-  '@vueuse/shared@11.2.0':
-    resolution: {integrity: sha512-VxFjie0EanOudYSgMErxXfq6fo8vhr5ICI+BuE3I9FnX7ePllEsVrRQ7O6Q1TLgApeLuPKcHQxAXpP+KnlrJsg==}
-
   '@vueuse/shared@12.0.0-beta.1':
     resolution: {integrity: sha512-HuP0Yry3sOZwqcBjB/mTlYEjqcO0MpmheAWUq+RdMKKX4GaF8szkKu3b/MLHKjLGmeeEQKZvtSCfj+Xbg+GNMQ==}
-
-  '@waline/api@1.0.0-alpha.8':
-    resolution: {integrity: sha512-S6pgUUfv+gcXU3hiW3PNUwiUvPy7bXmmLB/bwdU3hN5YVT5Q7CxyVSLA3oJkrNO5lcisKK1GBPv0H2W1uB0eGA==}
-    engines: {node: '>=18'}
-
-  '@waline/client@3.3.2':
-    resolution: {integrity: sha512-CK8ef5QafKt29AAz3n+bXNwzXdT/yh+pMRLxxTNH4RAMl0Wl3utqh3uA/gDpNRLWS4sOkFMASUC0ckbpeOAJNg==}
-    engines: {node: '>=18'}
 
   '@wdns/vue-code-block@2.3.3':
     resolution: {integrity: sha512-eOsCTatfi/8/zcgk7yzjuu+t4Ms4Te9SwYUE5PA/+JYcgp+JXAnYBgvqwPFVoTVKq3IpQCiGZg2zMblssvUCUQ==}
@@ -1934,9 +1913,6 @@ packages:
 
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
-
-  autosize@6.0.1:
-    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
 
   axios@1.7.9:
     resolution: {integrity: sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==}
@@ -3346,6 +3322,17 @@ packages:
   leac@0.6.0:
     resolution: {integrity: sha512-y+SqErxb8h7nE/fiEX07jsbuhrpO9lL8eca7/Y1nuWV2moNlXhyd59iDGcRf6moVyDMbmTNzL40SUyrFU/yDpg==}
 
+  lenis@1.1.18:
+    resolution: {integrity: sha512-hBJVN0o7ZWt6DqyLoCkYKLffgCqywX0Gf/ZWhWC8Ths1zN/lZHoAMC3faFjaTxnOEKokeV0q1Mlyu1aUr18xFQ==}
+    peerDependencies:
+      react: '>=17.0.0'
+      vue: '>=3.0.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -3468,18 +3455,8 @@ packages:
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
 
-  marked-highlight@2.1.4:
-    resolution: {integrity: sha512-D1GOkcdzP+1dzjoColL7umojefFrASDuLeyaHS0Zr/Uo9jkr1V6vpLRCzfi1djmEaWyK0SYMFtHnpkZ+cwFT1w==}
-    peerDependencies:
-      marked: '>=4 <15'
-
   marked@13.0.3:
     resolution: {integrity: sha512-rqRix3/TWzE9rIoFGIn8JmsVfhiuC8VIQ8IdX5TfzmeBucdY05/0UlzKaw0eVtpcN/OdVFpBk7CjKGo9iHJ/zA==}
-    engines: {node: '>= 18'}
-    hasBin: true
-
-  marked@14.1.2:
-    resolution: {integrity: sha512-f3r0yqpz31VXiDB/wj9GaOB0a2PRLQl6vJmXiFrniNwjkKdvakqJRULhjFKJpxOchlCRiG5fcacoUZY5Xa6PEQ==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -3971,9 +3948,6 @@ packages:
     resolution: {integrity: sha512-GkMg9uOTpIWWKbSsgwb5fA4EavTR+SG/PMPoAY8hkhHfEEY0/vqljY+XHqtDf2cr2IJtoNRDbrrEpZUiZCkYRw==}
     engines: {node: '>= 14.16.0'}
 
-  recaptcha-v3@1.11.3:
-    resolution: {integrity: sha512-sEE6J0RzUkS+sKEBpgCD/AqCU0ffrAVOADGjvAx9vcttN+VLK42SWMkj/J/I6vHu3Kew+xcfbBqDVb65N0QGDw==}
-
   refa@0.12.1:
     resolution: {integrity: sha512-J8rn6v4DBb2nnFqkqwy6/NnTYMcgLA+sLr0iIO41qpv0n+ngb7ksag2tMRl0inb1bbO/esUwzW1vbJi7K0sI0g==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
@@ -4389,8 +4363,8 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typeit@8.8.5:
-    resolution: {integrity: sha512-gtrTDKmBVzqyC7KBSBdhHwZOPhXcnP6gceMRXde0dxSN1DLHX9uzjC/Aj444/n4/UYLY8CpjXokWSvIjZPfckQ==}
+  typeit@8.8.7:
+    resolution: {integrity: sha512-sSVpy+cjeFP6Z+fZqiHzUSShg5yYFeJEt/Qut/bX945+Axyq+Yq+GPOuuk+sofoccSv8nNX/ibOOHkbki2mEpg==}
 
   typescript@5.6.2:
     resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
@@ -4554,20 +4528,14 @@ packages:
   valaxy-addon-vercount@0.0.5:
     resolution: {integrity: sha512-MjopdhKeeRBJ3ecMbhyuYv/Hi2YjXFAYcGCygxwwXMUatiDYX72/EmjgUwTC7sU1NdiyYC0dj+N1ROMd6O34+w==}
 
-  valaxy-addon-waline@0.1.5:
-    resolution: {integrity: sha512-FVo9q6P0rFIsVBNsMNKgrCBzTabiU9JjLyi5hO4nlch5cn7k1TN/nrqLPJE0mbXeLJ3UCUaaSsMXMg6O/bLzyA==}
-    peerDependencies:
-      valaxy: latest
-
   valaxy-theme-antfu@0.0.5:
     resolution: {integrity: sha512-lo3dPETk6I92fHz20h5gzaaK9oEId/ZLZ9iEBMYPy8qppB9m6nLq6W3pX2S5hXnhwS7NjKZog8zj0K7wPFEQHA==}
 
-  valaxy-theme-sakura@0.6.8:
-    resolution: {integrity: sha512-IS1oU40R4+GlBf3+RkcqV7LP6wX8iz+S+XfTXu3rJ28WNPiwZaS7Y86Ho7Ea9bnBsCYhWam6vYC6bVNB0QYPYw==}
+  valaxy-theme-sakura@0.8.0:
+    resolution: {integrity: sha512-rUcQghWftUyaMM8y1f/fn2lJpl2zCIv3YcsOs+mgC38up0LQ1IWxYJGD2xHzoIcpVAe9aFshldaqsQJaemZKDg==}
     peerDependencies:
       valaxy-addon-hitokoto: ^0.0.1
       valaxy-addon-vercount: ^0.0.5
-      valaxy-addon-waline: ^0.1.5
 
   valaxy@0.22.6:
     resolution: {integrity: sha512-AuHsQypW6l3qrb/HbU8PNFf9Bs6/l8HG4VV0dORxnI1AB0C54S6V/vLNLa5RpnBvMcQRU3yjNuRPK+kuoHe7WQ==}
@@ -5507,11 +5475,11 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/fa6-solid@1.2.0':
+  '@iconify-json/fa6-solid@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/mdi@1.2.0':
+  '@iconify-json/mdi@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5965,8 +5933,6 @@ snapshots:
   '@shikijs/vscode-textmate@9.3.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
-
-  '@studio-freight/lenis@1.0.42': {}
 
   '@stylistic/eslint-plugin@2.8.0(eslint@8.57.1)(typescript@5.6.2)':
     dependencies:
@@ -6722,16 +6688,6 @@ snapshots:
 
   '@vue/shared@3.5.13': {}
 
-  '@vueuse/core@11.2.0(vue@3.5.13(typescript@5.6.2))':
-    dependencies:
-      '@types/web-bluetooth': 0.0.20
-      '@vueuse/metadata': 11.2.0
-      '@vueuse/shared': 11.2.0(vue@3.5.13(typescript@5.6.2))
-      vue-demi: 0.14.10(vue@3.5.13(typescript@5.6.2))
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-
   '@vueuse/core@12.0.0-beta.1(typescript@5.6.2)':
     dependencies:
       '@types/web-bluetooth': 0.0.20
@@ -6754,36 +6710,12 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vueuse/metadata@11.2.0': {}
-
   '@vueuse/metadata@12.0.0-beta.1': {}
-
-  '@vueuse/shared@11.2.0(vue@3.5.13(typescript@5.6.2))':
-    dependencies:
-      vue-demi: 0.14.10(vue@3.5.13(typescript@5.6.2))
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
 
   '@vueuse/shared@12.0.0-beta.1(typescript@5.6.2)':
     dependencies:
       vue: 3.5.13(typescript@5.6.2)
     transitivePeerDependencies:
-      - typescript
-
-  '@waline/api@1.0.0-alpha.8': {}
-
-  '@waline/client@3.3.2(typescript@5.6.2)':
-    dependencies:
-      '@vueuse/core': 11.2.0(vue@3.5.13(typescript@5.6.2))
-      '@waline/api': 1.0.0-alpha.8
-      autosize: 6.0.1
-      marked: 14.1.2
-      marked-highlight: 2.1.4(marked@14.1.2)
-      recaptcha-v3: 1.11.3
-      vue: 3.5.13(typescript@5.6.2)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
       - typescript
 
   '@wdns/vue-code-block@2.3.3(typescript@5.6.2)':
@@ -6858,8 +6790,6 @@ snapshots:
   async@3.2.6: {}
 
   asynckit@0.4.0: {}
-
-  autosize@6.0.1: {}
 
   axios@1.7.9(debug@4.4.0):
     dependencies:
@@ -8430,6 +8360,10 @@ snapshots:
 
   leac@0.6.0: {}
 
+  lenis@1.1.18(vue@3.5.13(typescript@5.6.2)):
+    optionalDependencies:
+      vue: 3.5.13(typescript@5.6.2)
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -8543,13 +8477,7 @@ snapshots:
 
   markdown-table@3.0.3: {}
 
-  marked-highlight@2.1.4(marked@14.1.2):
-    dependencies:
-      marked: 14.1.2
-
   marked@13.0.3: {}
-
-  marked@14.1.2: {}
 
   mdast-util-find-and-replace@3.0.1:
     dependencies:
@@ -9201,8 +9129,6 @@ snapshots:
 
   readdirp@4.0.1: {}
 
-  recaptcha-v3@1.11.3: {}
-
   refa@0.12.1:
     dependencies:
       '@eslint-community/regexpp': 4.11.1
@@ -9644,7 +9570,7 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typeit@8.8.5:
+  typeit@8.8.7:
     dependencies:
       '@types/web-animations-js': 2.2.16
 
@@ -9854,14 +9780,6 @@ snapshots:
 
   valaxy-addon-vercount@0.0.5: {}
 
-  valaxy-addon-waline@0.1.5(typescript@5.6.2)(valaxy@0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1)):
-    dependencies:
-      '@waline/client': 3.3.2(typescript@5.6.2)
-      valaxy: 0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - typescript
-
   valaxy-theme-antfu@0.0.5(@vue/compiler-sfc@3.5.13)(markdown-it@14.1.0)(typescript@5.6.2)(vite@6.0.6(@types/node@22.5.5)(jiti@2.4.2)(sass@1.83.0)(terser@5.33.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.6.2)):
     dependencies:
       '@iconify-json/ant-design': 1.2.1
@@ -9891,16 +9809,19 @@ snapshots:
       - vue-template-es2015-compiler
       - webpack-sources
 
-  valaxy-theme-sakura@0.6.8(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(valaxy-addon-waline@0.1.5(typescript@5.6.2)(valaxy@0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1))):
+  valaxy-theme-sakura@0.8.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2)):
     dependencies:
-      '@iconify-json/fa6-solid': 1.2.0
-      '@iconify-json/mdi': 1.2.0
-      '@studio-freight/lenis': 1.0.42
+      '@ctrl/tinycolor': 4.1.0
+      '@iconify-json/fa6-solid': 1.2.3
+      '@iconify-json/mdi': 1.2.2
       interactjs: 1.10.27
-      typeit: 8.8.5
+      lenis: 1.1.18(vue@3.5.13(typescript@5.6.2))
+      typeit: 8.8.7
       valaxy-addon-hitokoto: 0.0.1
       valaxy-addon-vercount: 0.0.5
-      valaxy-addon-waline: 0.1.5(typescript@5.6.2)(valaxy@0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1))
+    transitivePeerDependencies:
+      - react
+      - vue
 
   valaxy@0.22.6(@babel/parser@7.26.2)(@types/markdown-it@14.1.2)(@types/node@22.5.5)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@8.57.1)(postcss@8.4.49)(rollup@4.27.4)(terser@5.33.0)(tsx@4.19.2)(typescript@5.6.2)(unhead@1.11.14)(yaml@2.6.1):
     dependencies:
