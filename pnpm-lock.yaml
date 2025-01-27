@@ -36,8 +36,8 @@ importers:
         specifier: ^0.0.5
         version: 0.0.5(@vue/compiler-sfc@3.5.13)(markdown-it@14.1.0)(typescript@5.6.2)(vite@6.0.11(@types/node@22.5.5)(jiti@2.4.2)(sass@1.83.4)(terser@5.33.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.2))
       valaxy-theme-sakura:
-        specifier: 0.8.0
-        version: 0.8.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2))
+        specifier: 0.9.0
+        version: 0.9.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2))
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.9.0
@@ -4443,8 +4443,8 @@ packages:
   valaxy-theme-antfu@0.0.5:
     resolution: {integrity: sha512-lo3dPETk6I92fHz20h5gzaaK9oEId/ZLZ9iEBMYPy8qppB9m6nLq6W3pX2S5hXnhwS7NjKZog8zj0K7wPFEQHA==}
 
-  valaxy-theme-sakura@0.8.0:
-    resolution: {integrity: sha512-rUcQghWftUyaMM8y1f/fn2lJpl2zCIv3YcsOs+mgC38up0LQ1IWxYJGD2xHzoIcpVAe9aFshldaqsQJaemZKDg==}
+  valaxy-theme-sakura@0.9.0:
+    resolution: {integrity: sha512-ku2bnDSsf6ZafSzIWuDUIKecZznD8blVq4hQAzuYfVas/LuU3lKayfsGefdnW/JeYXmpeqaNM8Cinjl70QfROw==}
     peerDependencies:
       valaxy-addon-hitokoto: ^0.0.1
       valaxy-addon-vercount: ^0.0.5
@@ -9708,7 +9708,7 @@ snapshots:
       - vue-template-es2015-compiler
       - webpack-sources
 
-  valaxy-theme-sakura@0.8.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2)):
+  valaxy-theme-sakura@0.9.0(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.6.2)):
     dependencies:
       '@ctrl/tinycolor': 4.1.0
       '@iconify-json/fa6-solid': 1.2.3
