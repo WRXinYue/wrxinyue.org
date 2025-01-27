@@ -22,7 +22,7 @@
     "valaxy": "^0.22.7",
     "valaxy-addon-components": "^0.0.4",
     "valaxy-theme-antfu": "^0.0.5",
-    "valaxy-theme-sakura": "0.8.0"
+    "valaxy-theme-sakura": "0.9.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.9.0",
