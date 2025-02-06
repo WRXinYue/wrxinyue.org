@@ -35,6 +35,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/blog_evolution_journey': RouteRecordInfo<'/posts/blog_evolution_journey', '/posts/blog_evolution_journey', Record<never, never>, Record<never, never>>,
     '/posts/note/jetbrains_activation': RouteRecordInfo<'/posts/note/jetbrains_activation', '/posts/note/jetbrains_activation', Record<never, never>, Record<never, never>>,
     '/posts/note/wsl': RouteRecordInfo<'/posts/note/wsl', '/posts/note/wsl', Record<never, never>, Record<never, never>>,
+    '/posts/note/锻炼脑力': RouteRecordInfo<'/posts/note/锻炼脑力', '/posts/note/锻炼脑力', Record<never, never>, Record<never, never>>,
     '/posts/摩擦和重力的物体运动与角度计算': RouteRecordInfo<'/posts/摩擦和重力的物体运动与角度计算', '/posts/摩擦和重力的物体运动与角度计算', Record<never, never>, Record<never, never>>,
     '/posts/日语': RouteRecordInfo<'/posts/日语', '/posts/日语', Record<never, never>, Record<never, never>>,
     '/posts/黑魂复刻第一季-傅老师': RouteRecordInfo<'/posts/黑魂复刻第一季-傅老师', '/posts/黑魂复刻第一季-傅老师', Record<never, never>, Record<never, never>>,

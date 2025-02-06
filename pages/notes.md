@@ -4,6 +4,6 @@ plum: true
 display: ''
 ---
 
-<SubNav />
+<AntfuSubNav />
 
-<ListPosts only-date type="note" />
+<AntfuListPosts only-date type="note" />

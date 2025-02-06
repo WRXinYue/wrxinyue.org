@@ -6,6 +6,6 @@ layout: post
 hide: true
 ---
 
-<SubNav />
+<AntfuSubNav />
 
-<ListPosts only-date type="blog" />
+<AntfuListPosts only-date type="blog" />

@@ -15,30 +15,22 @@ plum: true
 </h2>
 
 ::: en
-- Summary: A tech enthusiast who loves coding, enjoys listening to ambient & electronic music, and appreciates ACG culture.
-- Personality: Prefers quiet, enjoys solitude, and avoids interacting with too many acquaintances.
-- Philosophy: Secular humanism, geek spirit, and open-source values.
+
 - Team:
-[Ocean](https://oceandev.notion.site/8d46dfeeb5e242fbb8102270ca2f907e?v=836e5f4c8fc14880b0639549eb7e2ecc) |
-[Geekeyes](https://www.geekeyes.cn) |
-[Valaxy](https://github.com/valaxyjs)
-:::
-::: zh-CN
-- 概要: 一个热爱 Coding 的技术宅、听环境&电子音乐、享ACG文化
-- 人格: 喜欢安静、享受孤独、不与众多 acquaintances 交往
-- 思想: 世俗人文主义、极客精神、开源精神
-- 团队：
-[Ocean](https://oceandev.notion.site/8d46dfeeb5e242fbb8102270ca2f907e?v=836e5f4c8fc14880b0639549eb7e2ecc) |
-[极客之眼](https://www.geekeyes.cn) |
-[Valaxy](https://github.com/valaxyjs)
-- 项目: 我开源或参与了一些项目的开发，您可以在这里找到我的 <AppLink to="/projects"><span op75 i-simple-icons-github />完整项目列表</AppLink>
+  [Valaxy](https://github.com/valaxyjs) |
+  [Fuukei](https://github.com/Fuukei) |
+  [Geekeyes](https://www.geekeyes.cn) |
+
 :::
 
-::: en
-> Technology is not just a tool; it is a joy and an art. Through continuous innovation and experimentation, one can enjoy the process of learning from the unknown.
-:::
 ::: zh-CN
-> 技术不仅仅是工具，而是一种乐趣和艺术，通过不断创新和实验，享受从未知中学习的过程。
+
+- 团队：
+  [Valaxy](https://github.com/valaxyjs) |
+  [Fuukei](https://github.com/Fuukei) |
+  [极客之眼](https://www.geekeyes.cn)
+- 项目: 我开源或参与了一些项目的开发，您可以在这里找到我的 <AppLink to="/projects"><span op75 i-simple-icons-github />完整项目列表</AppLink>
+
 :::
 
 ::: en
@@ -58,6 +50,7 @@ Find me on
 :::
 
 ::: en
+
 <p flex="~ gap-3 wrap" class="mt--2!">
   <a href="https://github.com/WRXinYue" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
   <a href="https://space.bilibili.com/438788541" target="_blank"><span op75 i-simple-icons-bilibili /> BiliBili</a>

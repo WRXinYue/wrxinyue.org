@@ -7,4 +7,4 @@ description: Github Open Source Project Show
 
 <!-- @layout-full-width -->
 
-<ListDemos class="md:px-10" />
+<AntfuListDemos class="md:px-10" />
