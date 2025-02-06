@@ -1,8 +1,7 @@
-@use "valaxy-theme-sakura/styles/widgets/navbar.scss" as *;
-@use "valaxy-theme-sakura/styles/themes/sakura/css-vars.scss" as *;
-@use 'valaxy-theme-sakura/styles/animation/fading/fading.scss' as *;
-@use 'valaxy-theme-sakura/styles/animation/slide/slide.scss' as *;
-@use "valaxy/client/styles/mixins/index.scss" as *;
+// @use 'valaxy/client/styles/mixins/index.scss' as *;
+@use 'valaxy/client/styles/mixins/index.scss' as * with (
+  $namespace: 'sakura'
+);
 @use './markdown.css' as *;
 @use './gasp.scss' as *;
 
@@ -10,6 +9,28 @@
 @use 'markdown-it-github-alerts/styles/github-colors-light.css' as *;
 @use 'markdown-it-github-alerts/styles/github-colors-dark-class.css' as *;
 @use 'markdown-it-github-alerts/styles/github-base.css' as *;
+
+@use 'valaxy-theme-sakura/styles/layouts/layout.scss' as *;
+@use 'valaxy-theme-sakura/styles/vars' as *;
+
+:root {
+  --un-prose-links: var(--sakura-color-action);
+  --un-prose-body: var(--sakura-color-text);
+
+  // z-index
+  --va-z-overlay: var(--sakura-backdrop-z, 2);
+
+  @include set-css-var-from-map($light);
+  @include set-css-var-from-map($common);
+
+  --va-font-family-base: 'Chinese Quotes', 'Inter var', 'Inter', ui-sans-serif, system-ui, -apple-system,
+    blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', helvetica, arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html.dark {
+  @include set-css-var-from-map($dark);
+}
 
 /* 1.1.general-setting-pages *************************/
 /****************************************************/
@@ -22,6 +43,10 @@
   --c-bg: #fff;
   --c-scrollbar: #eee;
   --c-scrollbar-hover: #bbb;
+}
+
+:root {
+  color-scheme: only dark;
 }
 
 html {
@@ -194,9 +219,7 @@ html:not(.dark) [img-dark] {
     --enter-step: 90ms;
     --enter-initial: 0ms;
     animation: slide-enter 1s both 1;
-    animation-delay: calc(
-      var(--enter-initial) + var(--enter-stage) * var(--enter-step)
-    );
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
 
   .slide-enter-content > *:nth-child(1) {
@@ -312,7 +335,6 @@ html:not(.dark) [img-dark] {
 .fade-leave-to {
   opacity: 0;
 }
-
 
 #app main {
   padding: 0 !important;

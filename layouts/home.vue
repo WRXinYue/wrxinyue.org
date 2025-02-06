@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { useFrontmatter } from 'valaxy'
-import { initGsapAnimations } from '../helpers'
+import { onMounted } from 'vue'
 import { useThemeConfig } from '../composables'
+import { initGsapAnimations } from '../helpers'
 
 const fm = useFrontmatter()
 const themeConfig = useThemeConfig()
 
-const { banner } = themeConfig.value
+const { hero } = themeConfig.value
 
 onMounted(() => {
   initGsapAnimations()
@@ -15,10 +15,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <SakuraBanner :banner>
+  <SakuraHero :hero>
     <template #background-display>
       <div class="gsap_header__img">
-        <SakuraBackgroundDisplay :urls="banner?.urls" />
+        <SakuraHeroBackground :urls="hero?.urls" />
       </div>
     </template>
     <template #info-overlay>
@@ -55,6 +55,6 @@ onMounted(() => {
         </div>
       </div>
     </template>
-  </SakuraBanner>
+  </SakuraHero>
   <RouterView />
 </template>

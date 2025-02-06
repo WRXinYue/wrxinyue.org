@@ -1,13 +1,16 @@
-import { defineValaxyConfig } from 'valaxy'
-import { addonHitokoto } from 'valaxy-addon-hitokoto'
-import { ValaxyThemesResolver } from 'valaxy-addon-components'
+import type { ThemeConfig as SakuraThemeConfig, ThemeUserConfig as SakuraThemeUserConfig } from 'valaxy-theme-sakura'
+// import { addonHitokoto } from 'valaxy-addon-hitokoto'
 import type { ThemeConfig } from './types'
+import { defineValaxyConfig } from 'valaxy'
+import { ValaxyThemesResolver } from 'valaxy-addon-components'
+import { defaultThemeConfig, generateSafelist } from 'valaxy-theme-sakura/node'
 
-export default defineValaxyConfig<ThemeConfig>({
+export default defineValaxyConfig<ThemeConfig & SakuraThemeUserConfig>({
   theme: 'antfu',
 
   themeConfig: {
-    banner: {
+    ...defaultThemeConfig,
+    hero: {
       title: '',
       motto: '',
       urls: [
@@ -27,7 +30,11 @@ export default defineValaxyConfig<ThemeConfig>({
       ],
     },
 
-    nav: [
+    scrollDown: {
+      enable: false,
+    },
+
+    navbar: [
       {
         text: 'Home',
         link: '/',
@@ -58,8 +65,12 @@ export default defineValaxyConfig<ThemeConfig>({
       },
     ],
 
-    navOptions: {
+    navbarOptions: {
       showMarker: true,
+      tools: ['toggleLocale'],
+      offset: 0,
+      invert: ['home'],
+      autoHide: ['home'],
     },
 
     subNav: [
@@ -91,9 +102,13 @@ export default defineValaxyConfig<ThemeConfig>({
     },
   },
 
-  addons: [
-    addonHitokoto({}),
-  ],
+  // addons: [
+  //   addonHitokoto({}),
+  // ],
+
+  unocss: {
+    safelist: generateSafelist(defaultThemeConfig as SakuraThemeConfig),
+  },
 
   components: {
     resolvers: [ValaxyThemesResolver({ themes: ['sakura'] })],

@@ -16,7 +16,7 @@
       "enabled": false
     },
     {
-      "matchPackageNames": ["valaxy", "valaxy-theme-sakura", "valaxy-theme-antfu"],
+      "matchPackageNames": ["valaxy", "valaxy-theme-antfu"],
       "enabled": true
     }
   ]
