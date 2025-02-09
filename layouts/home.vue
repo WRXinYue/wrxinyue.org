@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
   <SakuraHero :hero>
-    <template #background-display>
+    <template #background>
       <div class="gsap_header__img">
         <SakuraHeroBackground :urls="hero?.urls" />
       </div>
