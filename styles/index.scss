@@ -20,6 +20,8 @@
   // z-index
   --va-z-overlay: var(--sakura-backdrop-z, 2);
 
+  --va-c-bg: var(--c-bg) !important;
+
   @include set-css-var-from-map($light);
   @include set-css-var-from-map($common);
 

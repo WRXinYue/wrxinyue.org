@@ -16,10 +16,19 @@ onMounted(() => {
   if (!appStore.isDark)
     appStore.toggleDark()
 })
+
+onMounted(() => {
+  setTimeout(() => {
+    appStore.showLoading = false
+  }, 600)
+})
 </script>
 
 <template>
   <ClientOnly v-if="frontmatter.plum">
     <AntfuPlum />
   </ClientOnly>
+  <Transition name="fade">
+    <WRLoading v-if="appStore.showLoading" />
+  </Transition>
 </template>
