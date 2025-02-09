@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core'
-import { useAppStore } from 'valaxy'
+import { useAppStore, useFrontmatter } from 'valaxy'
 import { onMounted } from 'vue'
 import { initLenis } from './helpers/lenis'
 
 const { width } = useWindowSize()
 const appStore = useAppStore()
+const frontmatter = useFrontmatter()
 
 onMounted(() => {
   if (width.value >= 768)
@@ -18,5 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div />
+  <ClientOnly v-if="frontmatter.plum">
+    <AntfuPlum />
+  </ClientOnly>
 </template>
