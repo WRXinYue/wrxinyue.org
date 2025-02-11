@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { Pkg } from 'valaxy'
 import { useValaxyConfig } from 'valaxy'
+import antfuPkg from 'valaxy-theme-antfu/package.json'
 import sakuraPkg from 'valaxy-theme-sakura/package.json'
 import valaxyPkg from 'valaxy/package.json'
 import { capitalize, computed } from 'vue'
@@ -20,7 +21,7 @@ const poweredHtml = computed(() => t('footer.powered', [`<a href="${valaxyPkg.re
 
 <template>
   <div class="powered" m="2" translate="no">
-    <span v-html="poweredHtml" /> | <span>{{ t('footer.theme') }} <a :href="pkg.homepage" :title="`valaxy-theme-${config.theme}`" target="_blank">{{ capitalize(config.theme) }}</a> v{{ pkg.version }}</span>
-    | <span>{{ t('footer.theme') }} <a :href="pkg.homepage" title="valaxy-theme-sakura" target="_blank">Sakura</a> v{{ sakuraPkg.version }}</span>
+    <span v-html="poweredHtml" /> | <span>{{ t('footer.theme') }} <a :href="antfuPkg.repository.url" :title="`valaxy-theme-${config.theme}`" target="_blank">{{ capitalize(config.theme) }}</a> v{{ pkg.version }}</span>
+    | <span>{{ t('footer.theme') }} <a :href="sakuraPkg.homepage" title="valaxy-theme-sakura" target="_blank">Sakura</a> v{{ sakuraPkg.version }}</span>
   </div>
 </template>

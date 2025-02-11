@@ -48,16 +48,15 @@ skills:
     description: Experienced in Unity development, proficient in UI frameworks such as UGUI, UIToolkit, and NGUI, and capable of seamlessly integrating plugins like Magica Cloth, Rayfire, and Final Motion Matching for Unity (MMU).
     description_zh: 具备 Unity 开发经验，掌握 UGUI、UIToolkit、NGUI 等 UI 框架，并能够灵活集成 Magica Cloth、Rayfire、Final Motion Matching for Unity (MMU) 等插件。
 
-
   - title: Artificial Intelligence
     title_zh: 人工智能
-    subtitle_zh: AI 模型训练与部署
+    subtitle_zh: Artificial Intelligence
     description: Familiar with model training frameworks such as PyTorch, TensorFlow, and Candle. Experienced in deploying and serving large models using tools like Ollama and LangChain.
     description_zh: 了解 PyTorch、TensorFlow 和 Candle 等模型训练框架的使用，熟悉 Ollama 和 LangChain 等大模型部署与服务化工具。
 
   - title: UI / UX Design
     title_zh: UI / UX 设计
-    subtitle_zh: UI / UX 设计与用户体验优化
+    subtitle_zh: UI / UX Design
     description: Skilled in design tools such as Adobe Illustrator, Photoshop, and Figma. Familiar with Apple Human Interface Guidelines and Material Design standards. Capable of independently designing icons and UI components.
     description_zh: 掌握 Adobe Illustrator、Photoshop 和 Figma 等设计工具，熟悉 Apple Human Interface Guidelines 和 Material Design 设计规范，能够独立设计图标、界面样式。
 ---
