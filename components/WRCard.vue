@@ -91,7 +91,6 @@ onMounted(() => {
   --card-color: var(--va-c-bg);
   // --text-color: hsl(260deg 10% 55%);
   --text-color: #4b4b4b;
-  --card-radius: 1rem;
   --card-width: 35vw;
   --border-width: 3px;
   --bg-size: 1;
