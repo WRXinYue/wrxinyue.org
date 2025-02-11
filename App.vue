@@ -18,9 +18,7 @@ onMounted(() => {
 })
 
 onMounted(() => {
-  setTimeout(() => {
-    appStore.showLoading = false
-  }, 600)
+  appStore.showLoading = false
 })
 </script>
 

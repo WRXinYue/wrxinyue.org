@@ -1,11 +1,11 @@
-import type { ThemeConfig as SakuraThemeConfig, ThemeUserConfig as SakuraThemeUserConfig } from 'valaxy-theme-sakura'
-// import { addonHitokoto } from 'valaxy-addon-hitokoto'
+import type { ThemeConfig as SakuraThemeConfig } from 'valaxy-theme-sakura'
+import type { Plugin } from 'vite'
 import type { ThemeConfig } from './types'
 import { defineValaxyConfig } from 'valaxy'
 import { ValaxyThemesResolver } from 'valaxy-addon-components'
 import { defaultThemeConfig, generateSafelist } from 'valaxy-theme-sakura/node'
 
-export default defineValaxyConfig<ThemeConfig & SakuraThemeUserConfig>({
+export default defineValaxyConfig<ThemeConfig>({
   theme: 'antfu',
 
   themeConfig: {
@@ -66,11 +66,15 @@ export default defineValaxyConfig<ThemeConfig & SakuraThemeUserConfig>({
     ],
 
     navbarOptions: {
+      title: ['WRXinYue'],
       showMarker: true,
+      enableHover: true,
       tools: ['toggleLocale'],
-      offset: 0,
+      offset: 10,
       invert: ['home'],
       autoHide: ['home'],
+      animIn: 'animation-fade-in-left',
+      animOut: 'animation-fade-out-left',
     },
 
     subNav: [
@@ -102,9 +106,9 @@ export default defineValaxyConfig<ThemeConfig & SakuraThemeUserConfig>({
     },
   },
 
-  // addons: [
-  //   addonHitokoto({}),
-  // ],
+  vite: {
+    plugins: [WRVitePlugin()],
+  },
 
   unocss: {
     safelist: generateSafelist(defaultThemeConfig as SakuraThemeConfig),
@@ -114,3 +118,21 @@ export default defineValaxyConfig<ThemeConfig & SakuraThemeUserConfig>({
     resolvers: [ValaxyThemesResolver({ themes: ['sakura'] })],
   },
 })
+
+function WRVitePlugin(): Plugin {
+  return {
+    name: 'wr-plugin',
+    enforce: 'pre',
+
+    config() {
+      return {
+        optimizeDeps: {
+          include: [
+            'gsap',
+            'gsap/dist/ScrollTrigger',
+          ],
+        },
+      }
+    },
+  }
+}

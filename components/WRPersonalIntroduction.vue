@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { useFrontmatter } from 'valaxy'
+import { useI18n } from 'vue-i18n'
 
 const fm = useFrontmatter()
 
@@ -12,9 +12,12 @@ const { t } = useI18n()
     <main class="container">
       <section class="about">
         <ThemeSectionTitle text="abo" hl-text="ut" />
-        <p class="text-xl text-center theme-text about-me">
-          {{ t('home.about') }}
-        </p>
+        <WRIntroText />
+        <WRIntroText>
+          <p class="theme-text about-me text-center">
+            "{{ t('home.about') }}"
+          </p>
+        </WRIntroText>
       </section>
 
       <section class="skills">
@@ -32,10 +35,22 @@ const { t } = useI18n()
       <section class="service">
         <ThemeSectionTitle text="servic" hl-text="es" />
 
-        <ServicesOverview :services="fm.services" />
+        <WRServicesOverview :services="fm.services" />
       </section>
     </main>
 
-    <MyFooter text="a coding enthusiast" />
+    <WRHeroFooter text="a coding enthusiast" />
   </div>
 </template>
+
+<style lang="scss" scoped>
+section {
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.content {
+  width: 100%;
+  padding: 0 70px;
+}
+</style>

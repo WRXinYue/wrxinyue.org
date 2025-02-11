@@ -1,17 +1,34 @@
 import gsap from 'gsap'
+import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import { wrapTextWithSpan } from '../helpers/gsap'
 
 export async function initGsapAnimations() {
-  // NOTE: The ssg must be loaded on the browser to prevent the SSG construction failure
-  const ScrollTriggerModule = await import('gsap/ScrollTrigger')
-  const ScrollTrigger = ScrollTriggerModule.default
-
   gsap.registerPlugin(ScrollTrigger)
 
   const gTl = gsap.timeline()
 
-  gTl.to(
-    '.gsap_header__img',
-    {
+  gsap.to('.overlay-panel', {
+    scaleY: 0,
+    duration: 1.65,
+    ease: 'power4.inOut',
+  })
+
+  const heroWcElements = wrapTextWithSpan('.hero-wc')
+
+  gTl
+    .set('.hero-wc .char', { scale: 1.4 })
+    .from(heroWcElements, {
+      yPercent: gsap.utils.wrap([200, -80]),
+      opacity: 0,
+      stagger: 0.018,
+      duration: 1.8,
+      ease: 'power4.inOut',
+    })
+    .to('.hero-wc', { scale: 1, duration: 0.95, ease: 'power3.out' }, '-=0.75')
+    .from('.hero', { opacity: 0, duration: 2, ease: 'power2.out' })
+    .to('.hero-wc', { opacity: 0, duration: 1.25, ease: 'power2.out' }, '<-=0.35')
+  gTl
+    .to('.gsap_header__img', {
       duration: 0.75,
       clipPath: 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)',
       opacity: 0.03,
@@ -21,16 +38,16 @@ export async function initGsapAnimations() {
         const progress = this.progress() * 100
         this.targets()[0].style.clipPath = `polygon(0% 0%, ${progress}% 0%, ${progress}% 100%, 0% 100%)`
       },
-    },
-  ).to(
-    '.gsap_header__img',
-    {
+    }, '<')
+    .to('.gsap_header__img', {
       duration: 1.25,
       opacity: 1,
       scale: 1,
       ease: 'expo.out',
-    },
-  )
+    })
+    .to('.title-container', { display: 'none', duration: 0 }, '>')
+
+  // const nameTL = gsap.timeline()
 
   gTl.from('.gasp_title .char', {
     duration: 0.75,
@@ -38,29 +55,32 @@ export async function initGsapAnimations() {
     yPercent: 130,
     stagger: 0.06,
     ease: 'back.out',
-  }, '-=2')
+  }, '-=2.5')
+    .from('.gasp_title .char', { fontSize: '2.5vw' }, '<')
+    .to('.gasp_title .char', { fontSize: '5.25vw' }, '<')
 
   gTl.from(
     '.header__marq',
     { duration: 2, opacity: 0, yPercent: 100, ease: 'expo.out' },
-    '-=1.5',
+    '-=2.5',
   )
 
-  const gsapSq = gsap.utils.toArray('.section-title__square') as Element[]
-  gsapSq.forEach((gSq) => {
-    const rotationAnim = gsap.from(gSq, { duration: 3, rotation: 720 })
-    ScrollTrigger.create({
-      trigger: gSq,
-      animation: rotationAnim,
-      start: 'top bottom',
-      scrub: 1.9,
+  // HACK: Ensure that the previous DOM has been properly rendered.
+  setTimeout(() => {
+    const gsapSq = gsap.utils.toArray('.section-title__square') as Element[]
+    gsapSq.forEach((gSq) => {
+      const rotationAnim = gsap.from(gSq, { duration: 3, rotation: 720 })
+      ScrollTrigger.create({
+        trigger: gSq,
+        animation: rotationAnim,
+        start: 'top bottom',
+        scrub: 1.9,
+      })
     })
-  })
+  }, 1000)
 
   gsap_header()
   gsap_portfolio()
-  gsap_service()
-  gsap_footer()
 }
 
 function gsap_header() {
@@ -126,29 +146,5 @@ function gsap_portfolio() {
       scrub: 1.2,
     },
     scale: 1.2,
-  })
-}
-
-function gsap_service() {
-  gsap.from('.service-item-arrow', {
-    x: (i, el) => 1 - Number.parseFloat(el.getAttribute('data-speed')),
-    scrollTrigger: {
-      trigger: '.service',
-      start: 'top bottom',
-      scrub: 1.9,
-    },
-  })
-}
-
-function gsap_footer() {
-  gsap.from('.footer__div span', {
-    y: (i, el) => 1 - Number.parseFloat(el.getAttribute('data-speed')),
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.footer',
-      start: 'top bottom',
-      end: 'bottom bottom',
-      scrub: 1.9,
-    },
   })
 }

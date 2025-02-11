@@ -23,9 +23,15 @@ importers:
       lenis:
         specifier: ^1.1.20
         version: 1.1.20(vue@3.5.13(typescript@5.3.3))
+      locomotive-scroll:
+        specifier: ^4.1.4
+        version: 4.1.4
       markdown-it-github-alerts:
         specifier: ^0.3.0
         version: 0.3.0(markdown-it@14.1.0)
+      three:
+        specifier: ^0.173.0
+        version: 0.173.0
       valaxy:
         specifier: ^0.22.7
         version: 0.22.7(@babel/parser@7.26.7)(@types/markdown-it@14.1.2)(@types/node@22.13.1)(@vue/compiler-dom@3.5.13)(axios@1.7.9)(eslint@9.19.0(jiti@2.4.2))(postcss@8.5.1)(rollup@4.34.4)(terser@5.38.0)(tsx@4.19.2)(typescript@5.3.3)(unhead@1.11.18)(yaml@2.7.0)
@@ -33,8 +39,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       valaxy-theme-antfu:
-        specifier: 0.0.8-alpha.2
-        version: 0.0.8-alpha.2(@vue/compiler-sfc@3.5.13)(markdown-it-async@2.0.0)(markdown-it@14.1.0)(typescript@5.3.3)(vue@3.5.13(typescript@5.3.3))
+        specifier: 0.0.8-alpha.3
+        version: 0.0.8-alpha.3(@vue/compiler-sfc@3.5.13)(markdown-it-async@2.0.0)(markdown-it@14.1.0)(typescript@5.3.3)(vue@3.5.13(typescript@5.3.3))
       valaxy-theme-sakura:
         specifier: 0.9.1-alpha.2
         version: 0.9.1-alpha.2(valaxy-addon-hitokoto@0.0.1)(valaxy-addon-vercount@0.0.5)(vue@3.5.13(typescript@5.3.3))
@@ -45,6 +51,9 @@ importers:
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
+      '@types/locomotive-scroll':
+        specifier: ^4.1.4
+        version: 4.1.4
       '@unocss/eslint-plugin':
         specifier: ^65.4.3
         version: 65.4.3(eslint@9.19.0(jiti@2.4.2))(typescript@5.3.3)
@@ -893,6 +902,10 @@ packages:
     resolution: {integrity: sha512-DvpNSxiMrFqYMaGSRDDnQgO/L0MqNH4KWw9CUx8LRHHIdWp08En9DpmSRNpauUOxKpHAhyJJxx92BHZk9J84EQ==}
     engines: {node: '>= 16'}
 
+  '@intlify/shared@11.1.1':
+    resolution: {integrity: sha512-2kGiWoXaeV8HZlhU/Nml12oTbhv7j2ufsJ5vQaa0VTjzUmZVdd/nmKFRAOJ/FtjO90Qba5AnZDwsrY7ZND5udA==}
+    engines: {node: '>= 16'}
+
   '@intlify/unplugin-vue-i18n@6.0.3':
     resolution: {integrity: sha512-9ZDjBlhUHtgjRl23TVcgfJttgu8cNepwVhWvOv3mUMRDAhjW0pur1mWKEUKr1I8PNwE4Gvv2IQ1xcl4RL0nG0g==}
     engines: {node: '>= 18'}
@@ -1346,6 +1359,9 @@ packages:
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
 
+  '@types/locomotive-scroll@4.1.4':
+    resolution: {integrity: sha512-G8GUr/ML/Ssxxl83VYbtFHMFoPNOQh/glzPWi5Z3Jk7Hng26Sl0ckAV11uq1AGKEq40jFMPhyAIuQ6fGPiBmHQ==}
+
   '@types/markdown-it@14.1.2':
     resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
 
@@ -1778,9 +1794,15 @@ packages:
     resolution: {integrity: sha512-Ljqskqx/tbZagIglYoJIMzH5zgssyp+in9+9sAyh15N22AornBeIDnb8EZ6Rk+6ShfMxd92uO3gfpT0NtZbpow==}
     engines: {node: '>=14.0.0'}
 
+  bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
+
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
+
+  bindall-standalone@1.0.5:
+    resolution: {integrity: sha512-HDI7YBWXVJk/eoGz+e4lYQQJnYp1ZHcUvAY71lVptLMhQnDm86vD73AGPw2qIlgYR3P0bjmoAcXiA8qhFejBhA==}
 
   birpc@0.2.19:
     resolution: {integrity: sha512-5WeXXAvTmitV1RqJFppT5QtUiz2p1mRSYU000Jkft5ZUCLJIk4uQriYNO50HknxKwM6jd8utNc66K1qGIwwWBQ==}
@@ -3147,6 +3169,9 @@ packages:
       vue:
         optional: true
 
+  lethargy@1.0.9:
+    resolution: {integrity: sha512-nFM8blpCF9rqIL5mRAaTGc78W8oQixVtsD86jbEPvcI13+lDUYJf3R7DZQQL7tCiBpbGpGKMX2gwJFO9hiaOkg==}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -3176,6 +3201,9 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
+
+  locomotive-scroll@4.1.4:
+    resolution: {integrity: sha512-6i98cFF2SKg6wIPpwVPuo2FG8qL3USsdDeew78TEYZyLoqleMWNfkSDpWA6mPym4dOfTIBXc678VmGlkgx3fTA==}
 
   lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
@@ -3955,6 +3983,9 @@ packages:
   slashes@3.0.12:
     resolution: {integrity: sha512-Q9VME8WyGkc7pJf6QEkj3wE+2CnvZMI+XJhwdTPR8Z/kWQRXi7boAWLDibRPyHRTUTPx5FaU7MsyrjI3yLB4HA==}
 
+  smoothscroll-polyfill@0.4.4:
+    resolution: {integrity: sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==}
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -4082,6 +4113,12 @@ packages:
     resolution: {integrity: sha512-a4GD5R1TjEeuCT6ZRiYMHmIf7okbCPEuhQET8bczV6FrQMMlFXA1n+G0KKjdlFCm3TEHV77GxfZB3vZSUQGFpg==}
     engines: {node: '>=10'}
     hasBin: true
+
+  three@0.173.0:
+    resolution: {integrity: sha512-AUwVmViIEUgBwxJJ7stnF0NkPpZxx1aZ6WiAbQ/Qq61h6I9UR4grXtZDmO8mnlaNORhHnIBlXJ1uBxILEKuVyw==}
+
+  tiny-emitter@1.2.0:
+    resolution: {integrity: sha512-rWjF00inHeWtT5UbQYAXoMI4hL6TRMqohuKCsODyPYYmfAxqfMnXLsIeNrbdPEkNxlk++rojVilTnI9IVmEBtA==}
 
   tinyexec@0.3.2:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
@@ -4331,8 +4368,8 @@ packages:
   valaxy-addon-vercount@0.0.5:
     resolution: {integrity: sha512-MjopdhKeeRBJ3ecMbhyuYv/Hi2YjXFAYcGCygxwwXMUatiDYX72/EmjgUwTC7sU1NdiyYC0dj+N1ROMd6O34+w==}
 
-  valaxy-theme-antfu@0.0.8-alpha.2:
-    resolution: {integrity: sha512-UsowApZgYGGZxj3bDZzLy0/FpAd9B2q1vERjippFnqbPPLUNz5v1yTkqNaILWbcEnTuJr0q+AR4CYCZShMrsyQ==}
+  valaxy-theme-antfu@0.0.8-alpha.3:
+    resolution: {integrity: sha512-6+q9/J84M5i8TETd6hSmDobniu5ZcyE+H7p4n/YKfMKW2r63UAKzrsuI9BRO4YlqwKFgmgbjdjq9yl4h0j3Bzw==}
 
   valaxy-theme-sakura@0.9.1-alpha.2:
     resolution: {integrity: sha512-FFVmuv/x+ss6UyDb/+1Eilu/9q2Zcoo/LTJ22B3uG44O13ZKoRTzHnIgcm0wEY1EFQlohFEr5MR1N5ywGzik7g==}
@@ -4360,6 +4397,9 @@ packages:
 
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
+
+  virtual-scroll@1.5.2:
+    resolution: {integrity: sha512-7jDHwlKbHUho7CYU/HojE/VKFH8GV9P5fVWP2HCa7dRUOpVvwl93OBOKIIcb2mKd+vqsbVR/0zl0X70+3sUZqA==}
 
   vite-dev-rpc@1.0.7:
     resolution: {integrity: sha512-FxSTEofDbUi2XXujCA+hdzCDkXFG1PXktMjSk1efq9Qb5lOYaaM9zNSvKvPPF7645Bak79kSp1PTooMW2wktcA==}
@@ -5388,12 +5428,14 @@ snapshots:
 
   '@intlify/shared@11.1.0': {}
 
+  '@intlify/shared@11.1.1': {}
+
   '@intlify/unplugin-vue-i18n@6.0.3(@vue/compiler-dom@3.5.13)(eslint@9.19.0(jiti@2.4.2))(rollup@4.34.4)(typescript@5.3.3)(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))(vue@3.5.13(typescript@5.3.3))':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.19.0(jiti@2.4.2))
       '@intlify/bundle-utils': 10.0.0(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))
-      '@intlify/shared': 11.1.0
-      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.1.0)(@vue/compiler-dom@3.5.13)(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))(vue@3.5.13(typescript@5.3.3))
+      '@intlify/shared': 11.1.1
+      '@intlify/vue-i18n-extensions': 8.0.0(@intlify/shared@11.1.1)(@vue/compiler-dom@3.5.13)(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))(vue@3.5.13(typescript@5.3.3))
       '@rollup/pluginutils': 5.1.4(rollup@4.34.4)
       '@typescript-eslint/scope-manager': 8.23.0
       '@typescript-eslint/typescript-estree': 8.23.0(typescript@5.3.3)
@@ -5415,11 +5457,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@intlify/vue-i18n-extensions@8.0.0(@intlify/shared@11.1.0)(@vue/compiler-dom@3.5.13)(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))(vue@3.5.13(typescript@5.3.3))':
+  '@intlify/vue-i18n-extensions@8.0.0(@intlify/shared@11.1.1)(@vue/compiler-dom@3.5.13)(vue-i18n@11.1.0(vue@3.5.13(typescript@5.3.3)))(vue@3.5.13(typescript@5.3.3))':
     dependencies:
       '@babel/parser': 7.26.7
     optionalDependencies:
-      '@intlify/shared': 11.1.0
+      '@intlify/shared': 11.1.1
       '@vue/compiler-dom': 3.5.13
       vue: 3.5.13(typescript@5.3.3)
       vue-i18n: 11.1.0(vue@3.5.13(typescript@5.3.3))
@@ -5850,6 +5892,8 @@ snapshots:
   '@types/katex@0.16.7': {}
 
   '@types/linkify-it@5.0.0': {}
+
+  '@types/locomotive-scroll@4.1.4': {}
 
   '@types/markdown-it@14.1.2':
     dependencies:
@@ -6473,7 +6517,11 @@ snapshots:
       postcss: 8.5.1
       postcss-media-query-parser: 0.2.3
 
+  bezier-easing@2.1.0: {}
+
   binary-extensions@2.3.0: {}
+
+  bindall-standalone@1.0.5: {}
 
   birpc@0.2.19: {}
 
@@ -7975,6 +8023,8 @@ snapshots:
     optionalDependencies:
       vue: 3.5.13(typescript@5.3.3)
 
+  lethargy@1.0.9: {}
+
   levn@0.4.1:
     dependencies:
       prelude-ls: 1.2.1
@@ -8005,6 +8055,12 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  locomotive-scroll@4.1.4:
+    dependencies:
+      bezier-easing: 2.1.0
+      smoothscroll-polyfill: 0.4.4
+      virtual-scroll: 1.5.2
 
   lodash-es@4.17.21: {}
 
@@ -8995,6 +9051,8 @@ snapshots:
 
   slashes@3.0.12: {}
 
+  smoothscroll-polyfill@0.4.4: {}
+
   source-map-js@1.2.1: {}
 
   source-map-support@0.5.21:
@@ -9115,6 +9173,10 @@ snapshots:
       acorn: 8.14.0
       commander: 2.20.3
       source-map-support: 0.5.21
+
+  three@0.173.0: {}
+
+  tiny-emitter@1.2.0: {}
 
   tinyexec@0.3.2: {}
 
@@ -9398,7 +9460,7 @@ snapshots:
 
   valaxy-addon-vercount@0.0.5: {}
 
-  valaxy-theme-antfu@0.0.8-alpha.2(@vue/compiler-sfc@3.5.13)(markdown-it-async@2.0.0)(markdown-it@14.1.0)(typescript@5.3.3)(vue@3.5.13(typescript@5.3.3)):
+  valaxy-theme-antfu@0.0.8-alpha.3(@vue/compiler-sfc@3.5.13)(markdown-it-async@2.0.0)(markdown-it@14.1.0)(typescript@5.3.3)(vue@3.5.13(typescript@5.3.3)):
     dependencies:
       '@iconify-json/ant-design': 1.2.5
       '@iconify-json/carbon': 1.2.6
@@ -9572,6 +9634,13 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
+
+  virtual-scroll@1.5.2:
+    dependencies:
+      bindall-standalone: 1.0.5
+      lethargy: 1.0.9
+      object-assign: 4.1.1
+      tiny-emitter: 1.2.0
 
   vite-dev-rpc@1.0.7(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(sass@1.84.0)(terser@5.38.0)(tsx@4.19.2)(yaml@2.7.0)):
     dependencies:

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { VCodeBlock } from '@wdns/vue-code-block'
+import { ref } from 'vue'
 
 const activation = ref()
 

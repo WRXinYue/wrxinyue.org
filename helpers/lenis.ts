@@ -9,7 +9,7 @@ function raf(time: any) {
 }
 
 export async function initLenis() {
-  lenisRef.value = new Lenis({ lerp: 0.04 })
+  lenisRef.value = new Lenis({ lerp: 0.1 })
 
   requestAnimationFrame(raf)
 }
