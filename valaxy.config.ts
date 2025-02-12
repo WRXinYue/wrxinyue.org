@@ -10,6 +10,11 @@ export default defineValaxyConfig<ThemeConfig>({
 
   themeConfig: {
     ...defaultThemeConfig,
+
+    colors: {
+      primary: '#fff',
+    },
+
     hero: {
       title: '',
       motto: '',

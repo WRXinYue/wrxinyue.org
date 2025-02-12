@@ -173,14 +173,25 @@ onMounted(() => {
       border-radius: calc(calc(var(--card-radius) * 0.9));
       box-shadow: 0 0 20px black;
       mix-blend-mode: color-burn;
+      // NOTE: Dynamic hue-based gradient
+      // background: hsl(0deg 0% 16%)
+      //   radial-gradient(
+      //     30% 30% at calc(var(--bg-x) * 1%) calc(var(--bg-y) * 1%),
+      //     hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 90%) calc(0% * var(--bg-size)),
+      //     hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 80%) calc(20% * var(--bg-size)),
+      //     hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 60%) calc(40% * var(--bg-size)),
+      //     transparent 100%
+      //   );
+      // NOTE: Only white
       background: hsl(0deg 0% 16%)
         radial-gradient(
           30% 30% at calc(var(--bg-x) * 1%) calc(var(--bg-y) * 1%),
-          hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 90%) calc(0% * var(--bg-size)),
-          hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 80%) calc(20% * var(--bg-size)),
-          hsl(calc(calc(var(--hue) * var(--hue-speed)) * 1deg) 100% 60%) calc(40% * var(--bg-size)),
+          hsl(0deg 0% 90%) calc(0% * var(--bg-size)),
+          hsl(0deg 0% 80%) calc(20% * var(--bg-size)),
+          hsl(0deg 0% 60%) calc(40% * var(--bg-size)),
           transparent 100%
         );
+
       animation:
         hue-animation var(--animation-speed) linear infinite,
         rotate-bg var(--animation-speed) linear infinite;
