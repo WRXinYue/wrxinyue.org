@@ -81,6 +81,30 @@ export async function initGsapAnimations() {
 
   gsap_header()
   gsap_portfolio()
+
+  gsap.from('.sec-p', {
+    scrollTrigger: {
+      trigger: '.sec-p',
+      // markers: true,
+      start: 'center bottom',
+      toggleActions: 'play none none reverse',
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: 'power3.out',
+  })
+
+  gsap.to('.sec-p p', {
+    scrollTrigger: {
+      trigger: '.sec-p',
+      // markers: true,
+      start: 'bottom center',
+      toggleActions: 'play reverse none none',
+    },
+    color: '#fff',
+    ease: 'power3.out',
+  })
 }
 
 function gsap_header() {

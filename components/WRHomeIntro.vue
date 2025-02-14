@@ -87,32 +87,6 @@ onMounted(async () => {
         },
         0,
       )
-
-    gsap.from('.sec-p', {
-      scrollTrigger: {
-        trigger: '.sec-p',
-        // markers: true,
-        start: 'center bottom',
-        scroller: '.scrollContainer',
-        toggleActions: 'play none none reverse',
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power3.out',
-    })
-
-    gsap.to('.sec-p p', {
-      scrollTrigger: {
-        trigger: '.sec-p',
-        // markers: true,
-        start: 'bottom center',
-        scroller: '.scrollContainer',
-        toggleActions: 'play reverse none none',
-      },
-      color: '#fff',
-      ease: 'power3.out',
-    })
   }, 0)
 })
 </script>

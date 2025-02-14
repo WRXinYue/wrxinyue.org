@@ -1,5 +1,5 @@
 <template>
   <WRHero />
-  <WRHomeIntro />
+  <!-- <WRHomeIntro /> -->
   <RouterView />
 </template>
