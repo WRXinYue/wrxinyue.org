@@ -21,7 +21,7 @@
     "locomotive-scroll": "^4.1.4",
     "markdown-it-github-alerts": "^0.3.0",
     "three": "^0.173.0",
-    "valaxy": "^0.22.7",
+    "valaxy": "^0.22.8",
     "valaxy-addon-components": "^0.1.0",
     "valaxy-theme-antfu": "0.0.8-alpha.3",
     "valaxy-theme-sakura": "0.9.1-alpha.2"
